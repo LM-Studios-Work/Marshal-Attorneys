@@ -3,16 +3,16 @@ import { Scale } from "lucide-react"
 
 const columns = [
   {
-    title: "Practice",
-    items: ["Litigation", "Mediation", "Compliance", "Advisory"],
+    title: "Practice Areas",
+    items: ["Conveyancing", "Family Law", "Litigation", "Labour Law", "Estate Law"],
   },
   {
     title: "Firm",
-    items: ["About", "Team", "Careers", "Press"],
+    items: ["About Us", "Our Team", "Services", "Contact"],
   },
   {
     title: "Contact",
-    items: ["Miami Office", "New York Office", "+1 (305) 555-0110", "hello@ashcroft.law"],
+    items: ["702-7th Floor Klamson Towers", "151 Commissioner Street", "Marshalltown, Johannesburg", "067 272 7475", "info@manattorneys.co.za"],
   },
 ]
 
@@ -24,11 +24,12 @@ export function SiteFooter() {
           <div className="col-span-2 md:col-span-1">
             <Link href="/" className="flex items-center gap-2">
               <Scale className="h-5 w-5 text-tan" aria-hidden />
-              <span className="font-serif text-xl text-white">Ashcroft</span>
+              <span className="font-serif text-xl text-white">MN Attorneys</span>
             </Link>
             <p className="mt-5 text-sm leading-relaxed text-white/60 max-w-xs">
-              A boutique law firm built on expertise, trust, and unwavering
-              dedication to outstanding results.
+              Marshal Ndlovu Attorneys Inc. — providing lasting legal solutions
+              through professional expertise and a holistic, multidisciplinary
+              approach across South Africa.
             </p>
           </div>
 
@@ -54,7 +55,7 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-14 pt-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/50">
-          <p>© {new Date().getFullYear()} Ashcroft & Vale. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Marshal Ndlovu Attorneys Inc. All rights reserved.</p>
           <div className="flex items-center gap-6">
             <Link href="#" className="hover:text-tan">Privacy</Link>
             <Link href="#" className="hover:text-tan">Terms</Link>

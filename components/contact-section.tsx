@@ -16,10 +16,10 @@ export function ContactSection() {
           <div className="bg-background p-8 md:p-12">
             <div className="text-center">
               <h2 className="font-serif text-4xl md:text-5xl leading-tight text-dark-bg text-balance">
-                Advocating for a better tomorrow
+                Request a consultation today
               </h2>
               <p className="mt-3 text-[11px] tracking-[0.28em] uppercase text-tan">
-                Trusted Expert Support
+                Trusted Legal Support
               </p>
             </div>
 

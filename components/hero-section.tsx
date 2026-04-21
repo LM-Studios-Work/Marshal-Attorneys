@@ -21,17 +21,17 @@ export function HeroSection() {
             {/* Overlay card */}
             <div className="absolute left-0 bottom-0 bg-background p-8 md:p-10 max-w-md">
               <h1 className="font-serif text-4xl md:text-5xl leading-[1.05] text-dark-bg text-balance">
-                Your justice is our priority
+                Providing lasting legal solutions
               </h1>
               <p className="mt-5 text-sm leading-relaxed text-muted-foreground max-w-xs">
-                Professional counsel tailored to meet your unique business
-                challenges and personal goals.
+                Professional expertise and a holistic, multidisciplinary
+                approach — serving clients across South Africa.
               </p>
               <Link
-                href="#services"
+                href="/contact"
                 className="mt-7 inline-flex items-center justify-center px-7 py-3 bg-tan text-white text-[11px] tracking-[0.22em] uppercase hover:bg-dark-bg transition-colors"
               >
-                Learn More
+                Request a Consultation
               </Link>
             </div>
           </div>
@@ -46,6 +46,9 @@ export function HeroSection() {
               <h2 className="mt-5 font-serif text-3xl md:text-4xl leading-tight text-dark-bg text-balance">
                 Defending your rights with expertise
               </h2>
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground max-w-xs mx-auto">
+                A well-established boutique firm with national capacity, offering a full range of corporate and commercial legal services.
+              </p>
               <div className="mt-7 flex items-center justify-center gap-1.5 text-tan">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="h-4 w-4 fill-current" aria-hidden />
@@ -57,23 +60,23 @@ export function HeroSection() {
             {/* Bottom: Dark testimonial card */}
             <div className="bg-dark-bg text-white px-8 py-12 md:py-14 relative flex flex-col items-center justify-center text-center">
               <blockquote className="text-sm md:text-[15px] leading-relaxed max-w-xs mx-auto">
-                Dedicated to excellence, we work closely with clients to achieve
-                outstanding results. Communication and trust are key in our
-                approach.
+                &ldquo;Marshal Ndlovu Attorneys Inc. made the process of buying
+                our first home seamless and stress-free. Their professionalism
+                and attention to detail were outstanding.&rdquo;
               </blockquote>
 
               <div className="mt-8 flex flex-col items-center">
                 <div className="relative h-12 w-12 overflow-hidden rounded-full ring-2 ring-tan/40">
                   <Image
                     src="/professional-woman-headshot-warm-lighting.jpg"
-                    alt="Emily Johnson"
+                    alt="Client testimonial"
                     fill
                     className="object-cover"
                     sizes="48px"
                   />
                 </div>
-                <p className="mt-3 text-sm font-medium">Emily Johnson</p>
-                <p className="text-xs text-white/60 mt-0.5">Miami</p>
+                <p className="mt-3 text-sm font-medium">Verified Client</p>
+                <p className="text-xs text-white/60 mt-0.5">Johannesburg</p>
               </div>
 
               {/* Carousel arrows */}

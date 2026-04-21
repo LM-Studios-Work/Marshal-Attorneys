@@ -1,14 +1,13 @@
 import Link from "next/link"
 
 const leftLinks = [
-  { label: "Conditions", href: "#" },
-  { label: "Quality", href: "#" },
-  { label: "Stay Connected", href: "#" },
+  { label: "067 272 7475", href: "tel:0672727475" },
+  { label: "info@manattorneys.co.za", href: "mailto:info@manattorneys.co.za" },
 ]
 
 const socialLinks = [
   { label: "Facebook", href: "#" },
-  { label: "Twitter", href: "#" },
+  { label: "LinkedIn", href: "#" },
   { label: "Instagram", href: "#" },
 ]
 

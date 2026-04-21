@@ -15,13 +15,13 @@ export function NavigateLaw() {
               We navigate the law for you
             </h2>
             <p className="mt-8 max-w-md text-sm leading-relaxed text-muted-foreground">
-              At the core of our mission is a deep commitment to excellence and
-              client satisfaction. Our team works tirelessly to provide
-              thoughtful solutions, ensuring that every detail reflects care
-              and precision.
+              Marshal Ndlovu Attorneys Inc. is a well-established boutique firm
+              with significant national capacity through a network of associates,
+              giving us substantial influence in key financial centers throughout
+              the Republic of South Africa.
             </p>
             <Link
-              href="#contact"
+              href="/contact"
               className="mt-8 inline-flex items-center justify-center px-7 py-3 bg-tan text-white text-[11px] tracking-[0.22em] uppercase hover:bg-dark-bg transition-colors"
             >
               Speak with a Lawyer
@@ -55,10 +55,10 @@ export function NavigateLaw() {
                 <circle cx="12" cy="3" r="1.5" fill="currentColor" />
               </svg>
               <div className="font-serif text-5xl md:text-6xl leading-none">
-                83
+                6+
               </div>
               <div className="mt-3 text-[10px] tracking-[0.22em] uppercase">
-                Mediation
+                Years Experience
               </div>
             </div>
 
@@ -75,10 +75,10 @@ export function NavigateLaw() {
                 <path d="M4 20 20 4M14 4h6v6" />
               </svg>
               <div className="font-serif text-5xl md:text-6xl leading-none">
-                32
+                630+
               </div>
               <div className="mt-3 text-[10px] tracking-[0.22em] uppercase">
-                Compliance
+                Finalised Matters
               </div>
             </div>
           </div>

@@ -1,10 +1,10 @@
 import Image from "next/image"
 
 const stats = [
-  { value: "5,100", label: "Legal Shield" },
-  { value: "1,470", label: "Justice Network" },
-  { value: "99.99%", label: "Lawyer Connect" },
-  { value: "24/7", label: "Advocacy Hub" },
+  { value: "6+", label: "Years Experience" },
+  { value: "1,000+", label: "Happy Clients" },
+  { value: "30+", label: "Peer Collaborations" },
+  { value: "630+", label: "Finalised Matters" },
 ]
 
 const avatars = [

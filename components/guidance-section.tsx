@@ -3,18 +3,18 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const items = [
   {
-    title: "Comfort Plus",
-    price: "$120.00",
+    title: "Conveyancing & Property Law",
+    label: "Real estate transfers, bond registrations & title deeds",
     image: "/leather-wallet-and-card-holder-on-linen.jpg",
   },
   {
-    title: "Daily Favorite",
-    price: "$30.00",
+    title: "Family Law & Estates",
+    label: "Divorce, guardianship, wills & estate administration",
     image: "/brown-leather-notebook-on-desk.jpg",
   },
   {
-    title: "Basic Box",
-    price: "$35.00",
+    title: "Litigation & Labour Law",
+    label: "Court representation, disputes & employment matters",
     image: "/wooden-judge-gavel-on-marble.jpg",
   },
 ]
@@ -26,7 +26,7 @@ export function GuidanceSection() {
         <div className="flex items-end justify-between gap-6 mb-12">
           <div>
             <p className="text-[11px] tracking-[0.28em] uppercase text-tan">
-              Strength of your trust
+              Our practice areas
             </p>
             <h2 className="mt-5 font-serif text-4xl md:text-5xl leading-tight text-dark-bg text-balance max-w-xl">
               Guiding you through legal challenges
@@ -65,7 +65,7 @@ export function GuidanceSection() {
                     {item.title}
                   </p>
                   <p className="text-xs text-muted-foreground mt-0.5">
-                    {item.price}
+                    {item.label}
                   </p>
                 </div>
               </div>

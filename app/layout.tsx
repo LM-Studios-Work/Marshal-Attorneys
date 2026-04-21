@@ -16,9 +16,9 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: "Ashcroft & Vale — Trusted Legal Counsel",
+  title: "Marshal Ndlovu Attorneys Inc. — Trusted Legal Counsel",
   description:
-    "A boutique law firm defending your rights with expertise, integrity, and a commitment to outstanding results.",
+    "A well-established boutique law firm providing lasting legal solutions through professional expertise and a holistic, multidisciplinary approach.",
   generator: "v0.app",
 }
 
