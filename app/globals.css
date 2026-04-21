@@ -1,0 +1,83 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Brand palette mapped from the provided style guide */
+  /* Dark BG - deep navy */
+  --dark-bg: #0f1d35;
+  /* Soft BG - pale lavender gray */
+  --soft-bg: #eef0f5;
+  /* Site / Form BG - pure white */
+  --site-bg: #ffffff;
+  /* Button / accent - warm tan */
+  --tan: #b9896a;
+  --tan-hover: #a2754c;
+  /* Overlay neutrals */
+  --overlay-1: #4d4d4d;
+  --overlay-2: #a8a8a8;
+  --overlay-3: #e7e7e7;
+
+  --background: var(--site-bg);
+  --foreground: var(--dark-bg);
+  --card: var(--site-bg);
+  --card-foreground: var(--dark-bg);
+  --popover: var(--site-bg);
+  --popover-foreground: var(--dark-bg);
+  --primary: var(--tan);
+  --primary-foreground: #ffffff;
+  --secondary: var(--soft-bg);
+  --secondary-foreground: var(--dark-bg);
+  --muted: var(--soft-bg);
+  --muted-foreground: #6b7280;
+  --accent: var(--dark-bg);
+  --accent-foreground: #ffffff;
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.577 0.245 27.325);
+  --border: #e5e7eb;
+  --input: #e5e7eb;
+  --ring: var(--tan);
+  --radius: 0.25rem;
+}
+
+@theme inline {
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-dark-bg: var(--dark-bg);
+  --color-soft-bg: var(--soft-bg);
+  --color-tan: var(--tan);
+  --color-tan-hover: var(--tan-hover);
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 4px);
+  --radius-xl: calc(var(--radius) + 8px);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
