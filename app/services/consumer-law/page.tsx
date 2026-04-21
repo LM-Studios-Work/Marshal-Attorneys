@@ -20,9 +20,9 @@ import { ServiceFramework } from "@/components/services/service-framework"
 import { ServiceCTA } from "@/components/services/service-cta"
 
 export const metadata: Metadata = {
-  title: "Consumer Law — Marshal Ndlovu Attorneys Inc.",
+  title: "Consumer Law | Marshal Ndlovu Attorneys Inc.",
   description:
-    "Consumer Protection Act and National Credit Act advisory and litigation — credit agreement vetting, responsible-lending compliance, tribunal advocacy and product-liability claims.",
+    "Consumer Protection Act and National Credit Act advisory and litigation: credit agreement vetting, responsible-lending compliance, tribunal advocacy and product-liability claims.",
 }
 
 export default function ConsumerLawPage() {
@@ -61,7 +61,7 @@ export default function ConsumerLawPage() {
             {
               icon: Gavel,
               title: "Enforcement of Rights",
-              desc: "Assertion of the right to fair, reasonable and safe goods and services — including damages where warranted.",
+              desc: "Assertion of the right to fair, reasonable and safe goods and services, including damages where warranted.",
             },
           ]}
         />
@@ -79,7 +79,7 @@ export default function ConsumerLawPage() {
             {
               icon: HandCoins,
               title: "Responsible Lending & Affordability",
-              desc: "Advising credit providers on the implementation of affordability assessments before granting credit — to avoid claims of reckless lending under the NCA.",
+              desc: "Advising credit providers on the implementation of affordability assessments before granting credit, to avoid claims of reckless lending under the NCA.",
             },
             {
               icon: AlertTriangle,
@@ -89,12 +89,12 @@ export default function ConsumerLawPage() {
             {
               icon: Package,
               title: "Product Liability & CPA Claims",
-              desc: "Representation in matters regarding defective goods and services — including enforcement of the implied warranty of quality and damages for hazardous products.",
+              desc: "Representation in matters regarding defective goods and services, including enforcement of the implied warranty of quality and damages for hazardous products.",
             },
             {
               icon: Gavel,
               title: "Tribunal & Regulatory Advocacy",
-              desc: "Representation before the National Consumer Tribunal (NCT) and Provincial Consumer Affairs Courts — handling regulatory probes and defending against prohibited-conduct allegations.",
+              desc: "Representation before the National Consumer Tribunal (NCT) and Provincial Consumer Affairs Courts, handling regulatory probes and defending against prohibited-conduct allegations.",
             },
             {
               icon: ShoppingBag,
@@ -113,7 +113,7 @@ export default function ConsumerLawPage() {
             icon: BookOpen,
             eyebrow: "Consumer Protection Act",
             title: "The rights of the consumer, codified",
-            body: "The CPA codifies the core consumer rights — equality, privacy, fair value, safe goods and fair and honest dealing. We apply this framework to compliance audits and consumer claims alike.",
+            body: "The CPA codifies the core consumer rights: equality, privacy, fair value, safe goods and fair and honest dealing. We apply this framework to compliance audits and consumer claims alike.",
             bullets: [
               "Right to safe, good-quality goods",
               "Implied warranty of quality and the six-month rule",
@@ -125,7 +125,7 @@ export default function ConsumerLawPage() {
             icon: ShieldCheck,
             eyebrow: "National Credit Act",
             title: "Responsible credit, rigorously enforced",
-            body: "The NCA regulates the entire credit lifecycle — from pre-agreement disclosures through enforcement and debt review. We advise registered credit providers and consumers under this regime.",
+            body: "The NCA regulates the entire credit lifecycle, from pre-agreement disclosures through enforcement and debt review. We advise registered credit providers and consumers under this regime.",
             bullets: [
               "Credit provider registration and compliance audits",
               "Affordability assessments and reckless-lending defence",
@@ -136,7 +136,7 @@ export default function ConsumerLawPage() {
         />
 
         <ServiceCTA
-          eyebrow="Protect your rights — or your business."
+          eyebrow="Protect your rights. Protect your business."
           heading="Let our consumer law team advise on your matter."
         />
       </main>

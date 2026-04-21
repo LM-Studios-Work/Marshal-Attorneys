@@ -20,7 +20,7 @@ const COLORS = [
   "#1e3256", // navy lighter
   "#d4b89e", // tan lighter
   "#2d4a73", // navy mid
-  "#eef0f5", // soft-bg — will get dark text via label
+  "#eef0f5", // soft-bg, dark text via label
 ]
 
 const STROKE = "#fff"
@@ -42,7 +42,7 @@ export function AboutServicesChart() {
               Curious about how we&apos;ve been serving our clients this year?
               Our breakdown reveals the diverse range of legal services we have
               provided, showcasing our commitment to excellence across various
-              fields — from conveyancing to corporate governance.
+              fields, from conveyancing to corporate governance.
             </p>
             <p className="mt-5 text-sm leading-relaxed text-muted-foreground max-w-md">
               See how our expertise is making a difference and find out why so

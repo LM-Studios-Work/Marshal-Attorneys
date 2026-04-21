@@ -20,9 +20,9 @@ import { ServiceFramework } from "@/components/services/service-framework"
 import { ServiceCTA } from "@/components/services/service-cta"
 
 export const metadata: Metadata = {
-  title: "Insolvency Law — Marshal Ndlovu Attorneys Inc.",
+  title: "Insolvency Law | Marshal Ndlovu Attorneys Inc.",
   description:
-    "Insolvency advisory and litigation — voluntary and compulsory sequestration, corporate liquidation, trustee representation and rehabilitation under the Insolvency Act.",
+    "Insolvency advisory and litigation: voluntary and compulsory sequestration, corporate liquidation, trustee representation and rehabilitation under the Insolvency Act.",
 }
 
 export default function InsolvencyLawPage() {
@@ -74,22 +74,22 @@ export default function InsolvencyLawPage() {
             {
               icon: TrendingDown,
               title: "Voluntary & Compulsory Sequestration",
-              desc: "Assisting individuals in applying for voluntary surrender of their estate — or representing creditors in applying for compulsory sequestration — demonstrating that sequestration will result in a dividend for creditors.",
+              desc: "Assisting individuals in applying for voluntary surrender of their estate, or representing creditors in applying for compulsory sequestration, demonstrating that sequestration will result in a dividend for creditors.",
             },
             {
               icon: Building2,
               title: "Corporate Liquidation",
-              desc: "Winding up of companies through a voluntary resolution of the shareholders or a court-ordered compulsory liquidation — including the appointment of a liquidator to realise assets and settle liabilities.",
+              desc: "Winding up of companies through a voluntary resolution of the shareholders or a court-ordered compulsory liquidation, including the appointment of a liquidator to realise assets and settle liabilities.",
             },
             {
               icon: UserCog,
               title: "Trustee & Estate Administration",
-              desc: "Acting as legal counsel to trustees or liquidators — identifying voidable preferences which are payments made to certain creditors shortly before insolvency that may be recovered.",
+              desc: "Acting as legal counsel to trustees or liquidators, identifying voidable preferences which are payments made to certain creditors shortly before insolvency that may be recovered.",
             },
             {
               icon: RefreshCcw,
               title: "Rehabilitation Proceedings",
-              desc: "Applications for rehabilitation — the legal process that discharges the insolvent person from their estate and restores their legal capacity to contract.",
+              desc: "Applications for rehabilitation, the legal process that discharges the insolvent person from their estate and restores their legal capacity to contract.",
             },
             {
               icon: FileWarning,
@@ -99,7 +99,7 @@ export default function InsolvencyLawPage() {
             {
               icon: Banknote,
               title: "Business Rescue Intersections",
-              desc: "Advising on the intersection of business rescue under the Companies Act with insolvency proceedings — and transition strategies where rescue is no longer viable.",
+              desc: "Advising on the intersection of business rescue under the Companies Act with insolvency proceedings, and transition strategies where rescue is no longer viable.",
             },
           ]}
           ctaTitle="Speak to an insolvency attorney about your matter."
@@ -113,7 +113,7 @@ export default function InsolvencyLawPage() {
             icon: BookOpen,
             eyebrow: "Insolvency Act 24 of 1936",
             title: "The statutory scheme for sequestration",
-            body: "The Act establishes the concursus creditorum — the collective concurrence of creditors — and regulates every aspect of the administration of an insolvent estate from sequestration to final distribution.",
+            body: "The Act establishes the concursus creditorum, being the collective concurrence of creditors, and regulates every aspect of the administration of an insolvent estate from sequestration to final distribution.",
             bullets: [
               "Friendly vs. compulsory sequestration applications",
               "Statutory meetings of creditors",

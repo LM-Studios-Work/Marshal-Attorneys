@@ -17,7 +17,7 @@ const services = [
   {
     icon: Home,
     title: "Transfer of Immovable Property",
-    desc: "Management of the entire registration process — from initial signing of transfer documents to the final lodgement and registration of the property in the name of the purchaser at the Deeds Office.",
+    desc: "Management of the entire registration process: from the initial signing of transfer documents to the final lodgement and registration of the property in the name of the purchaser at the Deeds Office.",
   },
   {
     icon: Banknote,

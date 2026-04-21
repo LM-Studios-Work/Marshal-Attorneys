@@ -25,7 +25,7 @@ export function HeroSection() {
               </h1>
               <p className="mt-5 text-sm leading-relaxed text-muted-foreground max-w-xs">
                 Professional expertise and a holistic, multidisciplinary
-                approach — serving clients across South Africa.
+                approach, serving clients across South Africa.
               </p>
               <Link
                 href="/contact"

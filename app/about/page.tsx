@@ -11,9 +11,9 @@ import { AboutServicesChart } from "@/components/about/about-services-chart"
 import { AboutMilestones } from "@/components/about/about-milestones"
 
 export const metadata: Metadata = {
-  title: "About Us — Marshal Ndlovu Attorneys Inc.",
+  title: "About Us | Marshal Ndlovu Attorneys Inc.",
   description:
-    "Learn about Marshal Ndlovu Attorneys Inc. — a well-established boutique firm offering a full range of corporate and commercial legal services across South Africa.",
+    "Learn about Marshal Ndlovu Attorneys Inc., a well-established boutique firm offering a full range of corporate and commercial legal services across South Africa.",
 }
 
 export default function AboutPage() {

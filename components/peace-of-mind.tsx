@@ -21,7 +21,7 @@ export function PeaceOfMind() {
             </h2>
             <p className="mt-6 max-w-lg text-sm leading-relaxed text-muted-foreground">
               Our firm&apos;s client base includes local and national companies
-              across a broad range of sectors — from emerging businesses to
+              across a broad range of sectors, from emerging businesses to
               multinationals, as well as public sector organizations. We address
               our clients&apos; needs with a holistic, multidisciplinary approach
               rooted in trust and clear communication.

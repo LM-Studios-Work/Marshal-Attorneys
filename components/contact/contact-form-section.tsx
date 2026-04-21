@@ -33,7 +33,7 @@ export function ContactFormSection() {
                   Office Hours
                 </p>
                 <p className="mt-2 font-serif text-xl md:text-2xl text-white">
-                  Monday — Friday, 08:30 to 17:00
+                  Monday to Friday, 08:30 to 17:00
                 </p>
               </div>
             </div>

@@ -21,7 +21,7 @@ export function OfficeMap() {
               <div className="flex items-start gap-3">
                 <MapPin className="h-4 w-4 mt-1 text-tan flex-none" aria-hidden />
                 <div className="text-[15px] leading-relaxed text-dark-bg">
-                  <p>702 — 7th Floor, Klamson Towers</p>
+                  <p>702, 7th Floor, Klamson Towers</p>
                   <p>151 Commissioner Street</p>
                   <p>Marshalltown, Johannesburg</p>
                 </div>

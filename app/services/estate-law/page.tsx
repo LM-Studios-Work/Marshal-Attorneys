@@ -20,9 +20,9 @@ import { ServiceFramework } from "@/components/services/service-framework"
 import { ServiceCTA } from "@/components/services/service-cta"
 
 export const metadata: Metadata = {
-  title: "Estate Law — Marshal Ndlovu Attorneys Inc.",
+  title: "Estate Law | Marshal Ndlovu Attorneys Inc.",
   description:
-    "Estate planning and deceased estate administration — wills, testamentary and inter vivos trusts, executor services and Master's Office compliance.",
+    "Estate planning and deceased estate administration: wills, testamentary and inter vivos trusts, executor services and Master's Office compliance.",
 }
 
 export default function EstateLawPage() {
@@ -42,7 +42,7 @@ export default function EstateLawPage() {
         <ServiceOverview
           eyebrow="Overview"
           heading="Preserving wealth across generations"
-          body="Estate law is the architecture of intergenerational wealth. We structure estates during our clients' lifetimes to minimise estate duty and capital gains tax — and we administer estates after death with the precision the Master of the High Court requires. Every instrument is drafted to express the testator's intention and to survive legal scrutiny."
+          body="Estate law is the architecture of intergenerational wealth. We structure estates during our clients' lifetimes to minimise estate duty and capital gains tax, and we administer estates after death with the precision the Master of the High Court requires. Every instrument is drafted to express the testator's intention and to survive legal scrutiny."
           imageSrc="/family-trust-meeting-warm-library.jpg"
           imageAlt="Family trust consultation setting"
           badgeLabel="Administration of Estates Act"
@@ -74,12 +74,12 @@ export default function EstateLawPage() {
             {
               icon: TrendingUp,
               title: "Strategic Estate Planning",
-              desc: "Legal and tax strategies structuring estates to minimise Estate Duty and Capital Gains Tax — ensuring the efficient transfer of wealth to beneficiaries.",
+              desc: "Legal and tax strategies structuring estates to minimise Estate Duty and Capital Gains Tax, ensuring the efficient transfer of wealth to beneficiaries.",
             },
             {
               icon: ScrollText,
               title: "Drafting of Wills & Testaments",
-              desc: "Drafting wills that comply strictly with the Wills Act — including the creation of Testamentary Trusts and the appointment of executors to ensure the testator's intentions are enforceable.",
+              desc: "Drafting wills that comply strictly with the Wills Act, including the creation of Testamentary Trusts and the appointment of executors to ensure the testator's intentions are enforceable.",
             },
             {
               icon: Landmark,
@@ -89,17 +89,17 @@ export default function EstateLawPage() {
             {
               icon: Users,
               title: "Inter Vivos & Testamentary Trusts",
-              desc: "Counsel on the creation of trusts for asset protection — managing registration of trusts and ensuring trustees adhere to the Trust Property Control Act.",
+              desc: "Counsel on the creation of trusts for asset protection, managing registration of trusts and ensuring trustees adhere to the Trust Property Control Act.",
             },
             {
               icon: Briefcase,
               title: "Executor & Trustee Services",
-              desc: "Acting as professional executors — collecting assets, settling debts and distributing the residue to the heirs — and serving as independent trustees where required.",
+              desc: "Acting as professional executors: collecting assets, settling debts and distributing the residue to the heirs, and serving as independent trustees where required.",
             },
             {
               icon: FileSignature,
               title: "Living Wills & Powers of Attorney",
-              desc: "Drafting advance directives and enduring powers of attorney — ensuring our clients' wishes are respected if they lose legal or physical capacity.",
+              desc: "Drafting advance directives and enduring powers of attorney, ensuring our clients' wishes are respected if they lose legal or physical capacity.",
             },
           ]}
           ctaTitle="Speak to an estate planning attorney about your legacy."
@@ -113,7 +113,7 @@ export default function EstateLawPage() {
             icon: BookOpen,
             eyebrow: "Wills Act 7 of 1953",
             title: "Form, formality and testamentary freedom",
-            body: "A will that does not comply with the Wills Act may be invalid — with catastrophic consequences for beneficiaries. We draft and execute wills that survive every formal challenge.",
+            body: "A will that does not comply with the Wills Act may be invalid, with catastrophic consequences for beneficiaries. We draft and execute wills that survive every formal challenge.",
             bullets: [
               "Formal execution, witnessing and signature requirements",
               "Revocation, alteration and the doctrine of dependent relative revocation",

@@ -9,7 +9,7 @@ import { ConsultationFormSection } from "@/components/contact/consultation-form-
 import { OfficeMap } from "@/components/contact/office-map"
 
 export const metadata: Metadata = {
-  title: "Contact Us — Marshal Ndlovu Attorneys Inc.",
+  title: "Contact Us | Marshal Ndlovu Attorneys Inc.",
   description:
     "Get in touch with Marshal Ndlovu Attorneys Inc. in Marshalltown, Johannesburg. Request a consultation across Conveyancing, Family Law, Litigation, Notarial Services, Consumer Law, Labour Law, Insolvency and Estate Law.",
 }

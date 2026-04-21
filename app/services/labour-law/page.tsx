@@ -20,9 +20,9 @@ import { ServiceFramework } from "@/components/services/service-framework"
 import { ServiceCTA } from "@/components/services/service-cta"
 
 export const metadata: Metadata = {
-  title: "Labour Law — Marshal Ndlovu Attorneys Inc.",
+  title: "Labour Law | Marshal Ndlovu Attorneys Inc.",
   description:
-    "Labour law advisory and litigation — employment contracts, disciplinary procedures, retrenchments under Section 189, CCMA and Labour Court representation.",
+    "Labour law advisory and litigation: employment contracts, disciplinary procedures, retrenchments under Section 189, CCMA and Labour Court representation.",
 }
 
 export default function LabourLawPage() {
@@ -42,7 +42,7 @@ export default function LabourLawPage() {
         <ServiceOverview
           eyebrow="Overview"
           heading="Structured employment relationships, defensibly managed"
-          body="Our labour law practice supports employers and employees through the complete employment lifecycle — from the architecture of the contract through performance management, disciplinary procedure, retrenchment and dispute resolution. We build employment relationships that are productive, lawful and defensible when tested."
+          body="Our labour law practice supports employers and employees through the complete employment lifecycle, from the architecture of the contract through performance management, disciplinary procedure, retrenchment and dispute resolution. We build employment relationships that are productive, lawful and defensible when tested."
           imageSrc="/ccma-commissioner-hearing-room.jpg"
           imageAlt="CCMA hearing venue interior"
           badgeLabel="LRA, BCEA & EEA"
@@ -74,12 +74,12 @@ export default function LabourLawPage() {
             {
               icon: FileSignature,
               title: "Employment Contract Architecture",
-              desc: "Drafting employment contracts that define terms of service, confidentiality and restraint of trade — with clauses that are reasonable and enforceable under South African law.",
+              desc: "Drafting employment contracts that define terms of service, confidentiality and restraint of trade, with clauses that are reasonable and enforceable under South African law.",
             },
             {
               icon: ClipboardList,
               title: "Disciplinary Procedures",
-              desc: "Guiding employers through Substantive and Procedural Fairness requirements — including drafting charge sheets and presiding over disciplinary hearings — to avoid unfair dismissal claims.",
+              desc: "Guiding employers through Substantive and Procedural Fairness requirements, including drafting charge sheets and presiding over disciplinary hearings, to avoid unfair dismissal claims.",
             },
             {
               icon: UserMinus,
@@ -89,7 +89,7 @@ export default function LabourLawPage() {
             {
               icon: Gavel,
               title: "CCMA & Labour Court Representation",
-              desc: "Representation in unfair dismissal, unfair labour practice and discrimination disputes — across conciliation, arbitration and review of awards in the Labour Court.",
+              desc: "Representation in unfair dismissal, unfair labour practice and discrimination disputes, across conciliation, arbitration and review of awards in the Labour Court.",
             },
             {
               icon: BookOpen,

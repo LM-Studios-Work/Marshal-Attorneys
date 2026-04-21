@@ -1,10 +1,16 @@
-import Link from "next/link"
-import { Scale } from "lucide-react"
+import Link from "next/link";
+import Image from "next/image";
 
 const columns = [
   {
     title: "Practice Areas",
-    items: ["Conveyancing", "Family Law", "Litigation", "Labour Law", "Estate Law"],
+    items: [
+      "Conveyancing",
+      "Family Law",
+      "Litigation",
+      "Labour Law",
+      "Estate Law",
+    ],
   },
   {
     title: "Firm",
@@ -12,9 +18,15 @@ const columns = [
   },
   {
     title: "Contact",
-    items: ["702-7th Floor Klamson Towers", "151 Commissioner Street", "Marshalltown, Johannesburg", "067 272 7475", "info@manattorneys.co.za"],
+    items: [
+      "702-7th Floor Klamson Towers",
+      "151 Commissioner Street",
+      "Marshalltown, Johannesburg",
+      "067 272 7475",
+      "info@manattorneys.co.za",
+    ],
   },
-]
+];
 
 export function SiteFooter() {
   return (
@@ -22,12 +34,17 @@ export function SiteFooter() {
       <div className="mx-auto max-w-[1400px] px-6 md:px-10 py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
           <div className="col-span-2 md:col-span-1">
-            <Link href="/" className="flex items-center gap-2">
-              <Scale className="h-5 w-5 text-tan" aria-hidden />
-              <span className="font-serif text-xl text-white">MN Attorneys</span>
+            <Link href="/" className="flex items-center gap-3">
+              <Image
+                src="/Red Modern Law Consulting Firm Logo.png"
+                alt="Marshal Ndlovu Attorneys Logo"
+                width={32}
+                height={32}
+                className="h-8 w-auto"
+              />
             </Link>
             <p className="mt-5 text-sm leading-relaxed text-white/60 max-w-xs">
-              Marshal Ndlovu Attorneys Inc. — providing lasting legal solutions
+              Marshal Ndlovu Attorneys Inc. provides lasting legal solutions
               through professional expertise and a holistic, multidisciplinary
               approach across South Africa.
             </p>
@@ -55,14 +72,23 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-14 pt-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/50">
-          <p>© {new Date().getFullYear()} Marshal Ndlovu Attorneys Inc. All rights reserved.</p>
+          <p>
+            © {new Date().getFullYear()} Marshal Ndlovu Attorneys Inc. All
+            rights reserved.
+          </p>
           <div className="flex items-center gap-6">
-            <Link href="#" className="hover:text-tan">Privacy</Link>
-            <Link href="#" className="hover:text-tan">Terms</Link>
-            <Link href="#" className="hover:text-tan">Cookies</Link>
+            <Link href="#" className="hover:text-tan">
+              Privacy
+            </Link>
+            <Link href="#" className="hover:text-tan">
+              Terms
+            </Link>
+            <Link href="#" className="hover:text-tan">
+              Cookies
+            </Link>
           </div>
         </div>
       </div>
     </footer>
-  )
+  );
 }

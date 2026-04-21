@@ -10,9 +10,9 @@ import { ConveyancingCompliance } from "@/components/conveyancing/conveyancing-c
 import { ConveyancingCTA } from "@/components/conveyancing/conveyancing-cta"
 
 export const metadata: Metadata = {
-  title: "Conveyancing & Property Law — Marshal Ndlovu Attorneys Inc.",
+  title: "Conveyancing & Property Law | Marshal Ndlovu Attorneys Inc.",
   description:
-    "Comprehensive conveyancing services in South Africa — sale agreements, property transfers, bond registration, sectional title, township establishment and more, in strict compliance with the Deeds Registries Act.",
+    "Comprehensive conveyancing services in South Africa: sale agreements, property transfers, bond registration, sectional title, township establishment and more, in strict compliance with the Deeds Registries Act.",
 }
 
 export default function ConveyancingPage() {

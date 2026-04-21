@@ -24,7 +24,7 @@ export function AboutMission() {
               <div>
                 <p className="font-serif text-2xl text-dark-bg">Mission</p>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  To provide lasting legal solutions — delivered with
+                  To provide lasting legal solutions, delivered with
                   professionalism, integrity, and an unwavering commitment to
                   our clients&apos; best interests.
                 </p>

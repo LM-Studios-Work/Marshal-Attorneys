@@ -21,9 +21,9 @@ import { ServiceFramework } from "@/components/services/service-framework"
 import { ServiceCTA } from "@/components/services/service-cta"
 
 export const metadata: Metadata = {
-  title: "Family Law — Marshal Ndlovu Attorneys Inc.",
+  title: "Family Law | Marshal Ndlovu Attorneys Inc.",
   description:
-    "Family law services across South Africa — antenuptial contracts, divorce, parental rights, maintenance and family trusts under the Matrimonial Property, Divorce and Children's Acts.",
+    "Family law services across South Africa: antenuptial contracts, divorce, parental rights, maintenance and family trusts under the Matrimonial Property, Divorce and Children's Acts.",
 }
 
 export default function FamilyLawPage() {
@@ -43,7 +43,7 @@ export default function FamilyLawPage() {
         <ServiceOverview
           eyebrow="Overview"
           heading="Protecting families through disciplined legal practice"
-          body="We counsel individuals and families through the most significant transitions of their lives — from the structuring of a marriage, to the dissolution of one, to the protection of children and generational wealth. Every matter is handled with the rigour required by the relevant statutes and the discretion the subject demands."
+          body="We counsel individuals and families through the most significant transitions of their lives: the structuring of a marriage, the dissolution of one, and the protection of children and generational wealth. Every matter is handled with the rigour required by the relevant statutes and the discretion the subject demands."
           imageSrc="/family-meeting-with-lawyer-warm-tones.jpg"
           imageAlt="Attorney counselling a family on matrimonial matters"
           badgeLabel="Children's Act 38 of 2005"
@@ -75,17 +75,17 @@ export default function FamilyLawPage() {
             {
               icon: FileSignature,
               title: "Matrimonial Property Regimes & ANCs",
-              desc: "Counsel on the selection of matrimonial property regimes including the drafting and registration of Antenuptial Contracts — with or without accrual — registered at the Deeds Office to be effective against third parties.",
+              desc: "Counsel on the selection of matrimonial property regimes including the drafting and registration of Antenuptial Contracts, with or without accrual, registered at the Deeds Office to be effective against third parties.",
             },
             {
               icon: Gavel,
               title: "Dissolution of Marriage",
-              desc: "We handle uncontested and contested divorces. In contested matters we manage litigation from summons to the final decree — including division of the joint estate, accrual claims and spousal maintenance.",
+              desc: "We handle uncontested and contested divorces. In contested matters we manage litigation from summons to the final decree, covering division of the joint estate, accrual claims and spousal maintenance.",
             },
             {
               icon: Users,
               title: "Parental Rights & Responsibilities",
-              desc: "Representation under the Children's Act — drafting Parenting Plans, litigating custody and access disputes and applying for the variation of existing court orders.",
+              desc: "Representation under the Children's Act, including drafting Parenting Plans, litigating custody and access disputes and applying for the variation of existing court orders.",
             },
             {
               icon: HandCoins,
@@ -95,7 +95,7 @@ export default function FamilyLawPage() {
             {
               icon: ScrollText,
               title: "Family Trusts (Inter Vivos & Testamentary)",
-              desc: "Creation of family trusts to safeguard assets — including drafting of the Trust Deed and registration of the trust with the Master of the High Court.",
+              desc: "Creation of family trusts to safeguard assets, including drafting of the Trust Deed and registration of the trust with the Master of the High Court.",
             },
             {
               icon: Heart,
@@ -126,7 +126,7 @@ export default function FamilyLawPage() {
             icon: Baby,
             eyebrow: "Children's Act 38 of 2005",
             title: "Best interests of the child, paramount",
-            body: "Every matter involving a minor child is measured against the statutory best-interests standard. We ensure parental rights and responsibilities are exercised — and adjudicated — accordingly.",
+            body: "Every matter involving a minor child is measured against the statutory best-interests standard. We ensure parental rights and responsibilities are exercised and adjudicated accordingly.",
             bullets: [
               "Parenting plans registered with the Family Advocate",
               "Care, contact and guardianship applications",

@@ -1,8 +1,9 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { Scale, ChevronDown } from "lucide-react"
-import { useState } from "react"
+import Link from "next/link";
+import Image from "next/image";
+import { ChevronDown } from "lucide-react";
+import { useState } from "react";
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -24,32 +25,33 @@ const navItems = [
   { label: "Our Team", href: "/team" },
   { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
-]
+];
 
 export function SiteNav() {
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null)
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
   return (
     <header className="bg-background border-b border-border/60">
       <div className="mx-auto max-w-[1400px] px-6 md:px-10 h-20 flex items-center justify-between gap-8">
-        <Link href="/" className="flex items-center gap-2 group">
-          <Scale className="h-5 w-5 text-tan" aria-hidden />
-          <span className="font-serif text-xl tracking-wide text-dark-bg">
-            MN Attorneys
-          </span>
+        <Link href="/" className="flex items-center gap-3 group">
+          <Image
+            src="/Red Modern Law Consulting Firm Logo.png"
+            alt="Marshal Ndlovu Attorneys Logo"
+            width={40}
+            height={40}
+            className="h-10 w-auto"
+          />
         </Link>
 
         <nav className="hidden lg:block">
           <ul className="flex items-center gap-8 text-[12px] tracking-[0.22em] uppercase text-dark-bg/80">
             {navItems.map((item) => {
-              const hasSubmenu = "submenu" in item && item.submenu
+              const hasSubmenu = "submenu" in item && item.submenu;
               return (
                 <li
                   key={item.label}
                   className="relative group"
-                  onMouseEnter={() =>
-                    hasSubmenu && setOpenDropdown(item.label)
-                  }
+                  onMouseEnter={() => hasSubmenu && setOpenDropdown(item.label)}
                   onMouseLeave={() => setOpenDropdown(null)}
                 >
                   <div className="flex items-center gap-1">
@@ -78,7 +80,7 @@ export function SiteNav() {
                     </div>
                   )}
                 </li>
-              )
+              );
             })}
           </ul>
         </nav>
@@ -91,5 +93,5 @@ export function SiteNav() {
         </Link>
       </div>
     </header>
-  )
+  );
 }

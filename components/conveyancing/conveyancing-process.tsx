@@ -2,7 +2,7 @@ const phases = [
   {
     number: "01",
     name: "Contractual Phase",
-    desc: "Vetting the Offer to Purchase (OTP) and ensuring all suspensive conditions — such as bond approval — are met before progressing.",
+    desc: "Vetting the Offer to Purchase (OTP) and ensuring all suspensive conditions, including bond approval, are met before progressing.",
   },
   {
     number: "02",
@@ -27,7 +27,7 @@ const phases = [
   {
     number: "06",
     name: "Registration Phase",
-    desc: "Final registration of the transfer and any mortgage bonds — resulting in the legal change of ownership.",
+    desc: "Final registration of the transfer and any mortgage bonds, resulting in the legal change of ownership.",
   },
 ]
 
@@ -49,7 +49,7 @@ export function ConveyancingProcess() {
             <p className="text-sm leading-relaxed text-muted-foreground max-w-lg">
               To provide complete transparency to our clients, every property
               transfer the firm handles follows the same disciplined six-phase
-              sequence — from contract vetting through to final registration at
+              sequence, from contract vetting through to final registration at
               the Deeds Office.
             </p>
           </div>

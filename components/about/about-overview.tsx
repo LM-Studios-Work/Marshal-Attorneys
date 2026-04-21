@@ -28,7 +28,7 @@ export function AboutOverview() {
               Who we are
             </p>
             <h2 className="mt-5 font-serif text-4xl md:text-5xl leading-tight text-dark-bg text-balance">
-              More than a law firm — a partner in your journey
+              More than a law firm: a partner in your journey
             </h2>
             <div className="mt-8 space-y-5 text-sm leading-relaxed text-muted-foreground">
               <p>
@@ -40,7 +40,7 @@ export function AboutOverview() {
               </p>
               <p>
                 Our client base includes local and national companies across a
-                broad range of sectors — from emerging businesses to
+                broad range of sectors, from emerging businesses to
                 multinationals, as well as public sector organizations.
               </p>
               <p>
@@ -61,7 +61,7 @@ export function AboutOverview() {
               <div className="border-l-2 border-tan pl-5">
                 <p className="font-serif text-lg text-dark-bg">Our Vision</p>
                 <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-                  Superior, efficient, and responsive service — through talent,
+                  Superior, efficient, and responsive service through talent,
                   collaboration, and innovation.
                 </p>
               </div>

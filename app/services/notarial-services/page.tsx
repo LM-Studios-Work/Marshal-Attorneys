@@ -20,9 +20,9 @@ import { ServiceFramework } from "@/components/services/service-framework"
 import { ServiceCTA } from "@/components/services/service-cta"
 
 export const metadata: Metadata = {
-  title: "Notarial Services — Marshal Ndlovu Attorneys Inc.",
+  title: "Notarial Services | Marshal Ndlovu Attorneys Inc.",
   description:
-    "Appointed Notaries Public — notarial deeds of servitude, apostille and legalisation, tie agreements and notarial contracts executed with full public faith.",
+    "Appointed Notaries Public: notarial deeds of servitude, apostille and legalisation, tie agreements and notarial contracts executed with full public faith.",
 }
 
 export default function NotarialServicesPage() {
@@ -74,12 +74,12 @@ export default function NotarialServicesPage() {
             {
               icon: Route,
               title: "Notarial Servitudes & Property Rights",
-              desc: "Drafting and execution of notarial deeds of servitude for legal creation of rights of way or utility easements — registered as notarial deeds to be binding on all future successors in title.",
+              desc: "Drafting and execution of notarial deeds of servitude for legal creation of rights of way or utility easements, registered as notarial deeds to be binding on all future successors in title.",
             },
             {
               icon: Globe2,
               title: "Apostille & International Legalisation",
-              desc: "Certification of authenticity of signatures and seals on official documents — under the Hague Convention — so that they are recognised in foreign jurisdictions.",
+              desc: "Certification of authenticity of signatures and seals on official documents under the Hague Convention, so that they are recognised in foreign jurisdictions.",
             },
             {
               icon: Link2,
@@ -89,12 +89,12 @@ export default function NotarialServicesPage() {
             {
               icon: FileSignature,
               title: "Notarial Contracts & Affidavits",
-              desc: "Overseeing the signing and sealing of contracts that statute requires be executed before a Notary — ensuring the instrument is executed strictly in accordance with the law.",
+              desc: "Overseeing the signing and sealing of contracts that statute requires be executed before a Notary, ensuring the instrument is executed strictly in accordance with the law.",
             },
             {
               icon: ScrollText,
               title: "Antenuptial Contracts",
-              desc: "Drafting and execution of antenuptial contracts before registration in the Deeds Office — securing matrimonial property regimes between spouses and against third parties.",
+              desc: "Drafting and execution of antenuptial contracts before registration in the Deeds Office, securing matrimonial property regimes between spouses and against third parties.",
             },
             {
               icon: BadgeCheck,
@@ -109,7 +109,7 @@ export default function NotarialServicesPage() {
         <ServiceFramework
           eyebrow="Notarial authority"
           heading="The heightened evidentiary value of a notarial act"
-          intro="Our notarial practice operates within the narrow but critical mandate granted by statute — executing instruments that carry greater legal weight than those prepared by an attorney alone."
+          intro="Our notarial practice operates within the narrow but critical mandate granted by statute, executing instruments that carry greater legal weight than those prepared by an attorney alone."
           primary={{
             icon: Stamp,
             eyebrow: "Notarial Execution",
@@ -126,7 +126,7 @@ export default function NotarialServicesPage() {
             icon: BookOpen,
             eyebrow: "Hague Convention",
             title: "Cross-border document recognition",
-            body: "For documents destined to be used abroad, we manage the full apostille or consular-legalisation chain — ensuring they are accepted by foreign authorities without unnecessary delay.",
+            body: "For documents destined to be used abroad, we manage the full apostille or consular-legalisation chain, ensuring they are accepted by foreign authorities without unnecessary delay.",
             bullets: [
               "Apostille via the High Court and DIRCO",
               "Consular legalisation for non-Convention states",

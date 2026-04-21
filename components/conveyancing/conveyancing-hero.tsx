@@ -36,7 +36,7 @@ export function ConveyancingHero() {
             </h1>
             <p className="mt-7 text-sm leading-relaxed text-white/70 max-w-lg">
               A highly regulated legal process essential for the valid transfer
-              of immovable property — conducted in strict accordance with the
+              of immovable property, conducted in strict accordance with the
               Deeds Registries Act and other applicable South African
               legislation.
             </p>

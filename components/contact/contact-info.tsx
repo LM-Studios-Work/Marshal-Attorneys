@@ -25,7 +25,7 @@ const items: InfoItem[] = [
     icon: MapPin,
     label: "Visit the Firm",
     lines: [
-      "702 — 7th Floor, Klamson Towers",
+      "702, 7th Floor, Klamson Towers",
       "151 Commissioner Street",
       "Marshalltown, Johannesburg",
     ],
