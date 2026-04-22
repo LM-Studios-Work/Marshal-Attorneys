@@ -1,12 +1,12 @@
 import {
   FilePen,
-  Home,
-  Banknote,
-  Building2,
-  MapPinned,
-  Route,
-  Layers,
-} from "lucide-react"
+  Building,
+  CurrencyDollar,
+  Package,
+  MapPin,
+  Path,
+  Stack,
+} from "phosphor-react"
 
 const services = [
   {
@@ -15,32 +15,32 @@ const services = [
     desc: "Preparation and review of Agreements of Sale to ensure all suspensive conditions, warranties and obligations are clearly defined and legally enforceable, mitigating the risk of future litigation.",
   },
   {
-    icon: Home,
+    icon: Building,
     title: "Transfer of Immovable Property",
     desc: "Management of the entire registration process: from the initial signing of transfer documents to the final lodgement and registration of the property in the name of the purchaser at the Deeds Office.",
   },
   {
-    icon: Banknote,
+    icon: CurrencyDollar,
     title: "Mortgage Bond Registration & Cancellation",
     desc: "Facilitating the registration of mortgage bonds on behalf of financial institutions and the formal cancellation of existing bonds upon settlement of the loan.",
   },
   {
-    icon: Building2,
+    icon: Package,
     title: "Sectional Title Administration",
     desc: "Opening and management of sectional title registers, ensuring that the division of units and common property is correctly recorded and compliant with the Sectional Titles Act.",
   },
   {
-    icon: MapPinned,
+    icon: MapPin,
     title: "Township Establishment & Registration",
     desc: "Specialized legal framework required for the establishment of new townships, including registration of township registers and the necessary approvals from local authorities.",
   },
   {
-    icon: Route,
+    icon: Path,
     title: "Servitudes & Land Rights",
     desc: "Formal registration and cancellation of servitudes, ensuring that rights of way, water or utility access are legally secured and correctly reflected on the title deed.",
   },
   {
-    icon: Layers,
+    icon: Stack,
     title: "Subdivisions & Consolidations",
     desc: "Managing the legal processes involved in subdividing a single property into multiple portions or consolidating multiple properties into a single title.",
   },
@@ -80,11 +80,13 @@ export function ConveyancingServices() {
                 className="bg-background p-8 md:p-10 group hover:bg-soft-bg transition-colors"
               >
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="h-11 w-11 bg-tan/10 flex items-center justify-center group-hover:bg-tan transition-colors">
+                  <div className="flex-shrink-0">
                     <Icon
-                      className="h-5 w-5 text-tan group-hover:text-white transition-colors"
-                      strokeWidth={1.5}
+                      size={32}
+                      weight="bold"
+                      color="#0f1d35"
                       aria-hidden
+                      className="transition-transform group-hover:scale-110"
                     />
                   </div>
                   <div className="h-px flex-1 bg-border" />
