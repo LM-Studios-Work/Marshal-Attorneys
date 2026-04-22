@@ -1,7 +1,7 @@
-import type { LucideIcon } from "lucide-react"
+import type { IconProps } from "phosphor-react"
 
 export type ServiceDetail = {
-  icon: LucideIcon
+  icon: React.ComponentType<IconProps>
   title: string
   desc: string
 }
@@ -53,11 +53,13 @@ export function ServiceDetails({
                 className="bg-background p-8 md:p-10 group hover:bg-soft-bg transition-colors"
               >
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="h-11 w-11 bg-tan/10 flex items-center justify-center group-hover:bg-tan transition-colors">
+                  <div className="flex-shrink-0">
                     <Icon
-                      className="h-5 w-5 text-tan group-hover:text-white transition-colors"
-                      strokeWidth={1.5}
+                      size={32}
+                      weight="bold"
+                      color="#0f1d35"
                       aria-hidden
+                      className="transition-transform group-hover:scale-110"
                     />
                   </div>
                   <div className="h-px flex-1 bg-border" />

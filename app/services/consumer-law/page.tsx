@@ -2,14 +2,14 @@ import type { Metadata } from "next"
 import {
   ShoppingBag,
   ClipboardCheck,
-  HandCoins,
+  Coins,
   Package,
-  AlertTriangle,
-  Scale,
+  Warning,
+  Scales,
   Gavel,
   BookOpen,
   ShieldCheck,
-} from "lucide-react"
+} from "phosphor-react"
 import { TopBar } from "@/components/top-bar"
 import { SiteNav } from "@/components/site-nav"
 import { SiteFooter } from "@/components/site-footer"
@@ -54,7 +54,7 @@ export default function ConsumerLawPage() {
               desc: "Policies, contracts and credit-granting processes aligned with the statutory framework.",
             },
             {
-              icon: Scale,
+              icon: Scales,
               title: "Tribunal Representation",
               desc: "Advocacy before the National Consumer Tribunal and Provincial Consumer Affairs Courts.",
             },
@@ -77,12 +77,12 @@ export default function ConsumerLawPage() {
               desc: "Vetting credit contracts to ensure they do not contain prohibited terms and that all required disclosures are transparent, in line with the NCA's form and content requirements.",
             },
             {
-              icon: HandCoins,
+              icon: Coins,
               title: "Responsible Lending & Affordability",
               desc: "Advising credit providers on the implementation of affordability assessments before granting credit, to avoid claims of reckless lending under the NCA.",
             },
             {
-              icon: AlertTriangle,
+              icon: Warning,
               title: "Credit Enforcement & Repossessions",
               desc: "Managing the issuance of Section 129 notices and the subsequent legal steps required before a creditor can approach the court for judgment on a credit agreement.",
             },

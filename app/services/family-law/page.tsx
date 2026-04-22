@@ -2,15 +2,15 @@ import type { Metadata } from "next"
 import {
   Heart,
   Users,
-  Scale,
-  FileSignature,
+  Scales,
+  FileDotted,
   ScrollText,
   Gavel,
   Baby,
-  HandCoins,
-  Shield,
+  Coins,
+  ShieldCheck,
   BookOpen,
-} from "lucide-react"
+} from "phosphor-react"
 import { TopBar } from "@/components/top-bar"
 import { SiteNav } from "@/components/site-nav"
 import { SiteFooter } from "@/components/site-footer"
@@ -50,7 +50,7 @@ export default function FamilyLawPage() {
           badgeTitle="Discreet. Child-focused. Enforceable."
           highlights={[
             {
-              icon: Shield,
+              icon: ShieldCheck,
               title: "Matrimonial Asset Protection",
               desc: "Antenuptial contracts and estate strategies that preserve wealth across generations.",
             },
@@ -73,7 +73,7 @@ export default function FamilyLawPage() {
           intro="From the drafting of antenuptial contracts to complex contested divorces and the creation of family trusts, we cover the complete spectrum of family-related legal work under South African law."
           items={[
             {
-              icon: FileSignature,
+              icon: FileDotted,
               title: "Matrimonial Property Regimes & ANCs",
               desc: "Counsel on the selection of matrimonial property regimes including the drafting and registration of Antenuptial Contracts, with or without accrual, registered at the Deeds Office to be effective against third parties.",
             },
@@ -88,7 +88,7 @@ export default function FamilyLawPage() {
               desc: "Representation under the Children's Act, including drafting Parenting Plans, litigating custody and access disputes and applying for the variation of existing court orders.",
             },
             {
-              icon: HandCoins,
+              icon: Coins,
               title: "Maintenance Litigation",
               desc: "Quantification and enforcement of maintenance orders for spouses and children, including the calculation of reasonable maintenance and the pursuit of arrears through the Maintenance Court.",
             },

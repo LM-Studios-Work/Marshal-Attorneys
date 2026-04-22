@@ -1,15 +1,15 @@
 import type { Metadata } from "next"
 import {
-  FileSignature,
+  FileDotted,
   UserMinus,
   Users,
   Gavel,
   ClipboardList,
-  Scale,
+  Scales,
   Briefcase,
   BookOpen,
   ShieldCheck,
-} from "lucide-react"
+} from "phosphor-react"
 import { TopBar } from "@/components/top-bar"
 import { SiteNav } from "@/components/site-nav"
 import { SiteFooter } from "@/components/site-footer"
@@ -54,7 +54,7 @@ export default function LabourLawPage() {
               desc: "Every dismissal and disciplinary process structured to withstand CCMA and Labour Court scrutiny.",
             },
             {
-              icon: Scale,
+              icon: Scales,
               title: "CCMA & Labour Court Advocacy",
               desc: "Full representation through conciliation, arbitration and subsequent review proceedings.",
             },
@@ -72,7 +72,7 @@ export default function LabourLawPage() {
           intro="From the drafting of enforceable employment contracts through retrenchment processes under Section 189 to arbitration at the CCMA and review in the Labour Court, we cover the full labour law spectrum for both employers and employees."
           items={[
             {
-              icon: FileSignature,
+              icon: FileDotted,
               title: "Employment Contract Architecture",
               desc: "Drafting employment contracts that define terms of service, confidentiality and restraint of trade, with clauses that are reasonable and enforceable under South African law.",
             },

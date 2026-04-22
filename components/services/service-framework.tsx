@@ -1,8 +1,9 @@
-import { ShieldCheck, Scale, Check } from "lucide-react"
-import type { LucideIcon } from "lucide-react"
+import { Check } from "lucide-react"
+import { ShieldCheck, Scales } from "phosphor-react"
+import type { IconProps } from "phosphor-react"
 
 type FrameworkCard = {
-  icon?: LucideIcon
+  icon?: React.ComponentType<IconProps>
   eyebrow: string
   title: string
   body: string
@@ -44,10 +45,11 @@ export function ServiceFramework({
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <article className="bg-dark-bg text-white p-10 md:p-12">
             <div className="flex items-center gap-4 mb-8">
-              <div className="h-12 w-12 bg-tan/15 flex items-center justify-center">
+              <div className="flex-shrink-0">
                 <PrimaryIcon
-                  className="h-5 w-5 text-tan"
-                  strokeWidth={1.5}
+                  size={32}
+                  weight="bold"
+                  color="#b9896a"
                   aria-hidden
                 />
               </div>
@@ -75,10 +77,11 @@ export function ServiceFramework({
 
           <article className="bg-soft-bg text-dark-bg p-10 md:p-12">
             <div className="flex items-center gap-4 mb-8">
-              <div className="h-12 w-12 bg-tan/15 flex items-center justify-center">
+              <div className="flex-shrink-0">
                 <SecondaryIcon
-                  className="h-5 w-5 text-tan"
-                  strokeWidth={1.5}
+                  size={32}
+                  weight="bold"
+                  color="#b9896a"
                   aria-hidden
                 />
               </div>

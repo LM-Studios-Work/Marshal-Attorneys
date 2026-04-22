@@ -1,16 +1,16 @@
 import type { Metadata } from "next"
 import {
-  Scale,
+  Scales,
   Gavel,
   FileText,
   Car,
-  ShieldAlert,
-  Banknote,
+  Warning,
+  CurrencyDollar,
   BookOpen,
-  Landmark,
+  Building,
   Users,
   Briefcase,
-} from "lucide-react"
+} from "phosphor-react"
 import { TopBar } from "@/components/top-bar"
 import { SiteNav } from "@/components/site-nav"
 import { SiteFooter } from "@/components/site-footer"
@@ -60,7 +60,7 @@ export default function LitigationPage() {
               desc: "Experienced representation across the Magistrates' Courts, High Court and specialist tribunals.",
             },
             {
-              icon: Scale,
+              icon: Scales,
               title: "Strategic Settlement",
               desc: "Where litigation is not the optimal outcome, we negotiate settlements that preserve value and avoid prolonged risk.",
             },
@@ -73,7 +73,7 @@ export default function LitigationPage() {
           intro="Our litigation practice handles the full lifecycle of a civil suit, from application proceedings for urgent relief to protracted action proceedings requiring oral evidence, across every forum in the South African judicial system."
           items={[
             {
-              icon: Landmark,
+              icon: Building,
               title: "High Court & Magistrate's Court Civil Litigation",
               desc: "Management of the full lifecycle of a civil suit, from drafting Particulars of Claim through discovery and expert reports, specialising in both Application Proceedings for urgent relief and Action Proceedings.",
             },
@@ -83,12 +83,12 @@ export default function LitigationPage() {
               desc: "A specialised administrative and legal procedure. We handle quantification of past and future medical expenses, loss of earnings and general damages, and litigate when claims are repudiated.",
             },
             {
-              icon: ShieldAlert,
+              icon: Warning,
               title: "Unlawful Arrest & Detention",
               desc: "Constitutional litigation claiming damages where the state has violated the right to liberty, requiring detailed analysis of the lawfulness of arrest and the legality of subsequent detention.",
             },
             {
-              icon: Banknote,
+              icon: CurrencyDollar,
               title: "Debt Recovery & Insolvency Litigation",
               desc: "Provisional Sentence Summonses for liquidated claims based on written documents, execution of judgments through the Writ of Execution and advice on the transition from litigation to insolvency proceedings.",
             },

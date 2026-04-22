@@ -1,15 +1,15 @@
 import type { Metadata } from "next"
 import {
-  Stamp,
-  Route,
-  Globe2,
-  Link2,
-  FileSignature,
-  BadgeCheck,
+  Seal,
+  Path,
+  Globe,
+  Link,
+  FileDotted,
+  CheckCircle,
   ScrollText,
   BookOpen,
-  Landmark,
-} from "lucide-react"
+  Building,
+} from "phosphor-react"
 import { TopBar } from "@/components/top-bar"
 import { SiteNav } from "@/components/site-nav"
 import { SiteFooter } from "@/components/site-footer"
@@ -49,17 +49,17 @@ export default function NotarialServicesPage() {
           badgeTitle="Executed. Sealed. Legally authenticated."
           highlights={[
             {
-              icon: Stamp,
+              icon: Seal,
               title: "Full Public Faith",
               desc: "Documents executed before our notary carry the heightened evidentiary value of a notarial instrument.",
             },
             {
-              icon: Globe2,
+              icon: Globe,
               title: "International Recognition",
               desc: "Apostille and legalisation services for documents destined for use in foreign jurisdictions.",
             },
             {
-              icon: Landmark,
+              icon: Building,
               title: "Deeds Office Registration",
               desc: "Notarial deeds prepared for and registered in the relevant Deeds Office to bind successors in title.",
             },
@@ -72,22 +72,22 @@ export default function NotarialServicesPage() {
           intro="From notarial deeds of servitude registered in the Deeds Office to the apostille of documents under the Hague Convention, our notary handles the complete range of instruments reserved to the notarial profession."
           items={[
             {
-              icon: Route,
+              icon: Path,
               title: "Notarial Servitudes & Property Rights",
               desc: "Drafting and execution of notarial deeds of servitude for legal creation of rights of way or utility easements, registered as notarial deeds to be binding on all future successors in title.",
             },
             {
-              icon: Globe2,
+              icon: Globe,
               title: "Apostille & International Legalisation",
               desc: "Certification of authenticity of signatures and seals on official documents under the Hague Convention, so that they are recognised in foreign jurisdictions.",
             },
             {
-              icon: Link2,
+              icon: Link,
               title: "Notarial Tie Agreements",
               desc: "Execution of tie agreements in property development that legally link two or more properties, ensuring obligations are met before properties can be transferred independently.",
             },
             {
-              icon: FileSignature,
+              icon: FileDotted,
               title: "Notarial Contracts & Affidavits",
               desc: "Overseeing the signing and sealing of contracts that statute requires be executed before a Notary, ensuring the instrument is executed strictly in accordance with the law.",
             },
@@ -97,7 +97,7 @@ export default function NotarialServicesPage() {
               desc: "Drafting and execution of antenuptial contracts before registration in the Deeds Office, securing matrimonial property regimes between spouses and against third parties.",
             },
             {
-              icon: BadgeCheck,
+              icon: CheckCircle,
               title: "Authentication of Copies",
               desc: "Certified true copies of original documents for use in domestic and foreign administrative, commercial and judicial proceedings.",
             },

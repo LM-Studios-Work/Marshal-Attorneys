@@ -1,8 +1,8 @@
 import Image from "next/image"
-import type { LucideIcon } from "lucide-react"
+import type { IconProps } from "phosphor-react"
 
 type Highlight = {
-  icon: LucideIcon
+  icon: React.ComponentType<IconProps>
   title: string
   desc: string
 }
@@ -65,12 +65,14 @@ export function ServiceOverview({
               {highlights.map((item) => {
                 const Icon = item.icon
                 return (
-                  <div key={item.title} className="flex gap-5">
-                    <div className="flex-shrink-0 h-12 w-12 bg-background border border-border flex items-center justify-center">
+                  <div key={item.title} className="flex gap-6">
+                    <div className="flex-shrink-0 pt-1">
                       <Icon
-                        className="h-5 w-5 text-tan"
-                        strokeWidth={1.5}
+                        size={40}
+                        weight="bold"
+                        color="#0f1d35"
                         aria-hidden
+                        className="transition-transform hover:scale-110"
                       />
                     </div>
                     <div>

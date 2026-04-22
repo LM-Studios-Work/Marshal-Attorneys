@@ -1,15 +1,15 @@
 import type { Metadata } from "next"
 import {
-  TrendingDown,
-  Building2,
-  UserCog,
-  RefreshCcw,
-  Scale,
+  TrendDown,
+  Building,
+  UserGear,
+  ArrowClockwise,
+  Scales,
   FileWarning,
-  Banknote,
+  CurrencyDollar,
   BookOpen,
   Gavel,
-} from "lucide-react"
+} from "phosphor-react"
 import { TopBar } from "@/components/top-bar"
 import { SiteNav } from "@/components/site-nav"
 import { SiteFooter } from "@/components/site-footer"
@@ -49,17 +49,17 @@ export default function InsolvencyLawPage() {
           badgeTitle="Ordered. Preferential. Properly administered."
           highlights={[
             {
-              icon: Scale,
+              icon: Scales,
               title: "Creditor Preference Hierarchy",
               desc: "Assets distributed in accordance with the statutory order of secured, preferent and concurrent creditors.",
             },
             {
-              icon: UserCog,
+              icon: UserGear,
               title: "Trustee & Liquidator Support",
               desc: "Legal counsel to appointed trustees and liquidators on asset realisation and impeachable transactions.",
             },
             {
-              icon: RefreshCcw,
+              icon: ArrowClockwise,
               title: "Rehabilitation Pathway",
               desc: "Applications restoring the insolvent's legal capacity and discharging residual liabilities.",
             },
@@ -72,22 +72,22 @@ export default function InsolvencyLawPage() {
           intro="From voluntary surrender applications on behalf of over-indebted individuals through corporate liquidations and the administration of complex estates, we handle the full procedural and substantive work that insolvency matters demand."
           items={[
             {
-              icon: TrendingDown,
+              icon: TrendDown,
               title: "Voluntary & Compulsory Sequestration",
               desc: "Assisting individuals in applying for voluntary surrender of their estate, or representing creditors in applying for compulsory sequestration, demonstrating that sequestration will result in a dividend for creditors.",
             },
             {
-              icon: Building2,
+              icon: Building,
               title: "Corporate Liquidation",
               desc: "Winding up of companies through a voluntary resolution of the shareholders or a court-ordered compulsory liquidation, including the appointment of a liquidator to realise assets and settle liabilities.",
             },
             {
-              icon: UserCog,
+              icon: UserGear,
               title: "Trustee & Estate Administration",
               desc: "Acting as legal counsel to trustees or liquidators, identifying voidable preferences which are payments made to certain creditors shortly before insolvency that may be recovered.",
             },
             {
-              icon: RefreshCcw,
+              icon: ArrowClockwise,
               title: "Rehabilitation Proceedings",
               desc: "Applications for rehabilitation, the legal process that discharges the insolvent person from their estate and restores their legal capacity to contract.",
             },
@@ -97,7 +97,7 @@ export default function InsolvencyLawPage() {
               desc: "Investigation and setting aside of dispositions without value, voidable preferences and collusive transactions under the Insolvency Act.",
             },
             {
-              icon: Banknote,
+              icon: CurrencyDollar,
               title: "Business Rescue Intersections",
               desc: "Advising on the intersection of business rescue under the Companies Act with insolvency proceedings, and transition strategies where rescue is no longer viable.",
             },
