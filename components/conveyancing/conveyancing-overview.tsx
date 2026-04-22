@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { ShieldCheck, FileText, Building } from "phosphor-react"
+import { ShieldCheck, FileText, Buildings } from "phosphor-react"
 
 const objectives = [
   {
@@ -13,7 +13,7 @@ const objectives = [
     desc: "Buyers receive clean, registered title with no hidden liabilities or claims.",
   },
   {
-    icon: Building,
+    icon: Buildings,
     title: "Seller Protection",
     desc: "Seller interests fully safeguarded throughout the registration process.",
   },

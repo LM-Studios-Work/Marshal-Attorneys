@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import {
   ShoppingBag,
-  ClipboardCheck,
+  Clipboard,
   Coins,
   Package,
   Warning,
@@ -72,7 +72,7 @@ export default function ConsumerLawPage() {
           intro="From credit agreement vetting and responsible lending policies through to tribunal advocacy and product liability claims, our practice covers the full enforcement and compliance spectrum under the CPA and NCA."
           items={[
             {
-              icon: ClipboardCheck,
+              icon: Clipboard,
               title: "Credit Agreement Compliance & Vetting",
               desc: "Vetting credit contracts to ensure they do not contain prohibited terms and that all required disclosures are transparent, in line with the NCA's form and content requirements.",
             },

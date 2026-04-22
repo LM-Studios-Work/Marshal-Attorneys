@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import {
   TrendDown,
-  Building,
+  Buildings,
   UserGear,
   ArrowClockwise,
   Scales,
@@ -77,7 +77,7 @@ export default function InsolvencyLawPage() {
               desc: "Assisting individuals in applying for voluntary surrender of their estate, or representing creditors in applying for compulsory sequestration, demonstrating that sequestration will result in a dividend for creditors.",
             },
             {
-              icon: Building,
+              icon: Buildings,
               title: "Corporate Liquidation",
               desc: "Winding up of companies through a voluntary resolution of the shareholders or a court-ordered compulsory liquidation, including the appointment of a liquidator to realise assets and settle liabilities.",
             },

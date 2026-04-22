@@ -1,6 +1,6 @@
 import {
   FilePen,
-  Building,
+  Buildings,
   CurrencyDollar,
   Package,
   MapPin,
@@ -15,7 +15,7 @@ const services = [
     desc: "Preparation and review of Agreements of Sale to ensure all suspensive conditions, warranties and obligations are clearly defined and legally enforceable, mitigating the risk of future litigation.",
   },
   {
-    icon: Building,
+    icon: Buildings,
     title: "Transfer of Immovable Property",
     desc: "Management of the entire registration process: from the initial signing of transfer documents to the final lodgement and registration of the property in the name of the purchaser at the Deeds Office.",
   },

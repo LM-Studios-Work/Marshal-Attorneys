@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import {
   ScrollText,
-  Building,
+  Buildings,
   Users,
   Briefcase,
   TrendUp,
@@ -82,7 +82,7 @@ export default function EstateLawPage() {
               desc: "Drafting wills that comply strictly with the Wills Act, including the creation of Testamentary Trusts and the appointment of executors to ensure the testator's intentions are enforceable.",
             },
             {
-              icon: Building,
+              icon: Buildings,
               title: "Administration of Deceased Estates",
               desc: "Winding up of estates involving reporting to the Master of the High Court, procurement of Letters of Executorship and drafting of the Liquidation and Distribution Account.",
             },

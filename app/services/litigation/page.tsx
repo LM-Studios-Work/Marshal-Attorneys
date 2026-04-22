@@ -7,7 +7,7 @@ import {
   Warning,
   CurrencyDollar,
   BookOpen,
-  Building,
+  Buildings,
   Users,
   Briefcase,
 } from "phosphor-react"
@@ -73,7 +73,7 @@ export default function LitigationPage() {
           intro="Our litigation practice handles the full lifecycle of a civil suit, from application proceedings for urgent relief to protracted action proceedings requiring oral evidence, across every forum in the South African judicial system."
           items={[
             {
-              icon: Building,
+              icon: Buildings,
               title: "High Court & Magistrate's Court Civil Litigation",
               desc: "Management of the full lifecycle of a civil suit, from drafting Particulars of Claim through discovery and expert reports, specialising in both Application Proceedings for urgent relief and Action Proceedings.",
             },

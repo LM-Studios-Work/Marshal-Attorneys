@@ -8,7 +8,7 @@ import {
   CheckCircle,
   ScrollText,
   BookOpen,
-  Building,
+  Buildings,
 } from "phosphor-react"
 import { TopBar } from "@/components/top-bar"
 import { SiteNav } from "@/components/site-nav"
@@ -59,7 +59,7 @@ export default function NotarialServicesPage() {
               desc: "Apostille and legalisation services for documents destined for use in foreign jurisdictions.",
             },
             {
-              icon: Building,
+              icon: Buildings,
               title: "Deeds Office Registration",
               desc: "Notarial deeds prepared for and registered in the relevant Deeds Office to bind successors in title.",
             },
