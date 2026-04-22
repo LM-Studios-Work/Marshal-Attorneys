@@ -6,7 +6,6 @@ import {
   Package,
   Warning,
   Scales,
-  Gavel,
   BookOpen,
   ShieldCheck,
 } from "phosphor-react"
@@ -92,7 +91,7 @@ export default function ConsumerLawPage() {
               desc: "Representation in matters regarding defective goods and services, including enforcement of the implied warranty of quality and damages for hazardous products.",
             },
             {
-              icon: Gavel,
+              icon: Scales,
               title: "Tribunal & Regulatory Advocacy",
               desc: "Representation before the National Consumer Tribunal (NCT) and Provincial Consumer Affairs Courts, handling regulatory probes and defending against prohibited-conduct allegations.",
             },

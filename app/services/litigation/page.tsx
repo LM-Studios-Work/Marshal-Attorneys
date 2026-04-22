@@ -1,14 +1,13 @@
 import type { Metadata } from "next"
 import {
   Scales,
-  Gavel,
   FileText,
   Car,
   Warning,
   CurrencyDollar,
   BookOpen,
   Buildings,
-  Users,
+  Handshake,
   Briefcase,
 } from "phosphor-react"
 import { TopBar } from "@/components/top-bar"
@@ -55,7 +54,7 @@ export default function LitigationPage() {
               desc: "Particulars of claim and applications drafted to withstand the most rigorous exception and striking-out challenge.",
             },
             {
-              icon: Gavel,
+              icon: Scales,
               title: "Courtroom Advocacy",
               desc: "Experienced representation across the Magistrates' Courts, High Court and specialist tribunals.",
             },

@@ -1,8 +1,8 @@
 import type { Metadata } from "next"
 import {
-  ScrollText,
+  Scroll,
   Buildings,
-  Users,
+  Handshake,
   Briefcase,
   TrendUp,
   FileDotted,
@@ -54,7 +54,7 @@ export default function EstateLawPage() {
               desc: "Estates designed to mitigate estate duty and capital gains tax where the law permits.",
             },
             {
-              icon: ScrollText,
+              icon: Scroll,
               title: "Testator's Intention Preserved",
               desc: "Wills drafted to be clear, unambiguous and compliant with the formalities of the Wills Act.",
             },
@@ -77,7 +77,7 @@ export default function EstateLawPage() {
               desc: "Legal and tax strategies structuring estates to minimise Estate Duty and Capital Gains Tax, ensuring the efficient transfer of wealth to beneficiaries.",
             },
             {
-              icon: ScrollText,
+              icon: Scroll,
               title: "Drafting of Wills & Testaments",
               desc: "Drafting wills that comply strictly with the Wills Act, including the creation of Testamentary Trusts and the appointment of executors to ensure the testator's intentions are enforceable.",
             },
@@ -87,7 +87,7 @@ export default function EstateLawPage() {
               desc: "Winding up of estates involving reporting to the Master of the High Court, procurement of Letters of Executorship and drafting of the Liquidation and Distribution Account.",
             },
             {
-              icon: Users,
+              icon: Handshake,
               title: "Inter Vivos & Testamentary Trusts",
               desc: "Counsel on the creation of trusts for asset protection, managing registration of trusts and ensuring trustees adhere to the Trust Property Control Act.",
             },

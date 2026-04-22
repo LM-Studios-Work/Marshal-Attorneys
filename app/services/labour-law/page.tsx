@@ -1,11 +1,10 @@
 import type { Metadata } from "next"
 import {
   FileDotted,
-  UserMinus,
-  Users,
-  Gavel,
-  ClipboardList,
+  ShieldWarning,
+  Handshake,
   Scales,
+  ClipboardText,
   Briefcase,
   BookOpen,
   ShieldCheck,
@@ -59,7 +58,7 @@ export default function LabourLawPage() {
               desc: "Full representation through conciliation, arbitration and subsequent review proceedings.",
             },
             {
-              icon: ClipboardList,
+              icon: ClipboardText,
               title: "Proactive Compliance",
               desc: "Contracts, handbooks and policies designed to prevent disputes before they arise.",
             },
@@ -77,17 +76,17 @@ export default function LabourLawPage() {
               desc: "Drafting employment contracts that define terms of service, confidentiality and restraint of trade, with clauses that are reasonable and enforceable under South African law.",
             },
             {
-              icon: ClipboardList,
+              icon: ClipboardText,
               title: "Disciplinary Procedures",
               desc: "Guiding employers through Substantive and Procedural Fairness requirements, including drafting charge sheets and presiding over disciplinary hearings, to avoid unfair dismissal claims.",
             },
             {
-              icon: UserMinus,
+              icon: ShieldWarning,
               title: "Retrenchments & Section 189 Process",
               desc: "Managing the mandatory consultation process, drafting of the notice of contemplation of retrenchment and negotiation of severance packages under Section 189 of the LRA.",
             },
             {
-              icon: Gavel,
+              icon: Scales,
               title: "CCMA & Labour Court Representation",
               desc: "Representation in unfair dismissal, unfair labour practice and discrimination disputes, across conciliation, arbitration and review of awards in the Labour Court.",
             },
@@ -97,7 +96,7 @@ export default function LabourLawPage() {
               desc: "Audits of company policies to ensure alignment with the jurisprudence of the Labour Appeal Court and current CCMA practice.",
             },
             {
-              icon: Users,
+              icon: Handshake,
               title: "Collective Bargaining & Union Matters",
               desc: "Advising on recognition agreements, collective bargaining processes, strike action and essential-service designations under the LRA.",
             },

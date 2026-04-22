@@ -1,5 +1,5 @@
 import {
-  FilePen,
+  FileText,
   Buildings,
   CurrencyDollar,
   Package,
@@ -10,7 +10,7 @@ import {
 
 const services = [
   {
-    icon: FilePen,
+    icon: FileText,
     title: "Drafting & Vetting of Sale Agreements",
     desc: "Preparation and review of Agreements of Sale to ensure all suspensive conditions, warranties and obligations are clearly defined and legally enforceable, mitigating the risk of future litigation.",
   },

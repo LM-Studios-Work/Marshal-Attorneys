@@ -3,10 +3,10 @@ import {
   Seal,
   Path,
   Globe,
-  Link,
+  FlowArrow,
   FileDotted,
-  CheckCircle,
-  ScrollText,
+  ShieldCheck,
+  Scroll,
   BookOpen,
   Buildings,
 } from "phosphor-react"
@@ -82,7 +82,7 @@ export default function NotarialServicesPage() {
               desc: "Certification of authenticity of signatures and seals on official documents under the Hague Convention, so that they are recognised in foreign jurisdictions.",
             },
             {
-              icon: Link,
+              icon: FlowArrow,
               title: "Notarial Tie Agreements",
               desc: "Execution of tie agreements in property development that legally link two or more properties, ensuring obligations are met before properties can be transferred independently.",
             },
@@ -92,12 +92,12 @@ export default function NotarialServicesPage() {
               desc: "Overseeing the signing and sealing of contracts that statute requires be executed before a Notary, ensuring the instrument is executed strictly in accordance with the law.",
             },
             {
-              icon: ScrollText,
+              icon: Scroll,
               title: "Antenuptial Contracts",
               desc: "Drafting and execution of antenuptial contracts before registration in the Deeds Office, securing matrimonial property regimes between spouses and against third parties.",
             },
             {
-              icon: CheckCircle,
+              icon: ShieldCheck,
               title: "Authentication of Copies",
               desc: "Certified true copies of original documents for use in domestic and foreign administrative, commercial and judicial proceedings.",
             },
@@ -111,7 +111,7 @@ export default function NotarialServicesPage() {
           heading="The heightened evidentiary value of a notarial act"
           intro="Our notarial practice operates within the narrow but critical mandate granted by statute, executing instruments that carry greater legal weight than those prepared by an attorney alone."
           primary={{
-            icon: Stamp,
+            icon: Seal,
             eyebrow: "Notarial Execution",
             title: "Acts of public faith under South African law",
             body: "A notarial act is deemed to have greater evidentiary weight than a privately executed document. We take meticulous care to ensure every notarial instrument meets the formal and substantive requirements of law.",

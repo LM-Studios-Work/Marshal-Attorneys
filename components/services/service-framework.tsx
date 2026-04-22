@@ -26,7 +26,7 @@ export function ServiceFramework({
   secondary,
 }: ServiceFrameworkProps) {
   const PrimaryIcon = primary.icon ?? ShieldCheck
-  const SecondaryIcon = secondary.icon ?? Scale
+  const SecondaryIcon = secondary.icon ?? Scales
   return (
     <section className="bg-background py-24 md:py-32">
       <div className="mx-auto max-w-[1400px] px-6 md:px-10">

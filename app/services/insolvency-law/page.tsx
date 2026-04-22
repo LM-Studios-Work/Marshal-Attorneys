@@ -2,13 +2,12 @@ import type { Metadata } from "next"
 import {
   TrendDown,
   Buildings,
-  UserGear,
+  Briefcase,
   ArrowClockwise,
   Scales,
-  FileWarning,
+  WarningCircle,
   CurrencyDollar,
   BookOpen,
-  Gavel,
 } from "phosphor-react"
 import { TopBar } from "@/components/top-bar"
 import { SiteNav } from "@/components/site-nav"
@@ -54,7 +53,7 @@ export default function InsolvencyLawPage() {
               desc: "Assets distributed in accordance with the statutory order of secured, preferent and concurrent creditors.",
             },
             {
-              icon: UserGear,
+              icon: Briefcase,
               title: "Trustee & Liquidator Support",
               desc: "Legal counsel to appointed trustees and liquidators on asset realisation and impeachable transactions.",
             },
@@ -82,7 +81,7 @@ export default function InsolvencyLawPage() {
               desc: "Winding up of companies through a voluntary resolution of the shareholders or a court-ordered compulsory liquidation, including the appointment of a liquidator to realise assets and settle liabilities.",
             },
             {
-              icon: UserGear,
+              icon: Briefcase,
               title: "Trustee & Estate Administration",
               desc: "Acting as legal counsel to trustees or liquidators, identifying voidable preferences which are payments made to certain creditors shortly before insolvency that may be recovered.",
             },
@@ -92,7 +91,7 @@ export default function InsolvencyLawPage() {
               desc: "Applications for rehabilitation, the legal process that discharges the insolvent person from their estate and restores their legal capacity to contract.",
             },
             {
-              icon: FileWarning,
+              icon: WarningCircle,
               title: "Impeachable Transactions",
               desc: "Investigation and setting aside of dispositions without value, voidable preferences and collusive transactions under the Insolvency Act.",
             },
@@ -122,7 +121,7 @@ export default function InsolvencyLawPage() {
             ],
           }}
           secondary={{
-            icon: Gavel,
+            icon: Scales,
             eyebrow: "Corporate & Cross-Border",
             title: "Companies Act and cross-jurisdictional matters",
             body: "Corporate insolvency and business rescue are regulated by the Companies Act 71 of 2008. Cross-border insolvency raises additional considerations under the Cross-Border Insolvency Act.",
