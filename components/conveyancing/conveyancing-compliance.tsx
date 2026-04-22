@@ -1,4 +1,4 @@
-import { ShieldCheck, Receipt, Check } from "lucide-react"
+import { ShieldCheck, Receipt, Check } from "phosphor-react"
 
 const fica = [
   "Rigorous identity verification for all parties",
@@ -35,10 +35,11 @@ export function ConveyancingCompliance() {
           {/* FICA card */}
           <article className="bg-dark-bg text-white p-10 md:p-12">
             <div className="flex items-center gap-4 mb-8">
-              <div className="h-12 w-12 bg-tan/15 flex items-center justify-center">
+              <div className="flex-shrink-0">
                 <ShieldCheck
-                  className="h-5 w-5 text-tan"
-                  strokeWidth={1.5}
+                  size={32}
+                  weight="bold"
+                  color="#b9896a"
                   aria-hidden
                 />
               </div>
@@ -70,10 +71,11 @@ export function ConveyancingCompliance() {
           {/* SARS card */}
           <article className="bg-soft-bg text-dark-bg p-10 md:p-12">
             <div className="flex items-center gap-4 mb-8">
-              <div className="h-12 w-12 bg-tan/15 flex items-center justify-center">
+              <div className="flex-shrink-0">
                 <Receipt
-                  className="h-5 w-5 text-tan"
-                  strokeWidth={1.5}
+                  size={32}
+                  weight="bold"
+                  color="#0f1d35"
                   aria-hidden
                 />
               </div>

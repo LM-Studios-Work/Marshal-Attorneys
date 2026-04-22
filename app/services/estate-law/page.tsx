@@ -1,15 +1,15 @@
 import type { Metadata } from "next"
 import {
-  ScrollText,
-  Landmark,
-  Users,
+  Scroll,
+  Buildings,
+  Handshake,
   Briefcase,
-  TrendingUp,
-  FileSignature,
-  Scale,
+  TrendUp,
+  FileDotted,
+  Scales,
   BookOpen,
-  Shield,
-} from "lucide-react"
+  ShieldCheck,
+} from "phosphor-react"
 import { TopBar } from "@/components/top-bar"
 import { SiteNav } from "@/components/site-nav"
 import { SiteFooter } from "@/components/site-footer"
@@ -49,17 +49,17 @@ export default function EstateLawPage() {
           badgeTitle="Structured. Efficient. Enforceable."
           highlights={[
             {
-              icon: TrendingUp,
+              icon: TrendUp,
               title: "Tax-Efficient Structuring",
               desc: "Estates designed to mitigate estate duty and capital gains tax where the law permits.",
             },
             {
-              icon: ScrollText,
+              icon: Scroll,
               title: "Testator's Intention Preserved",
               desc: "Wills drafted to be clear, unambiguous and compliant with the formalities of the Wills Act.",
             },
             {
-              icon: Shield,
+              icon: ShieldCheck,
               title: "Beneficiary Protection",
               desc: "Trust structures and testamentary arrangements that shelter vulnerable beneficiaries.",
             },
@@ -72,22 +72,22 @@ export default function EstateLawPage() {
           intro="From strategic estate planning and the drafting of wills through to the administration of deceased estates and the creation of trusts for asset protection, our estate practice handles the complete lifecycle of intergenerational wealth."
           items={[
             {
-              icon: TrendingUp,
+              icon: TrendUp,
               title: "Strategic Estate Planning",
               desc: "Legal and tax strategies structuring estates to minimise Estate Duty and Capital Gains Tax, ensuring the efficient transfer of wealth to beneficiaries.",
             },
             {
-              icon: ScrollText,
+              icon: Scroll,
               title: "Drafting of Wills & Testaments",
               desc: "Drafting wills that comply strictly with the Wills Act, including the creation of Testamentary Trusts and the appointment of executors to ensure the testator's intentions are enforceable.",
             },
             {
-              icon: Landmark,
+              icon: Buildings,
               title: "Administration of Deceased Estates",
               desc: "Winding up of estates involving reporting to the Master of the High Court, procurement of Letters of Executorship and drafting of the Liquidation and Distribution Account.",
             },
             {
-              icon: Users,
+              icon: Handshake,
               title: "Inter Vivos & Testamentary Trusts",
               desc: "Counsel on the creation of trusts for asset protection, managing registration of trusts and ensuring trustees adhere to the Trust Property Control Act.",
             },
@@ -97,7 +97,7 @@ export default function EstateLawPage() {
               desc: "Acting as professional executors: collecting assets, settling debts and distributing the residue to the heirs, and serving as independent trustees where required.",
             },
             {
-              icon: FileSignature,
+              icon: FileDotted,
               title: "Living Wills & Powers of Attorney",
               desc: "Drafting advance directives and enduring powers of attorney, ensuring our clients' wishes are respected if they lose legal or physical capacity.",
             },
@@ -122,7 +122,7 @@ export default function EstateLawPage() {
             ],
           }}
           secondary={{
-            icon: Scale,
+            icon: Scales,
             eyebrow: "Administration of Estates Act",
             title: "Administered under the Master's supervision",
             body: "Every deceased estate in South Africa falls under the supervisory jurisdiction of the Master of the High Court. We navigate that process with the precision and documentary rigour the Master requires.",

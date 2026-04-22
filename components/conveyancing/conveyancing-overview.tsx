@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { ShieldCheck, FileText, Landmark } from "lucide-react"
+import { ShieldCheck, FileText, Buildings } from "phosphor-react"
 
 const objectives = [
   {
@@ -13,7 +13,7 @@ const objectives = [
     desc: "Buyers receive clean, registered title with no hidden liabilities or claims.",
   },
   {
-    icon: Landmark,
+    icon: Buildings,
     title: "Seller Protection",
     desc: "Seller interests fully safeguarded throughout the registration process.",
   },
@@ -64,12 +64,14 @@ export function ConveyancingOverview() {
               {objectives.map((obj) => {
                 const Icon = obj.icon
                 return (
-                  <div key={obj.title} className="flex gap-5">
-                    <div className="flex-shrink-0 h-12 w-12 bg-background border border-border flex items-center justify-center">
+                  <div key={obj.title} className="flex gap-6">
+                    <div className="flex-shrink-0 pt-1">
                       <Icon
-                        className="h-5 w-5 text-tan"
-                        strokeWidth={1.5}
+                        size={40}
+                        weight="bold"
+                        color="#0f1d35"
                         aria-hidden
+                        className="transition-transform hover:scale-110"
                       />
                     </div>
                     <div>

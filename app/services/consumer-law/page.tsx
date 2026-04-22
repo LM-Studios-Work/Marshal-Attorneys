@@ -1,15 +1,14 @@
 import type { Metadata } from "next"
 import {
   ShoppingBag,
-  ClipboardCheck,
-  HandCoins,
+  Clipboard,
+  Coins,
   Package,
-  AlertTriangle,
-  Scale,
-  Gavel,
+  Warning,
+  Scales,
   BookOpen,
   ShieldCheck,
-} from "lucide-react"
+} from "phosphor-react"
 import { TopBar } from "@/components/top-bar"
 import { SiteNav } from "@/components/site-nav"
 import { SiteFooter } from "@/components/site-footer"
@@ -54,7 +53,7 @@ export default function ConsumerLawPage() {
               desc: "Policies, contracts and credit-granting processes aligned with the statutory framework.",
             },
             {
-              icon: Scale,
+              icon: Scales,
               title: "Tribunal Representation",
               desc: "Advocacy before the National Consumer Tribunal and Provincial Consumer Affairs Courts.",
             },
@@ -72,17 +71,17 @@ export default function ConsumerLawPage() {
           intro="From credit agreement vetting and responsible lending policies through to tribunal advocacy and product liability claims, our practice covers the full enforcement and compliance spectrum under the CPA and NCA."
           items={[
             {
-              icon: ClipboardCheck,
+              icon: Clipboard,
               title: "Credit Agreement Compliance & Vetting",
               desc: "Vetting credit contracts to ensure they do not contain prohibited terms and that all required disclosures are transparent, in line with the NCA's form and content requirements.",
             },
             {
-              icon: HandCoins,
+              icon: Coins,
               title: "Responsible Lending & Affordability",
               desc: "Advising credit providers on the implementation of affordability assessments before granting credit, to avoid claims of reckless lending under the NCA.",
             },
             {
-              icon: AlertTriangle,
+              icon: Warning,
               title: "Credit Enforcement & Repossessions",
               desc: "Managing the issuance of Section 129 notices and the subsequent legal steps required before a creditor can approach the court for judgment on a credit agreement.",
             },
@@ -92,7 +91,7 @@ export default function ConsumerLawPage() {
               desc: "Representation in matters regarding defective goods and services, including enforcement of the implied warranty of quality and damages for hazardous products.",
             },
             {
-              icon: Gavel,
+              icon: Scales,
               title: "Tribunal & Regulatory Advocacy",
               desc: "Representation before the National Consumer Tribunal (NCT) and Provincial Consumer Affairs Courts, handling regulatory probes and defending against prohibited-conduct allegations.",
             },
