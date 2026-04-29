@@ -21,8 +21,12 @@ export const metadata: Metadata = {
     "A well-established boutique law firm providing lasting legal solutions through professional expertise and a holistic, multidisciplinary approach.",
   generator: "v0.app",
   icons: {
-    icon: "/favicon.png",
-    apple: "/apple-icon.png",
+    icon: [
+      { url: "/marshal%20favicon.png", type: "image/png" },
+      { url: "/marshal%20favicon.png", sizes: "any" },
+    ],
+    shortcut: "/marshal%20favicon.png",
+    apple: "/marshal%20favicon.png",
   },
 };
 

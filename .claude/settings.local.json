@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp -r \"/c/Users/austi/Downloads/v0-temp/app/.\" \"/c/Users/austi/Downloads/Lawyer Website/app/\")",
+      "Bash(cp -r \"/c/Users/austi/Downloads/v0-temp/components/.\" \"/c/Users/austi/Downloads/Lawyer Website/components/\")",
+      "Bash(cp -r \"/c/Users/austi/Downloads/v0-temp/hooks/.\" \"/c/Users/austi/Downloads/Lawyer Website/hooks/\")",
+      "Bash(cp -r \"/c/Users/austi/Downloads/v0-temp/lib/.\" \"/c/Users/austi/Downloads/Lawyer Website/lib/\")",
+      "Bash(cp -r \"/c/Users/austi/Downloads/v0-temp/public/.\" \"/c/Users/austi/Downloads/Lawyer Website/public/\")",
+      "Bash(npx tsc *)"
+    ]
+  }
+}

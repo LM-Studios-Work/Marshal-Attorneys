@@ -36,7 +36,7 @@ export function SiteFooter() {
           <div className="col-span-2 md:col-span-1">
             <Link href="/" className="flex items-center gap-3">
               <Image
-                src="/Red Modern Law Consulting Firm Logo.png"
+                src="/Red%20Modern%20Law%20Consulting%20Firm%20Logo.png"
                 alt="Marshal Ndlovu Attorneys Logo"
                 width={32}
                 height={32}

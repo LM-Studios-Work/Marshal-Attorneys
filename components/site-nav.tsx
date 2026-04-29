@@ -35,7 +35,7 @@ export function SiteNav() {
       <div className="mx-auto max-w-[1400px] px-6 md:px-10 h-20 flex items-center justify-between gap-8">
         <Link href="/" className="flex items-center gap-3 group">
           <Image
-            src="/Red Modern Law Consulting Firm Logo.png"
+            src="/Red%20Modern%20Law%20Consulting%20Firm%20Logo.png"
             alt="Marshal Ndlovu Attorneys Logo"
             width={40}
             height={40}
