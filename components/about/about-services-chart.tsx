@@ -49,7 +49,7 @@ export function AboutServicesChart() {
               many clients trust us with their legal needs.
             </p>
             <Link
-              href="/contact"
+              href="/case-results"
               className="mt-8 inline-flex items-center justify-center px-7 py-3 bg-tan text-white text-[11px] tracking-[0.22em] uppercase hover:bg-dark-bg transition-colors"
             >
               See Case Results
