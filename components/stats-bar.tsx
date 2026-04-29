@@ -47,7 +47,7 @@ export function StatsBar() {
             <div key={s.label} className="text-center">
               <dt className="sr-only">{s.label}</dt>
               <dd className="font-serif text-4xl md:text-5xl text-dark-bg tabular-nums">
-                <AnimatedNumber value={s.value} suffix={s.suffix} />
+                <AnimatedNumber value={s.value} suffix={s.suffix} duration={900} />
               </dd>
               <p className="mt-3 text-[10px] tracking-[0.28em] uppercase text-muted-foreground">
                 {s.label}
