@@ -92,7 +92,7 @@ export function GuidanceSection() {
   return (
     <section className="home-section bg-background py-24 md:py-32">
       <div className="mx-auto max-w-[1400px] px-6 md:px-10">
-        <div className="home-reveal flex items-end justify-between gap-6 mb-12">
+        <div className="flex items-end justify-between gap-6 mb-12">
           <div>
             <p className="text-[11px] tracking-[0.28em] uppercase text-tan">
               Our practice areas
@@ -135,7 +135,7 @@ export function GuidanceSection() {
                 key={item.title}
                 href={item.href}
                 data-card
-                className="home-service-card group shrink-0 w-[78vw] sm:w-[58vw] md:w-[44vw] lg:w-[calc((100%-3rem)/4)] snap-start bg-soft-bg"
+                className="group shrink-0 w-[78vw] sm:w-[58vw] md:w-[44vw] lg:w-[calc((100%-3rem)/4)] snap-start bg-soft-bg"
               >
                 <article>
                   <div className="relative aspect-[4/3] overflow-hidden">
