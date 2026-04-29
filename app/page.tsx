@@ -14,8 +14,8 @@ export default function HomePage() {
       <TopBar />
       <SiteNav />
       <HeroSection />
-      <NavigateLaw />
       <StatsBar />
+      <NavigateLaw />
       <GuidanceSection />
       <PeaceOfMind />
       <ConsultationFormSection />
