@@ -1,8 +1,10 @@
-const stats = [
-  { value: "6+", label: "Years Experience" },
-  { value: "1,000+", label: "Happy Clients" },
-  { value: "30+", label: "Peer Collaborations" },
-  { value: "630+", label: "Finalised Matters" },
+import { AnimatedNumber } from "@/components/animated-number"
+
+const stats: { value: number; suffix: string; label: string }[] = [
+  { value: 6, suffix: "+", label: "Years Experience" },
+  { value: 1000, suffix: "+", label: "Happy Clients" },
+  { value: 30, suffix: "+", label: "Peer Collaborations" },
+  { value: 630, suffix: "+", label: "Finalised Matters" },
 ]
 
 export function AboutStats() {
@@ -17,8 +19,8 @@ export function AboutStats() {
                 i < stats.length - 1 ? "border-r border-white/20" : ""
               }`}
             >
-              <span className="font-serif text-5xl md:text-6xl leading-none text-white">
-                {stat.value}
+              <span className="font-serif text-5xl md:text-6xl leading-none text-white tabular-nums">
+                <AnimatedNumber value={stat.value} suffix={stat.suffix} />
               </span>
               <span className="mt-3 text-[10px] tracking-[0.22em] uppercase text-white/80">
                 {stat.label}

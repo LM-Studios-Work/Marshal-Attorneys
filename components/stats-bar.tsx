@@ -1,10 +1,11 @@
 import Image from "next/image"
+import { AnimatedNumber } from "@/components/animated-number"
 
-const stats = [
-  { value: "6+", label: "Years Experience" },
-  { value: "1,000+", label: "Happy Clients" },
-  { value: "30+", label: "Peer Collaborations" },
-  { value: "630+", label: "Finalised Matters" },
+const stats: { value: number; suffix: string; label: string }[] = [
+  { value: 6, suffix: "+", label: "Years Experience" },
+  { value: 1000, suffix: "+", label: "Happy Clients" },
+  { value: 30, suffix: "+", label: "Peer Collaborations" },
+  { value: 630, suffix: "+", label: "Finalised Matters" },
 ]
 
 const avatars = [
@@ -46,7 +47,7 @@ export function StatsBar() {
             <div key={s.label} className="text-center">
               <dt className="sr-only">{s.label}</dt>
               <dd className="font-serif text-4xl md:text-5xl text-dark-bg tabular-nums">
-                {s.value}
+                <AnimatedNumber value={s.value} suffix={s.suffix} duration={900} />
               </dd>
               <p className="mt-3 text-[10px] tracking-[0.28em] uppercase text-muted-foreground">
                 {s.label}
