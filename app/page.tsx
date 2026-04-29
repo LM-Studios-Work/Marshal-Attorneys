@@ -1,7 +1,6 @@
 import { TopBar } from "@/components/top-bar"
 import { SiteNav } from "@/components/site-nav"
 import { HeroSection } from "@/components/hero-section"
-import { ServicesIntro } from "@/components/services-intro"
 import { NavigateLaw } from "@/components/navigate-law"
 import { StatsBar } from "@/components/stats-bar"
 import { GuidanceSection } from "@/components/guidance-section"
@@ -15,7 +14,6 @@ export default function HomePage() {
       <TopBar />
       <SiteNav />
       <HeroSection />
-      <ServicesIntro />
       <NavigateLaw />
       <StatsBar />
       <GuidanceSection />
