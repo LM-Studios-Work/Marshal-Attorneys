@@ -31,7 +31,7 @@ export function SiteNav() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
   return (
-    <header className="bg-background border-b border-border/60">
+    <header className="sticky top-11 z-50 bg-background border-b border-border/60 shadow-sm">
       <div className="mx-auto max-w-[1400px] px-6 md:px-10 h-20 flex items-center justify-between gap-8">
         <Link href="/" className="flex items-center gap-3 group">
           <Image

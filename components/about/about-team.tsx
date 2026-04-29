@@ -8,13 +8,13 @@ const attorneys = [
     image: "/placeholder.svg?height=480&width=380",
   },
   {
-    name: "Nikiwe V Nogemane",
-    role: "Attorney, Notary & Conveyancer",
+    name: "Sinothando Mbatha",
+    role: "Litigation and Conveyancing Secretary",
     image: "/placeholder.svg?height=480&width=380",
   },
   {
-    name: "Fidelia Ndlovu",
-    role: "Labour and HR Specialist",
+    name: "Busisiwe Ndlovu",
+    role: "Candidate Attorney",
     image: "/placeholder.svg?height=480&width=380",
   },
 ]
@@ -26,16 +26,16 @@ export function AboutTeam() {
         {/* Heading */}
         <div className="max-w-2xl mb-16">
           <p className="text-[11px] tracking-[0.28em] uppercase text-tan">
-            Meet our attorneys
+            Meet our team
           </p>
           <h2 className="mt-5 font-serif text-4xl md:text-5xl leading-tight text-dark-bg text-balance">
             The professionals behind the firm
           </h2>
           <p className="mt-6 text-sm leading-relaxed text-muted-foreground">
-            At Marshal Ndlovu Attorneys Inc., our team of experienced attorneys
-            is dedicated to delivering exceptional legal services. Get to know
-            the professionals who bring expertise, dedication, and a
-            client-focused approach to every case.
+            At Marshal Ndlovu Attorneys Inc., our team is dedicated to
+            delivering exceptional legal services. Get to know the professionals
+            who bring expertise, dedication, and a client-focused approach to
+            every case.
           </p>
         </div>
 
@@ -68,7 +68,7 @@ export function AboutTeam() {
                   href="/about#team"
                   className="mt-1 text-[11px] tracking-[0.18em] uppercase text-dark-bg/50 hover:text-tan transition-colors border-b border-dark-bg/20 hover:border-tan pb-px"
                 >
-                  Meet Attorney
+                  Meet Team
                 </Link>
               </div>
             </div>

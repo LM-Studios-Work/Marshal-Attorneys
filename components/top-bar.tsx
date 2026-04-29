@@ -6,14 +6,21 @@ const leftLinks = [
 ]
 
 const socialLinks = [
-  { label: "Facebook", href: "https://facebook.com", external: true },
-  { label: "LinkedIn", href: "https://linkedin.com", external: true },
-  { label: "Instagram", href: "https://instagram.com", external: true },
+  {
+    label: "Facebook",
+    href: "https://www.facebook.com/p/Marshal-Ndlovu-Attorneys-Inc-61557156562642/",
+    external: true,
+  },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/marshal-ndlovu-81212295/",
+    external: true,
+  },
 ]
 
 export function TopBar() {
   return (
-    <div className="bg-dark-bg text-white/80 text-[11px] tracking-[0.18em] uppercase">
+    <div className="sticky top-0 z-50 bg-dark-bg text-white/80 text-[11px] tracking-[0.18em] uppercase">
       <div className="mx-auto max-w-[1400px] px-6 md:px-10 h-11 flex items-center justify-between">
         <ul className="hidden md:flex items-center gap-0">
           {leftLinks.map((l, i) => (

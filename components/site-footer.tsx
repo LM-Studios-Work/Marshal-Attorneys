@@ -27,9 +27,9 @@ const columns = [
   {
     title: "Contact",
     items: [
-      "702-7th Floor Klamson Towers",
+      "614-6th Floor Klamson Towers",
       "151 Commissioner Street",
-      "Marshalltown, Johannesburg",
+      "Marshaltown, JHB 2001",
       "067 272 7475",
       "info@manattorneys.co.za",
     ],
@@ -66,7 +66,7 @@ export function SiteFooter() {
               <ul className="mt-5 space-y-3 text-sm">
                 {("links" in col ? col.links : col.items).map((item) => (
                   <li key={typeof item === "string" ? item : item.label}>
-                    {"href" in item ? (
+                    {typeof item !== "string" && "href" in item ? (
                       <Link
                         href={item.href}
                         className="text-white/70 hover:text-tan transition-colors"
