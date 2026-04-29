@@ -30,7 +30,7 @@ export function AboutHero() {
                 Free Consultation
               </Link>
               <Link
-                href="#team"
+                href="/about#team"
                 className="inline-flex items-center justify-center px-7 py-3 border border-white/30 text-white text-[11px] tracking-[0.22em] uppercase hover:border-tan hover:text-tan transition-colors"
               >
                 Meet Our Team
