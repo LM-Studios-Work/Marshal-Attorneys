@@ -17,7 +17,7 @@ const socialLinks = [
 export function TopBar() {
   return (
     <div className="sticky top-0 z-50 bg-dark-bg text-white/80 text-[11px] tracking-[0.18em] uppercase">
-      <div className="mx-auto max-w-[1400px] px-4 md:px-10 h-11 flex items-center justify-between gap-3">
+      <div className="mx-auto w-full max-w-none px-4 lg:px-3 xl:px-6 h-11 lg:h-8 flex items-center justify-between gap-3">
         {/* Left: contact info */}
         <ul className="flex items-center">
           <li className="flex items-center">

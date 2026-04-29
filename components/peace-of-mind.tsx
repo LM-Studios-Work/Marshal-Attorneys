@@ -11,11 +11,11 @@ const highlights = [
 
 export function PeaceOfMind() {
   return (
-    <section className="bg-soft-bg py-24 md:py-32">
+    <section className="home-section bg-soft-bg py-24 md:py-32">
       <div className="mx-auto max-w-[1400px] px-6 md:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-10">
           {/* Left copy + lists */}
-          <div>
+          <div className="home-reveal">
             <h2 className="font-serif text-4xl md:text-5xl leading-tight text-dark-bg text-balance max-w-xl">
               Your peace of mind starts with us
             </h2>
@@ -58,7 +58,7 @@ export function PeaceOfMind() {
           </div>
 
           {/* Right pricing card */}
-          <div className="bg-dark-bg text-white p-8 md:p-10">
+          <div className="home-reveal bg-dark-bg text-white p-8 md:p-10">
             <p className="text-[11px] tracking-[0.28em] uppercase text-tan">
               Focused on results
             </p>

@@ -3,11 +3,11 @@ import Link from "next/link"
 
 export function NavigateLaw() {
   return (
-    <section className="bg-background pb-24 md:pb-32">
+    <section className="home-section bg-background pb-24 md:pb-32">
       <div className="mx-auto max-w-[1400px] px-6 md:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           {/* Left text column */}
-          <div>
+          <div className="home-reveal">
             <p className="text-[11px] tracking-[0.28em] uppercase text-tan">
               Dedicated to your case
             </p>
@@ -29,7 +29,7 @@ export function NavigateLaw() {
           </div>
 
           {/* Right image stack */}
-          <div className="relative min-h-[440px]">
+          <div className="home-image-stack relative min-h-[440px]">
             {/* Background shelf image */}
             <div className="absolute inset-0 overflow-hidden">
               <Image
@@ -42,7 +42,7 @@ export function NavigateLaw() {
             </div>
 
             {/* Stat card 1 - tan */}
-            <div className="absolute top-6 left-6 md:left-10 bg-tan text-white w-40 md:w-48 aspect-[3/4] flex flex-col items-center justify-center p-4">
+            <div className="home-reveal absolute top-6 left-6 md:left-10 bg-tan text-white w-40 md:w-48 aspect-[3/4] flex flex-col items-center justify-center p-4">
               <svg
                 viewBox="0 0 24 24"
                 className="h-6 w-6 mb-2 opacity-90"
@@ -63,7 +63,7 @@ export function NavigateLaw() {
             </div>
 
             {/* Stat card 2 - navy */}
-            <div className="absolute bottom-6 right-6 md:right-10 bg-dark-bg text-white w-40 md:w-48 aspect-[3/4] flex flex-col items-center justify-center p-4">
+            <div className="home-reveal absolute bottom-6 right-6 md:right-10 bg-dark-bg text-white w-40 md:w-48 aspect-[3/4] flex flex-col items-center justify-center p-4">
               <svg
                 viewBox="0 0 24 24"
                 className="h-6 w-6 mb-2 text-tan"

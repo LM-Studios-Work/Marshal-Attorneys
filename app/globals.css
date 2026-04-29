@@ -81,3 +81,59 @@
     @apply bg-background text-foreground font-sans antialiased;
   }
 }
+
+@layer utilities {
+  .home-page {
+    --home-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .home-page .home-section .home-reveal,
+  .home-page .home-section .home-image-stack,
+  .home-page .home-section .home-stat,
+  .home-page .home-section .home-service-card {
+    opacity: 0;
+    transform: translateY(44px);
+    transition:
+      opacity 900ms var(--home-ease),
+      transform 900ms var(--home-ease);
+    will-change: opacity, transform;
+  }
+
+  .home-page .home-section .home-reveal.is-visible,
+  .home-page .home-section .home-image-stack.is-visible,
+  .home-page .home-section .home-stat.is-visible,
+  .home-page .home-section .home-service-card.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .home-page .home-section .home-stat:nth-child(2),
+  .home-page .home-section .home-service-card:nth-child(2) {
+    transition-delay: 90ms;
+  }
+
+  .home-page .home-section .home-stat:nth-child(3),
+  .home-page .home-section .home-service-card:nth-child(3) {
+    transition-delay: 160ms;
+  }
+
+  .home-page .home-section .home-stat:nth-child(4),
+  .home-page .home-section .home-service-card:nth-child(4) {
+    transition-delay: 230ms;
+  }
+
+  .home-page .home-section .home-service-card:nth-child(n + 5) {
+    transition-delay: 280ms;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .home-page .home-image-stack,
+    .home-page .home-stat,
+    .home-page .home-service-card,
+    .home-page .home-reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+}

@@ -57,31 +57,32 @@ export function HeroSection() {
 
       {/* ===================== DESKTOP LAYOUT ===================== */}
       <div className="hidden lg:block">
-        <div className="mx-auto max-w-[1400px] px-6 md:px-10 py-8 lg:py-10">
-          <div className="grid grid-cols-[1.6fr_1fr] gap-6">
+        <div className="mx-auto w-full max-w-none px-0 py-0">
+          <div className="grid h-[calc(100svh-6rem)] min-h-[520px] max-h-[680px] grid-cols-[1.82fr_1fr] gap-3 xl:gap-5">
             {/* Left: Lawyer portrait with overlay card */}
-            <div className="relative overflow-hidden min-h-[520px] lg:min-h-[640px]">
+            <div className="relative h-full min-h-0 overflow-hidden">
               <Image
                 src="/team/customer care.webp"
                 alt="Marshal Ndlovu Attorneys team hero image"
                 fill
                 priority
                 className="object-cover"
+                style={{ objectPosition: "center 38%" }}
                 sizes="60vw"
               />
 
               {/* Overlay card */}
-              <div className="absolute left-0 bottom-0 bg-background p-8 md:p-10 max-w-md">
-                <h1 className="font-serif text-4xl md:text-5xl leading-[1.05] text-dark-bg text-balance">
+              <div className="absolute left-0 bottom-0 bg-background p-6 xl:p-8 w-[46%] min-w-[390px] max-w-[500px]">
+                <h1 className="font-serif text-[2.6rem] xl:text-5xl leading-[1.05] text-dark-bg text-balance">
                   Providing lasting legal solutions
                 </h1>
-                <p className="mt-5 text-sm leading-relaxed text-muted-foreground max-w-xs">
+                <p className="mt-4 text-sm leading-relaxed text-muted-foreground max-w-xs">
                   Professional expertise and a holistic, multidisciplinary
                   approach, serving clients across South Africa.
                 </p>
                 <Link
                   href="/services"
-                  className="mt-7 inline-flex items-center justify-center px-7 py-3 bg-tan text-white text-[11px] tracking-[0.22em] uppercase hover:bg-dark-bg transition-colors"
+                  className="mt-6 inline-flex items-center justify-center px-7 py-3 bg-tan text-white text-[11px] tracking-[0.22em] uppercase hover:bg-dark-bg transition-colors"
                 >
                   Explore Services
                 </Link>
@@ -89,19 +90,19 @@ export function HeroSection() {
             </div>
 
             {/* Right: stacked cards */}
-            <div className="grid grid-rows-[auto_1fr] gap-6">
+            <div className="grid h-full min-h-0 grid-rows-[1fr_1fr] gap-3 xl:gap-5">
               {/* Top: Soft bg card */}
-              <div className="bg-soft-bg px-8 py-12 md:py-14 text-center">
+              <div className="bg-soft-bg px-8 py-6 text-center flex flex-col items-center justify-center overflow-hidden">
                 <p className="text-[11px] tracking-[0.28em] uppercase text-tan">
                   What we do
                 </p>
-                <h2 className="mt-5 font-serif text-3xl md:text-4xl leading-tight text-dark-bg text-balance">
+                <h2 className="mt-4 font-serif text-3xl xl:text-[2.35rem] leading-[1.08] text-dark-bg text-balance">
                   Defending your rights with expertise
                 </h2>
-                <p className="mt-4 text-sm leading-relaxed text-muted-foreground max-w-xs mx-auto">
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground max-w-sm mx-auto">
                   A well-established boutique firm with national capacity, offering a full range of corporate and commercial legal services.
                 </p>
-                <div className="mt-7 flex items-center justify-center gap-1.5 text-tan">
+                <div className="mt-5 flex items-center justify-center gap-1.5 text-tan">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="h-4 w-4 fill-current" aria-hidden />
                   ))}
@@ -110,15 +111,15 @@ export function HeroSection() {
               </div>
 
               {/* Bottom: Dark testimonial card */}
-              <div className="bg-dark-bg text-white px-8 py-12 md:py-14 relative flex flex-col items-center justify-center text-center">
-                <blockquote className="text-sm md:text-[15px] leading-relaxed max-w-xs mx-auto">
+              <div className="bg-dark-bg text-white px-8 py-6 relative flex flex-col items-center justify-center text-center overflow-hidden">
+                <blockquote className="text-sm xl:text-[15px] leading-relaxed max-w-sm mx-auto">
                   &ldquo;Marshal Ndlovu Attorneys Inc. made the process of buying
                   our first home seamless and stress-free. Their professionalism
                   and attention to detail were outstanding.&rdquo;
                 </blockquote>
 
-                <div className="mt-8 flex flex-col items-center">
-                  <div className="relative h-12 w-12 overflow-hidden rounded-full ring-2 ring-tan/40">
+                <div className="mt-5 flex flex-col items-center">
+                  <div className="relative h-10 w-10 overflow-hidden rounded-full ring-2 ring-tan/40">
                     <Image
                       src="/professional-woman-headshot-warm-lighting.jpg"
                       alt="Client testimonial"

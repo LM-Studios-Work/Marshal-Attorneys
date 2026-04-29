@@ -22,11 +22,11 @@ export function ConsultationFormSection() {
   const [contactMethod, setContactMethod] = useState<ContactMethod>("Phone")
 
   return (
-    <section className="bg-soft-bg py-24 md:py-32">
+    <section className="home-section bg-soft-bg py-24 md:py-32">
       <div className="mx-auto max-w-[1400px] px-6 md:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-16 items-start">
           {/* Left: pitch card */}
-          <div className="bg-dark-bg text-white p-10 md:p-12 lg:sticky lg:top-8">
+          <div className="home-reveal bg-dark-bg text-white p-10 md:p-12 lg:sticky lg:top-8">
             <p className="text-[11px] tracking-[0.28em] uppercase text-tan">
               Request a Consultation
             </p>
@@ -69,7 +69,7 @@ export function ConsultationFormSection() {
           </div>
 
           {/* Right: form */}
-          <div className="bg-background p-8 md:p-12">
+          <div className="home-reveal bg-background p-8 md:p-12">
             <h3 className="font-serif text-2xl md:text-3xl text-dark-bg">
               Consultation Request
             </h3>

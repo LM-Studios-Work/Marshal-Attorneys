@@ -44,15 +44,15 @@ export function SiteNav() {
   }, [mobileOpen]);
 
   return (
-    <header className="sticky top-11 z-50 bg-background border-b border-border/60 shadow-sm">
-      <div className="mx-auto max-w-[1400px] px-6 md:px-10 h-20 flex items-center justify-between gap-8">
+    <header className="sticky top-11 lg:top-8 z-50 bg-background border-b border-border/60 shadow-sm">
+      <div className="mx-auto w-full max-w-none px-4 lg:px-3 xl:px-6 h-20 lg:h-16 flex items-center justify-between gap-8">
         <Link href="/" className="flex items-center gap-3 group">
           <Image
             src="/Red%20Modern%20Law%20Consulting%20Firm%20Logo.png"
             alt="Marshal Ndlovu Attorneys Logo"
             width={40}
             height={40}
-            className="h-10 w-auto"
+            className="h-10 lg:h-11 w-auto"
           />
         </Link>
 

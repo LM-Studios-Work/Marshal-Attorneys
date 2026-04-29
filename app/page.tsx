@@ -8,10 +8,12 @@ import { GuidanceSection } from "@/components/guidance-section"
 import { PeaceOfMind } from "@/components/peace-of-mind"
 import { ConsultationFormSection } from "@/components/contact/consultation-form-section"
 import { SiteFooter } from "@/components/site-footer"
+import { HomeScrollReveal } from "@/components/home-scroll-reveal"
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="home-page min-h-screen bg-background">
+      <HomeScrollReveal />
       <TopBar />
       <SiteNav />
       <HeroSection />
