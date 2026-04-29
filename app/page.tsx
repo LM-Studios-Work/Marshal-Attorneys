@@ -6,8 +6,7 @@ import { NavigateLaw } from "@/components/navigate-law"
 import { StatsBar } from "@/components/stats-bar"
 import { GuidanceSection } from "@/components/guidance-section"
 import { PeaceOfMind } from "@/components/peace-of-mind"
-import { ContactSection } from "@/components/contact-section"
-import { NotWhatYoureLookingFor } from "@/components/not-what-youre-looking-for"
+import { ConsultationFormSection } from "@/components/contact/consultation-form-section"
 import { SiteFooter } from "@/components/site-footer"
 
 export default function HomePage() {
@@ -21,8 +20,7 @@ export default function HomePage() {
       <StatsBar />
       <GuidanceSection />
       <PeaceOfMind />
-      <ContactSection />
-      <NotWhatYoureLookingFor />
+      <ConsultationFormSection />
       <SiteFooter />
     </main>
   )

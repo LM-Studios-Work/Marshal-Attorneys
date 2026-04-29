@@ -39,7 +39,7 @@ export function TopBar() {
               className="flex items-center gap-2 px-3 py-1 normal-case tracking-normal hover:text-tan transition-colors"
             >
               <Mail className="h-3.5 w-3.5" aria-hidden />
-              <span>info@manattorneys.co.za</span>
+              <span className="text-[1.02em]">info@manattorneys.co.za</span>
             </Link>
           </li>
         </ul>

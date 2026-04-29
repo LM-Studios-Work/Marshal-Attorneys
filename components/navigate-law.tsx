@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import { AnimatedNumber } from "@/components/animated-number"
 
 export function NavigateLaw() {
   return (
@@ -54,8 +55,8 @@ export function NavigateLaw() {
                 <path d="M12 3v18M5 8h14M5 16h14" />
                 <circle cx="12" cy="3" r="1.5" fill="currentColor" />
               </svg>
-              <div className="font-serif text-5xl md:text-6xl leading-none">
-                6+
+              <div className="font-serif text-5xl md:text-6xl leading-none tabular-nums">
+                <AnimatedNumber value={6} suffix="+" />
               </div>
               <div className="mt-3 text-[10px] tracking-[0.22em] uppercase">
                 Years Experience
@@ -74,8 +75,8 @@ export function NavigateLaw() {
               >
                 <path d="M4 20 20 4M14 4h6v6" />
               </svg>
-              <div className="font-serif text-5xl md:text-6xl leading-none">
-                630+
+              <div className="font-serif text-5xl md:text-6xl leading-none tabular-nums">
+                <AnimatedNumber value={630} suffix="+" />
               </div>
               <div className="mt-3 text-[10px] tracking-[0.22em] uppercase">
                 Finalised Matters
