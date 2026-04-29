@@ -23,7 +23,7 @@ const navItems = [
     ],
   },
   { label: "Our Team", href: "/about#team" },
-  { label: "Case Results", href: "/case-results" },
+  { label: "Who Do I Talk To", href: "/who-do-i-talk-to" },
   { label: "Contact", href: "/contact" },
 ];
 
