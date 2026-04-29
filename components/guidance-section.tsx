@@ -84,7 +84,6 @@ export function GuidanceSection() {
   const scrollByCard = (direction: 1 | -1) => {
     const el = scrollerRef.current
     if (!el) return
-    // Scroll by roughly one card width (including gap)
     const card = el.querySelector<HTMLElement>("[data-card]")
     const distance = card ? card.offsetWidth + 24 : Math.round(el.clientWidth * 0.8)
     el.scrollBy({ left: direction * distance, behavior: "smooth" })
@@ -124,53 +123,43 @@ export function GuidanceSection() {
             </button>
           </div>
         </div>
-      </div>
 
-      {/* Edge-bleed horizontal scroller */}
-      <div
-        ref={scrollerRef}
-        className="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-2 px-6 md:px-10 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
-      >
-        {/* Left spacer to align first card with the max-width container */}
-        <div
-          aria-hidden
-          className="shrink-0 w-0 lg:w-[max(0px,calc((100vw-1400px)/2))]"
-        />
-
-        {items.map((item) => (
-          <Link
-            key={item.title}
-            href={item.href}
-            data-card
-            className="group shrink-0 w-[78vw] sm:w-[58vw] md:w-[44vw] lg:w-[360px] snap-start bg-soft-bg"
+        {/* Constrained scroller — overflow hidden so off-screen cards aren't visible until you scroll */}
+        <div className="overflow-hidden">
+          <div
+            ref={scrollerRef}
+            className="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-2 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
           >
-            <article>
-              <div className="relative aspect-[4/3] overflow-hidden">
-                <Image
-                  src={item.image || "/placeholder.svg"}
-                  alt={item.title}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  sizes="(max-width: 640px) 78vw, (max-width: 768px) 58vw, (max-width: 1024px) 44vw, 360px"
-                />
-                <div className="absolute inset-x-6 bottom-6 bg-background/95 backdrop-blur px-5 py-3">
-                  <p className="font-serif text-lg text-dark-bg">
-                    {item.title}
-                  </p>
-                  <p className="text-xs text-muted-foreground mt-0.5">
-                    {item.label}
-                  </p>
-                </div>
-              </div>
-            </article>
-          </Link>
-        ))}
-
-        {/* Right spacer */}
-        <div
-          aria-hidden
-          className="shrink-0 w-6 md:w-10 lg:w-[max(0px,calc((100vw-1400px)/2))]"
-        />
+            {items.map((item) => (
+              <Link
+                key={item.title}
+                href={item.href}
+                data-card
+                className="group shrink-0 w-[78vw] sm:w-[58vw] md:w-[44vw] lg:w-[calc((100%-3rem)/4)] snap-start bg-soft-bg"
+              >
+                <article>
+                  <div className="relative aspect-[4/3] overflow-hidden">
+                    <Image
+                      src={item.image || "/placeholder.svg"}
+                      alt={item.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 640px) 78vw, (max-width: 768px) 58vw, (max-width: 1024px) 44vw, 320px"
+                    />
+                    <div className="absolute inset-x-6 bottom-6 bg-background/95 backdrop-blur px-5 py-3">
+                      <p className="font-serif text-lg text-dark-bg">
+                        {item.title}
+                      </p>
+                      <p className="text-xs text-muted-foreground mt-0.5">
+                        {item.label}
+                      </p>
+                    </div>
+                  </div>
+                </article>
+              </Link>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   )

@@ -7,6 +7,7 @@ import { ServiceOverview } from "@/components/services/service-overview"
 import { ServiceDetails } from "@/components/services/service-details"
 import { ServiceFramework } from "@/components/services/service-framework"
 import { ServiceCTA } from "@/components/services/service-cta"
+import { NotWhatYoureLookingFor } from "@/components/not-what-youre-looking-for"
 
 export const metadata: Metadata = {
   title: "Consumer Law | Marshal Ndlovu Attorneys Inc.",
@@ -128,6 +129,7 @@ export default function ConsumerLawPage() {
           eyebrow="Protect your rights. Protect your business."
           heading="Let our consumer law team advise on your matter."
         />
+        <NotWhatYoureLookingFor />
       </main>
       <SiteFooter />
     </>

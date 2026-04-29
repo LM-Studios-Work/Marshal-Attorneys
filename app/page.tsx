@@ -7,6 +7,7 @@ import { StatsBar } from "@/components/stats-bar"
 import { GuidanceSection } from "@/components/guidance-section"
 import { PeaceOfMind } from "@/components/peace-of-mind"
 import { ContactSection } from "@/components/contact-section"
+import { NotWhatYoureLookingFor } from "@/components/not-what-youre-looking-for"
 import { SiteFooter } from "@/components/site-footer"
 
 export default function HomePage() {
@@ -21,6 +22,7 @@ export default function HomePage() {
       <GuidanceSection />
       <PeaceOfMind />
       <ContactSection />
+      <NotWhatYoureLookingFor />
       <SiteFooter />
     </main>
   )

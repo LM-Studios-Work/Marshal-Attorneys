@@ -8,6 +8,7 @@ import { ConveyancingServices } from "@/components/conveyancing/conveyancing-ser
 import { ConveyancingProcess } from "@/components/conveyancing/conveyancing-process"
 import { ConveyancingCompliance } from "@/components/conveyancing/conveyancing-compliance"
 import { ConveyancingCTA } from "@/components/conveyancing/conveyancing-cta"
+import { NotWhatYoureLookingFor } from "@/components/not-what-youre-looking-for"
 
 export const metadata: Metadata = {
   title: "Conveyancing & Property Law | Marshal Ndlovu Attorneys Inc.",
@@ -27,6 +28,7 @@ export default function ConveyancingPage() {
         <ConveyancingProcess />
         <ConveyancingCompliance />
         <ConveyancingCTA />
+        <NotWhatYoureLookingFor />
       </main>
       <SiteFooter />
     </>

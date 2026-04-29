@@ -5,6 +5,7 @@ import { SiteFooter } from "@/components/site-footer"
 import { WhoDoITalkToHero } from "@/components/who-do-i-talk-to/who-do-i-talk-to-hero"
 import { WhoDoITalkToFaqs } from "@/components/who-do-i-talk-to/who-do-i-talk-to-faqs"
 import { ConsultationFormSection } from "@/components/contact/consultation-form-section"
+import { NotWhatYoureLookingFor } from "@/components/not-what-youre-looking-for"
 
 export const metadata: Metadata = {
   title: "Who Do I Talk To? | Marshal Ndlovu Attorneys Inc.",
@@ -19,6 +20,7 @@ export default function WhoDoITalkToPage() {
       <SiteNav />
       <WhoDoITalkToHero />
       <WhoDoITalkToFaqs />
+      <NotWhatYoureLookingFor />
       <ConsultationFormSection />
       <SiteFooter />
     </main>

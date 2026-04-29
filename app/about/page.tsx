@@ -9,6 +9,7 @@ import { AboutMission } from "@/components/about/about-mission"
 import { AboutTeam } from "@/components/about/about-team"
 import { AboutServicesChart } from "@/components/about/about-services-chart"
 import { AboutMilestones } from "@/components/about/about-milestones"
+import { NotWhatYoureLookingFor } from "@/components/not-what-youre-looking-for"
 
 export const metadata: Metadata = {
   title: "About Us | Marshal Ndlovu Attorneys Inc.",
@@ -29,6 +30,7 @@ export default function AboutPage() {
         <AboutTeam />
         <AboutServicesChart />
         <AboutMilestones />
+        <NotWhatYoureLookingFor />
       </main>
       <SiteFooter />
     </>

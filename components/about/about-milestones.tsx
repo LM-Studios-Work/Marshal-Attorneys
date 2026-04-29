@@ -1,4 +1,7 @@
+"use client"
+
 import Link from "next/link"
+import { useEffect, useRef, useState } from "react"
 
 const milestones = [
   {
@@ -35,6 +38,33 @@ const milestones = [
 ]
 
 export function AboutMilestones() {
+  const timelineRef = useRef<HTMLDivElement>(null)
+  const [progress, setProgress] = useState(0)
+
+  useEffect(() => {
+    const update = () => {
+      const el = timelineRef.current
+      if (!el) return
+      const rect = el.getBoundingClientRect()
+      const vh = window.innerHeight
+      // Begin filling once the timeline top reaches 80% of viewport,
+      // complete once the timeline bottom reaches 30% of viewport.
+      const start = vh * 0.8
+      const end = vh * 0.3
+      const totalTravel = rect.height + (start - end)
+      const traveled = start - rect.top
+      const p = traveled / totalTravel
+      setProgress(Math.max(0, Math.min(1, p)))
+    }
+    update()
+    window.addEventListener("scroll", update, { passive: true })
+    window.addEventListener("resize", update)
+    return () => {
+      window.removeEventListener("scroll", update)
+      window.removeEventListener("resize", update)
+    }
+  }, [])
+
   return (
     <section className="bg-background py-24 md:py-32">
       <div className="mx-auto max-w-[1400px] px-6 md:px-10">
@@ -60,50 +90,54 @@ export function AboutMilestones() {
         </div>
 
         {/* Timeline */}
-        <div className="relative">
-          {/* Vertical line */}
-          <div className="absolute left-[88px] md:left-[120px] top-0 bottom-0 w-px bg-border hidden md:block" />
+        <div ref={timelineRef} className="relative">
+          {/* Vertical track — left:24px on mobile, left:120px on desktop. Both lines and all dots are anchored to this exact x. */}
+          <div
+            aria-hidden
+            className="absolute top-0 bottom-0 left-6 md:left-[120px] w-px bg-border"
+          />
+          {/* Scroll-driven progress overlay */}
+          <div
+            aria-hidden
+            className="absolute top-0 left-6 md:left-[120px] w-px bg-tan transition-[height] duration-200 ease-out"
+            style={{ height: `${progress * 100}%` }}
+          />
 
-          <div className="space-y-0">
-            {milestones.map((milestone, mi) => (
-              <div
-                key={milestone.year}
-                className={`flex gap-0 md:gap-0 ${mi < milestones.length - 1 ? "mb-0" : ""}`}
-              >
-                {/* Year */}
-                <div className="hidden md:flex flex-col items-end pt-1 w-[120px] flex-shrink-0 pr-10">
-                  <span className="font-serif text-3xl text-dark-bg">
-                    {milestone.year}
-                  </span>
-                </div>
+          <div className="space-y-14 md:space-y-16">
+            {milestones.map((milestone) => (
+              <div key={milestone.year} className="relative">
+                {/* Year — desktop sits to the LEFT of the line */}
+                <span className="hidden md:block absolute left-0 top-0 w-[100px] pr-6 text-right font-serif text-3xl text-dark-bg leading-none">
+                  {milestone.year}
+                </span>
 
-                {/* Dot */}
-                <div className="hidden md:flex flex-col items-center flex-shrink-0">
-                  <div className="mt-2 h-3 w-3 rounded-full bg-tan ring-4 ring-background flex-shrink-0" />
-                </div>
+                {/* Year — mobile sits to the RIGHT of the line */}
+                <p className="md:hidden font-serif text-2xl text-dark-bg pl-12 mb-5 leading-none">
+                  {milestone.year}
+                </p>
 
-                {/* Events */}
-                <div className="flex-1 pl-0 md:pl-10 pb-14">
-                  {/* Mobile year */}
-                  <p className="md:hidden font-serif text-2xl text-dark-bg mb-6">
-                    {milestone.year}
-                  </p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    {milestone.events.map((event) => (
-                      <div
-                        key={event.title}
-                        className="border border-border p-7 hover:border-tan transition-colors group"
-                      >
-                        <div className="w-8 h-px bg-tan mb-5" />
-                        <p className="font-serif text-lg text-dark-bg group-hover:text-tan transition-colors">
-                          {event.title}
-                        </p>
-                        <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                          {event.desc}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
+                {/* Dot — perfectly centered on the vertical line */}
+                <span
+                  aria-hidden
+                  className="absolute left-6 md:left-[120px] top-0 -translate-x-1/2 h-3 w-3 rounded-full bg-tan ring-4 ring-background"
+                />
+
+                {/* Cards */}
+                <div className="pl-12 md:pl-[160px] grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  {milestone.events.map((event) => (
+                    <div
+                      key={event.title}
+                      className="border border-border p-7 hover:border-tan transition-colors group"
+                    >
+                      <div className="w-8 h-px bg-tan mb-5" />
+                      <p className="font-serif text-lg text-dark-bg group-hover:text-tan transition-colors">
+                        {event.title}
+                      </p>
+                      <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                        {event.desc}
+                      </p>
+                    </div>
+                  ))}
                 </div>
               </div>
             ))}
@@ -111,7 +145,7 @@ export function AboutMilestones() {
         </div>
 
         {/* CTA */}
-        <div className="mt-4 flex flex-col md:flex-row items-center justify-between gap-6 border-t border-border pt-12">
+        <div className="mt-16 flex flex-col md:flex-row items-center justify-between gap-6 border-t border-border pt-12">
           <p className="font-serif text-2xl md:text-3xl text-dark-bg text-balance">
             Discover how our milestones reflect our dedication to excellence.
           </p>

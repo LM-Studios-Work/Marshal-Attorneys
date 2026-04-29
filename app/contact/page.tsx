@@ -7,6 +7,7 @@ import { ContactInfo } from "@/components/contact/contact-info"
 import { ContactFormSection } from "@/components/contact/contact-form-section"
 import { ConsultationFormSection } from "@/components/contact/consultation-form-section"
 import { OfficeMap } from "@/components/contact/office-map"
+import { NotWhatYoureLookingFor } from "@/components/not-what-youre-looking-for"
 
 export const metadata: Metadata = {
   title: "Contact Us | Marshal Ndlovu Attorneys Inc.",
@@ -24,6 +25,7 @@ export default function ContactPage() {
       <ContactFormSection />
       <ConsultationFormSection />
       <OfficeMap />
+      <NotWhatYoureLookingFor />
       <SiteFooter />
     </main>
   )

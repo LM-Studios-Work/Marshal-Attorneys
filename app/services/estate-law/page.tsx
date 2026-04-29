@@ -7,6 +7,7 @@ import { ServiceOverview } from "@/components/services/service-overview"
 import { ServiceDetails } from "@/components/services/service-details"
 import { ServiceFramework } from "@/components/services/service-framework"
 import { ServiceCTA } from "@/components/services/service-cta"
+import { NotWhatYoureLookingFor } from "@/components/not-what-youre-looking-for"
 
 export const metadata: Metadata = {
   title: "Estate Law | Marshal Ndlovu Attorneys Inc.",
@@ -128,6 +129,7 @@ export default function EstateLawPage() {
           eyebrow="Plan today. Protect tomorrow."
           heading="Let our estate law team structure and safeguard your legacy."
         />
+        <NotWhatYoureLookingFor />
       </main>
       <SiteFooter />
     </>

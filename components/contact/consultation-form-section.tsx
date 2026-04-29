@@ -14,9 +14,12 @@ const services = [
   "Estate Law",
 ]
 
+type ContactMethod = "Phone" | "Email"
+
 export function ConsultationFormSection() {
   const [service, setService] = useState<string>("")
   const [open, setOpen] = useState(false)
+  const [contactMethod, setContactMethod] = useState<ContactMethod>("Phone")
 
   return (
     <section className="bg-soft-bg py-24 md:py-32">
@@ -86,9 +89,15 @@ export function ConsultationFormSection() {
                 type="email"
                 placeholder="you@example.com"
               />
+              <Field
+                label="Phone"
+                name="phone"
+                type="tel"
+                placeholder="067 272 7475"
+              />
 
               {/* Service dropdown */}
-              <div className="md:col-span-2 relative">
+              <div className="relative">
                 <label
                   htmlFor="service"
                   className="block text-[10px] tracking-[0.28em] uppercase text-dark-bg/70 mb-2"
@@ -141,6 +150,43 @@ export function ConsultationFormSection() {
                   </ul>
                 )}
                 <input type="hidden" name="service" value={service} />
+              </div>
+
+              {/* Preferred means of contact */}
+              <div className="md:col-span-2">
+                <p className="block text-[10px] tracking-[0.28em] uppercase text-dark-bg/70 mb-3">
+                  Preferred Means of Contact
+                </p>
+                <div
+                  role="radiogroup"
+                  aria-label="Preferred means of contact"
+                  className="flex flex-wrap gap-3"
+                >
+                  {(["Phone", "Email"] as ContactMethod[]).map((option) => {
+                    const isActive = contactMethod === option
+                    return (
+                      <label key={option} className="cursor-pointer">
+                        <input
+                          type="radio"
+                          name="contactMethod"
+                          value={option}
+                          checked={isActive}
+                          onChange={() => setContactMethod(option)}
+                          className="sr-only"
+                        />
+                        <span
+                          className={`inline-flex items-center px-6 py-2.5 border text-[11px] tracking-[0.22em] uppercase transition-colors ${
+                            isActive
+                              ? "bg-dark-bg border-dark-bg text-white"
+                              : "bg-transparent border-dark-bg/20 text-dark-bg/70 hover:border-tan hover:text-dark-bg"
+                          }`}
+                        >
+                          {option}
+                        </span>
+                      </label>
+                    )
+                  })}
+                </div>
               </div>
 
               <div className="md:col-span-2">
