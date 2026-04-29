@@ -63,19 +63,20 @@ export function PeaceOfMind() {
               Focused on results
             </p>
             <h3 className="mt-4 font-serif text-3xl md:text-4xl leading-tight">
-              Request a free consultation today
+              Explore the services that fit your matter
             </h3>
 
             <p className="mt-6 text-sm leading-relaxed text-white/70">
               Whether you have a complex legal issue or need straightforward
-              advice, our team is ready to help you find the right solutions.
+              advice, our team is ready to help you identify the right legal
+              support for your situation.
             </p>
 
             <Link
-              href="/contact"
+              href="/services"
               className="mt-8 inline-flex items-center justify-center w-full px-7 py-3 bg-tan text-white text-[11px] tracking-[0.22em] uppercase hover:bg-white hover:text-dark-bg transition-colors"
             >
-              Book a Consultation
+              Explore Services
             </Link>
 
             <div className="mt-10 pt-8 border-t border-white/15">

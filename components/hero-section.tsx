@@ -6,96 +6,51 @@ export function HeroSection() {
   return (
     <section className="bg-background">
       {/* ===================== MOBILE LAYOUT ===================== */}
-      <div className="lg:hidden">
-        {/* Tall hero image with overlay headline + floating card */}
-        <div className="relative">
-          <div className="relative aspect-[3/4] w-full overflow-hidden">
-            <Image
-              src="/lawyer-in-navy-suit-reading-documents-in-wood-pane.jpg"
-              alt="Lawyer reviewing documents in a wood-paneled office"
-              fill
-              priority
-              className="object-cover"
-              sizes="100vw"
-            />
-            {/* Soft gradient at top so white text is always legible */}
-            <div
-              aria-hidden
-              className="absolute inset-x-0 top-0 h-2/5 bg-gradient-to-b from-dark-bg/55 to-transparent"
-            />
-
-            {/* Top headline + stars */}
-            <div className="absolute inset-x-0 top-0 px-6 pt-10 text-center text-white">
-              <h1 className="font-serif text-3xl leading-[1.15] text-balance">
-                Defending your rights with expertise
-              </h1>
-              <div
-                className="mt-4 flex items-center justify-center gap-1.5 text-tan"
-                aria-label="Rated 5 out of 5"
-              >
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-4 w-4 fill-current" aria-hidden />
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Floating white card, overlaps the bottom of the image */}
-          <div className="px-6 -mt-20 relative z-10">
-            <div className="bg-background p-6 shadow-lg max-w-[20rem]">
-              <h2 className="font-serif text-2xl leading-[1.15] text-dark-bg text-balance">
-                Your justice is our priority
-              </h2>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                Professional legal expertise tailored to your unique challenges,
-                serving clients across South Africa.
-              </p>
-              <Link
-                href="/contact"
-                className="mt-5 inline-flex items-center justify-center px-6 py-2.5 bg-tan text-white text-[11px] tracking-[0.22em] uppercase hover:bg-dark-bg transition-colors"
-              >
-                Learn More
-              </Link>
-            </div>
+      <div className="lg:hidden bg-dark-bg">
+        <div className="relative h-[24rem] w-full overflow-hidden">
+          <Image
+            src="/team/home hero image.webp"
+            alt="Marshal Ndlovu Attorneys office interior"
+            fill
+            priority
+            className="object-cover opacity-75"
+            style={{ objectPosition: "center 20%" }}
+            sizes="100vw"
+          />
+          <div
+            aria-hidden
+            className="absolute inset-0 bg-gradient-to-b from-dark-bg/25 via-dark-bg/15 to-dark-bg"
+          />
+          <div className="absolute inset-x-0 bottom-0 px-6 pb-10">
+            <p className="text-[11px] tracking-[0.28em] uppercase text-tan">
+              Marshal attorneys
+            </p>
+            <h1 className="mt-4 font-serif text-4xl leading-[1.05] text-white text-balance">
+              A firm built on expertise &amp; trust
+            </h1>
           </div>
         </div>
 
-        {/* Dark testimonial band */}
-        <div className="mt-10 bg-dark-bg text-white px-6 py-14 relative">
-          <blockquote className="text-[15px] leading-relaxed max-w-sm mx-auto text-center">
-            &ldquo;Marshal Ndlovu Attorneys Inc. made the process of buying our
-            first home seamless and stress-free. Their professionalism and
-            attention to detail were outstanding.&rdquo;
-          </blockquote>
-
-          <div className="mt-8 flex items-center justify-center gap-8">
-            <button
-              aria-label="Previous testimonial"
-              className="text-white/60 hover:text-tan transition-colors"
+        <div className="px-6 py-10">
+          <p className="text-sm leading-relaxed text-white/70">
+            Marshal Ndlovu Attorneys Inc. is a well-established boutique firm
+            with significant national capacity through a network of associates,
+            giving us substantial influence in key financial centers throughout
+            the Republic of South Africa.
+          </p>
+          <div className="mt-8 flex flex-col gap-3">
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center px-7 py-3 bg-tan text-white text-[11px] tracking-[0.22em] uppercase hover:bg-white hover:text-dark-bg transition-colors"
             >
-              <ChevronLeft className="h-5 w-5" />
-            </button>
-
-            <div className="flex flex-col items-center">
-              <div className="relative h-14 w-14 overflow-hidden rounded-full ring-2 ring-tan/40">
-                <Image
-                  src="/professional-woman-headshot-warm-lighting.jpg"
-                  alt="Client testimonial"
-                  fill
-                  className="object-cover"
-                  sizes="56px"
-                />
-              </div>
-              <p className="mt-3 text-sm font-medium">Verified Client</p>
-              <p className="text-xs text-white/60 mt-0.5">Johannesburg</p>
-            </div>
-
-            <button
-              aria-label="Next testimonial"
-              className="text-white/60 hover:text-tan transition-colors"
+              Free Consultation
+            </Link>
+            <Link
+              href="/services"
+              className="inline-flex items-center justify-center px-7 py-3 border border-white/30 text-white text-[11px] tracking-[0.22em] uppercase hover:border-tan hover:text-tan transition-colors"
             >
-              <ChevronRight className="h-5 w-5" />
-            </button>
+              Our Services
+            </Link>
           </div>
         </div>
       </div>
@@ -107,8 +62,8 @@ export function HeroSection() {
             {/* Left: Lawyer portrait with overlay card */}
             <div className="relative overflow-hidden min-h-[520px] lg:min-h-[640px]">
               <Image
-                src="/lawyer-in-navy-suit-reading-documents-in-wood-pane.jpg"
-                alt="Lawyer reviewing documents in a wood-paneled office"
+                src="/team/customer care.webp"
+                alt="Marshal Ndlovu Attorneys team hero image"
                 fill
                 priority
                 className="object-cover"
@@ -125,10 +80,10 @@ export function HeroSection() {
                   approach, serving clients across South Africa.
                 </p>
                 <Link
-                  href="/contact"
+                  href="/services"
                   className="mt-7 inline-flex items-center justify-center px-7 py-3 bg-tan text-white text-[11px] tracking-[0.22em] uppercase hover:bg-dark-bg transition-colors"
                 >
-                  Request a Consultation
+                  Explore Services
                 </Link>
               </div>
             </div>

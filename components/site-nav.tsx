@@ -114,7 +114,7 @@ export function SiteNav() {
           aria-expanded={mobileOpen}
           aria-controls="mobile-nav-drawer"
           onClick={() => setMobileOpen(true)}
-          className="lg:hidden inline-flex items-center justify-center h-11 w-11 -mr-2 text-dark-bg hover:text-tan transition-colors"
+          className="lg:hidden inline-flex items-center justify-center h-11 w-11 -mr-2 text-tan hover:text-tan-hover transition-colors"
         >
           <Menu className="h-6 w-6" aria-hidden />
         </button>

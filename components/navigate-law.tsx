@@ -33,8 +33,8 @@ export function NavigateLaw() {
             {/* Background shelf image */}
             <div className="absolute inset-0 overflow-hidden">
               <Image
-                src="/rows-of-leather-bound-law-books-on-shelf.jpg"
-                alt="Leather-bound law books on a shelf"
+                src="/team/home hero image.webp"
+                alt="Customer care at Marshal Ndlovu Attorneys"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"

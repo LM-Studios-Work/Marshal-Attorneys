@@ -5,7 +5,7 @@ const attorneys = [
   {
     name: "Marshal Ndlovu",
     role: "Attorney, Notary & Conveyancer",
-    image: "/placeholder.svg?height=480&width=380",
+    image: "/team/Marshal.webp",
   },
   {
     name: "Sinothando Mbatha",
@@ -49,7 +49,7 @@ export function AboutTeam() {
                   src={attorney.image}
                   alt={attorney.name}
                   fill
-                  className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                  className="object-cover transition-all duration-500"
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
                 {/* Hover overlay */}

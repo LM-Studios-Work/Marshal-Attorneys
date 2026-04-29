@@ -10,7 +10,7 @@ import { ConsultationFormSection } from "@/components/contact/consultation-form-
 export const metadata: Metadata = {
   title: "Our Services | Marshal Ndlovu Attorneys Inc.",
   description:
-    "Eight focused practice areas — Conveyancing, Family Law, Litigation, Notarial Services, Consumer Law, Labour Law, Insolvency Law and Estate Law — delivered with rigour by Marshal Ndlovu Attorneys Inc.",
+    "Marshal Ndlovu Attorneys Inc. provides focused legal support in conveyancing, family law, litigation, notarial services, consumer law, labour law, insolvency law, and estate law.",
 }
 
 export default function ServicesIndexPage() {

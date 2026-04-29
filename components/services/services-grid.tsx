@@ -17,7 +17,7 @@ const services: Service[] = [
     title: "Conveyancing",
     blurb: "Property Transfers & Bonds",
     description:
-      "Property transfers, bond registrations and title deed work — handled with precision through our network of five Deeds Offices across four provinces.",
+      "We handle property transfers, bond registrations, and title deed work with precision through our network of five Deeds Offices across four provinces.",
     image: "/leather-wallet-and-card-holder-on-linen.jpg",
     href: "/services/conveyancing",
   },
@@ -26,7 +26,7 @@ const services: Service[] = [
     title: "Family Law",
     blurb: "Divorce, Custody & Maintenance",
     description:
-      "Divorce, custody, maintenance and domestic matters — guided with discretion and care at every stage of your family's journey.",
+      "We guide clients through divorce, custody, maintenance, and domestic matters with discretion and care at every stage of the process.",
     image: "/brown-leather-notebook-on-desk.jpg",
     href: "/services/family-law",
   },
@@ -35,7 +35,7 @@ const services: Service[] = [
     title: "Litigation",
     blurb: "Court Representation",
     description:
-      "Court representation and complex civil disputes — strategic, prepared and tenacious advocacy when your case demands it.",
+      "We represent clients in court and manage complex civil disputes with strategic, prepared, and tenacious advocacy.",
     image: "/wooden-judge-gavel-on-marble.jpg",
     href: "/services/litigation",
   },
@@ -44,7 +44,7 @@ const services: Service[] = [
     title: "Notarial Services",
     blurb: "Antenuptial & Notarial Bonds",
     description:
-      "Antenuptial contracts, notarial bonds and authentications — executed by a qualified notary public with meticulous attention to detail.",
+      "Our qualified notary public prepares antenuptial contracts, notarial bonds, and authentications with meticulous attention to detail.",
     image: "/elegant-law-office-interior-dark-navy.jpg",
     href: "/services/notarial-services",
   },
@@ -53,7 +53,7 @@ const services: Service[] = [
     title: "Consumer Law",
     blurb: "CPA Enforcement & Disputes",
     description:
-      "Consumer Protection Act enforcement, defective goods and supplier disputes — protecting consumer rights with rigour and resolve.",
+      "We assist with Consumer Protection Act enforcement, defective goods, and supplier disputes to protect consumer rights with rigor and resolve.",
     image: "/placeholder.svg?height=900&width=1200",
     href: "/services/consumer-law",
   },
@@ -62,7 +62,7 @@ const services: Service[] = [
     title: "Labour Law",
     blurb: "CCMA & Employment Matters",
     description:
-      "CCMA disputes, dismissals and employment matters — clear, decisive representation for both employees and employers.",
+      "We provide clear, decisive representation in CCMA disputes, dismissals, and broader employment matters for both employees and employers.",
     image: "/courtroom-gavel-detail-warm-tones.jpg",
     href: "/services/labour-law",
   },
@@ -71,7 +71,7 @@ const services: Service[] = [
     title: "Insolvency Law",
     blurb: "Sequestration & Liquidations",
     description:
-      "Voluntary sequestration, liquidations and debt relief — clear paths through financial difficulty for individuals and companies.",
+      "We help individuals and companies navigate voluntary sequestration, liquidations, and debt relief with a clear path forward.",
     image: "/placeholder.svg?height=900&width=1200",
     href: "/services/insolvency-law",
   },
@@ -80,7 +80,7 @@ const services: Service[] = [
     title: "Estate Law",
     blurb: "Wills, Trusts & Estates",
     description:
-      "Wills, trusts and deceased estate administration — preserving legacies with care, foresight and professional rigour.",
+      "We advise on wills, trusts, and deceased estate administration to preserve legacies with care, foresight, and professional rigor.",
     image: "/rows-of-leather-bound-law-books-on-shelf.jpg",
     href: "/services/estate-law",
   },
