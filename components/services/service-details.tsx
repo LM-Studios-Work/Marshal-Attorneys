@@ -1,7 +1,10 @@
-import type { IconProps } from "phosphor-react"
+"use client"
+
+import { PhosphorIcon } from "@/components/services/phosphor-icon"
+import type { PhosphorIconName } from "@/lib/phosphor-icon-names"
 
 export type ServiceDetail = {
-  icon: React.ComponentType<IconProps>
+  icon: PhosphorIconName
   title: string
   desc: string
 }
@@ -54,7 +57,8 @@ export function ServiceDetails({
               >
                 <div className="flex items-center gap-4 mb-6">
                   <div className="flex-shrink-0">
-                    <Icon
+                    <PhosphorIcon
+                      name={Icon}
                       size={32}
                       weight="bold"
                       color="#0f1d35"

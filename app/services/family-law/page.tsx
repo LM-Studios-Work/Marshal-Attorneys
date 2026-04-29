@@ -1,16 +1,4 @@
 import type { Metadata } from "next"
-import {
-  Heart,
-  Handshake,
-  Scales,
-  FileDotted,
-  Scroll,
-  Gavel,
-  Baby,
-  Coins,
-  ShieldCheck,
-  BookOpen,
-} from "phosphor-react"
 import { TopBar } from "@/components/top-bar"
 import { SiteNav } from "@/components/site-nav"
 import { SiteFooter } from "@/components/site-footer"
@@ -50,17 +38,17 @@ export default function FamilyLawPage() {
           badgeTitle="Discreet. Child-focused. Enforceable."
           highlights={[
             {
-              icon: ShieldCheck,
+              icon: "ShieldCheck",
               title: "Matrimonial Asset Protection",
               desc: "Antenuptial contracts and estate strategies that preserve wealth across generations.",
             },
             {
-              icon: Baby,
+              icon: "Baby",
               title: "Best Interests of the Child",
               desc: "Parenting plans and custody litigation grounded in the Children's Act standard.",
             },
             {
-              icon: Scales,
+              icon: "Scales",
               title: "Court-Ready Representation",
               desc: "Full litigation capability across divorce, maintenance and custody matters.",
             },
@@ -73,32 +61,32 @@ export default function FamilyLawPage() {
           intro="From the drafting of antenuptial contracts to complex contested divorces and the creation of family trusts, we cover the complete spectrum of family-related legal work under South African law."
           items={[
             {
-              icon: FileDotted,
+              icon: "FileDotted",
               title: "Matrimonial Property Regimes & ANCs",
               desc: "Counsel on the selection of matrimonial property regimes including the drafting and registration of Antenuptial Contracts, with or without accrual, registered at the Deeds Office to be effective against third parties.",
             },
             {
-              icon: Scales,
+              icon: "Scales",
               title: "Dissolution of Marriage",
               desc: "We handle uncontested and contested divorces. In contested matters we manage litigation from summons to the final decree, covering division of the joint estate, accrual claims and spousal maintenance.",
             },
             {
-              icon: Handshake,
+              icon: "Handshake",
               title: "Parental Rights & Responsibilities",
               desc: "Representation under the Children's Act, including drafting Parenting Plans, litigating custody and access disputes and applying for the variation of existing court orders.",
             },
             {
-              icon: Coins,
+              icon: "Coins",
               title: "Maintenance Litigation",
               desc: "Quantification and enforcement of maintenance orders for spouses and children, including the calculation of reasonable maintenance and the pursuit of arrears through the Maintenance Court.",
             },
             {
-              icon: Scroll,
+              icon: "Scroll",
               title: "Family Trusts (Inter Vivos & Testamentary)",
               desc: "Creation of family trusts to safeguard assets, including drafting of the Trust Deed and registration of the trust with the Master of the High Court.",
             },
             {
-              icon: Heart,
+              icon: "Heart",
               title: "Protective Relief & Interdicts",
               desc: "Urgent applications for domestic violence protection orders and related interdicts, providing immediate legal safeguards for vulnerable family members.",
             },
@@ -111,7 +99,7 @@ export default function FamilyLawPage() {
           heading="Governed by the core family statutes"
           intro="Every family law matter we handle is anchored in the principal South African statutes that regulate the formation, conduct and dissolution of the family unit."
           primary={{
-            icon: BookOpen,
+            icon: "BookOpen",
             eyebrow: "Matrimonial Statutes",
             title: "Matrimonial Property Act & Divorce Act",
             body: "These statutes govern the proprietary consequences of marriage and the dissolution thereof. We apply them rigorously to protect our clients' financial and legal interests.",
@@ -123,7 +111,7 @@ export default function FamilyLawPage() {
             ],
           }}
           secondary={{
-            icon: Baby,
+            icon: "Baby",
             eyebrow: "Children's Act 38 of 2005",
             title: "Best interests of the child, paramount",
             body: "Every matter involving a minor child is measured against the statutory best-interests standard. We ensure parental rights and responsibilities are exercised and adjudicated accordingly.",

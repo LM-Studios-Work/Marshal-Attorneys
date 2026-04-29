@@ -1,46 +1,40 @@
-import {
-  FileText,
-  Buildings,
-  CurrencyDollar,
-  Package,
-  MapPin,
-  Path,
-  Stack,
-} from "phosphor-react"
+"use client"
+
+import { PhosphorIcon } from "@/components/services/phosphor-icon"
 
 const services = [
   {
-    icon: FileText,
+    icon: "FileText",
     title: "Drafting & Vetting of Sale Agreements",
     desc: "Preparation and review of Agreements of Sale to ensure all suspensive conditions, warranties and obligations are clearly defined and legally enforceable, mitigating the risk of future litigation.",
   },
   {
-    icon: Buildings,
+    icon: "Buildings",
     title: "Transfer of Immovable Property",
     desc: "Management of the entire registration process: from the initial signing of transfer documents to the final lodgement and registration of the property in the name of the purchaser at the Deeds Office.",
   },
   {
-    icon: CurrencyDollar,
+    icon: "CurrencyDollar",
     title: "Mortgage Bond Registration & Cancellation",
     desc: "Facilitating the registration of mortgage bonds on behalf of financial institutions and the formal cancellation of existing bonds upon settlement of the loan.",
   },
   {
-    icon: Package,
+    icon: "Package",
     title: "Sectional Title Administration",
     desc: "Opening and management of sectional title registers, ensuring that the division of units and common property is correctly recorded and compliant with the Sectional Titles Act.",
   },
   {
-    icon: MapPin,
+    icon: "MapPin",
     title: "Township Establishment & Registration",
     desc: "Specialized legal framework required for the establishment of new townships, including registration of township registers and the necessary approvals from local authorities.",
   },
   {
-    icon: Path,
+    icon: "Path",
     title: "Servitudes & Land Rights",
     desc: "Formal registration and cancellation of servitudes, ensuring that rights of way, water or utility access are legally secured and correctly reflected on the title deed.",
   },
   {
-    icon: Stack,
+    icon: "Stack",
     title: "Subdivisions & Consolidations",
     desc: "Managing the legal processes involved in subdividing a single property into multiple portions or consolidating multiple properties into a single title.",
   },
@@ -81,7 +75,8 @@ export function ConveyancingServices() {
               >
                 <div className="flex items-center gap-4 mb-6">
                   <div className="flex-shrink-0">
-                    <Icon
+                    <PhosphorIcon
+                      name={Icon}
                       size={32}
                       weight="bold"
                       color="#0f1d35"

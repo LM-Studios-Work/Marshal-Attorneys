@@ -1,4 +1,4 @@
-import { MapPin } from "lucide-react"
+import { PhosphorIcon } from "@/components/services/phosphor-icon"
 
 export function OfficeMap() {
   return (
@@ -19,7 +19,14 @@ export function OfficeMap() {
 
             <address className="mt-8 not-italic">
               <div className="flex items-start gap-3">
-                <MapPin className="h-4 w-4 mt-1 text-tan flex-none" aria-hidden />
+                <PhosphorIcon
+                  name="MapPin"
+                  size={18}
+                  weight="bold"
+                  color="#b9896a"
+                  className="mt-1 flex-none"
+                  aria-hidden
+                />
                 <div className="text-[15px] leading-relaxed text-dark-bg">
                   <p>702, 7th Floor, Klamson Towers</p>
                   <p>151 Commissioner Street</p>

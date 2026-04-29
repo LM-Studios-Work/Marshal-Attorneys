@@ -1,4 +1,6 @@
-import { ShieldCheck, Receipt, Check } from "phosphor-react"
+"use client"
+
+import { PhosphorIcon } from "@/components/services/phosphor-icon"
 
 const fica = [
   "Rigorous identity verification for all parties",
@@ -36,7 +38,8 @@ export function ConveyancingCompliance() {
           <article className="bg-dark-bg text-white p-10 md:p-12">
             <div className="flex items-center gap-4 mb-8">
               <div className="flex-shrink-0">
-                <ShieldCheck
+                <PhosphorIcon
+                  name="ShieldCheck"
                   size={32}
                   weight="bold"
                   color="#b9896a"
@@ -60,7 +63,11 @@ export function ConveyancingCompliance() {
               {fica.map((item) => (
                 <li key={item} className="flex items-start gap-3 text-sm">
                   <span className="flex-shrink-0 mt-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-tan/20 text-tan">
-                    <Check className="h-3 w-3" strokeWidth={2.5} />
+                    <PhosphorIcon
+                      name="Check"
+                      className="h-3 w-3"
+                      strokeWidth={2.5}
+                    />
                   </span>
                   <span className="text-white/85">{item}</span>
                 </li>
@@ -72,7 +79,8 @@ export function ConveyancingCompliance() {
           <article className="bg-soft-bg text-dark-bg p-10 md:p-12">
             <div className="flex items-center gap-4 mb-8">
               <div className="flex-shrink-0">
-                <Receipt
+                <PhosphorIcon
+                  name="Receipt"
                   size={32}
                   weight="bold"
                   color="#0f1d35"
@@ -96,7 +104,11 @@ export function ConveyancingCompliance() {
               {sars.map((item) => (
                 <li key={item} className="flex items-start gap-3 text-sm">
                   <span className="flex-shrink-0 mt-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-tan/20 text-tan">
-                    <Check className="h-3 w-3" strokeWidth={2.5} />
+                    <PhosphorIcon
+                      name="Check"
+                      className="h-3 w-3"
+                      strokeWidth={2.5}
+                    />
                   </span>
                   <span className="text-dark-bg/85">{item}</span>
                 </li>

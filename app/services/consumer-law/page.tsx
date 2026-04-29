@@ -1,14 +1,4 @@
 import type { Metadata } from "next"
-import {
-  ShoppingBag,
-  Clipboard,
-  Coins,
-  Package,
-  Warning,
-  Scales,
-  BookOpen,
-  ShieldCheck,
-} from "phosphor-react"
 import { TopBar } from "@/components/top-bar"
 import { SiteNav } from "@/components/site-nav"
 import { SiteFooter } from "@/components/site-footer"
@@ -48,17 +38,17 @@ export default function ConsumerLawPage() {
           badgeTitle="Regulated. Transparent. Enforceable."
           highlights={[
             {
-              icon: ShieldCheck,
+              icon: "ShieldCheck",
               title: "Regulatory Compliance",
               desc: "Policies, contracts and credit-granting processes aligned with the statutory framework.",
             },
             {
-              icon: Scales,
+              icon: "Scales",
               title: "Tribunal Representation",
               desc: "Advocacy before the National Consumer Tribunal and Provincial Consumer Affairs Courts.",
             },
             {
-              icon: Gavel,
+              icon: "Gavel",
               title: "Enforcement of Rights",
               desc: "Assertion of the right to fair, reasonable and safe goods and services, including damages where warranted.",
             },
@@ -71,32 +61,32 @@ export default function ConsumerLawPage() {
           intro="From credit agreement vetting and responsible lending policies through to tribunal advocacy and product liability claims, our practice covers the full enforcement and compliance spectrum under the CPA and NCA."
           items={[
             {
-              icon: Clipboard,
+              icon: "Clipboard",
               title: "Credit Agreement Compliance & Vetting",
               desc: "Vetting credit contracts to ensure they do not contain prohibited terms and that all required disclosures are transparent, in line with the NCA's form and content requirements.",
             },
             {
-              icon: Coins,
+              icon: "Coins",
               title: "Responsible Lending & Affordability",
               desc: "Advising credit providers on the implementation of affordability assessments before granting credit, to avoid claims of reckless lending under the NCA.",
             },
             {
-              icon: Warning,
+              icon: "Warning",
               title: "Credit Enforcement & Repossessions",
               desc: "Managing the issuance of Section 129 notices and the subsequent legal steps required before a creditor can approach the court for judgment on a credit agreement.",
             },
             {
-              icon: Package,
+              icon: "Package",
               title: "Product Liability & CPA Claims",
               desc: "Representation in matters regarding defective goods and services, including enforcement of the implied warranty of quality and damages for hazardous products.",
             },
             {
-              icon: Scales,
+              icon: "Scales",
               title: "Tribunal & Regulatory Advocacy",
               desc: "Representation before the National Consumer Tribunal (NCT) and Provincial Consumer Affairs Courts, handling regulatory probes and defending against prohibited-conduct allegations.",
             },
             {
-              icon: ShoppingBag,
+              icon: "ShoppingBag",
               title: "Consumer Contract Drafting",
               desc: "Preparation of CPA-compliant terms and conditions, warranty policies and promotional competition rules for retailers and service providers.",
             },
@@ -109,7 +99,7 @@ export default function ConsumerLawPage() {
           heading="Anchored in the CPA and NCA"
           intro="South African consumer law is a codified regime. Every matter we handle is grounded in the relevant statute, regulations and published guidance from the regulators."
           primary={{
-            icon: BookOpen,
+            icon: "BookOpen",
             eyebrow: "Consumer Protection Act",
             title: "The rights of the consumer, codified",
             body: "The CPA codifies the core consumer rights: equality, privacy, fair value, safe goods and fair and honest dealing. We apply this framework to compliance audits and consumer claims alike.",
@@ -121,7 +111,7 @@ export default function ConsumerLawPage() {
             ],
           }}
           secondary={{
-            icon: ShieldCheck,
+            icon: "ShieldCheck",
             eyebrow: "National Credit Act",
             title: "Responsible credit, rigorously enforced",
             body: "The NCA regulates the entire credit lifecycle, from pre-agreement disclosures through enforcement and debt review. We advise registered credit providers and consumers under this regime.",

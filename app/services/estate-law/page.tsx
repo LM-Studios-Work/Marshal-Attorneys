@@ -1,15 +1,4 @@
 import type { Metadata } from "next"
-import {
-  Scroll,
-  Buildings,
-  Handshake,
-  Briefcase,
-  TrendUp,
-  FileDotted,
-  Scales,
-  BookOpen,
-  ShieldCheck,
-} from "phosphor-react"
 import { TopBar } from "@/components/top-bar"
 import { SiteNav } from "@/components/site-nav"
 import { SiteFooter } from "@/components/site-footer"
@@ -49,17 +38,17 @@ export default function EstateLawPage() {
           badgeTitle="Structured. Efficient. Enforceable."
           highlights={[
             {
-              icon: TrendUp,
+              icon: "TrendUp",
               title: "Tax-Efficient Structuring",
               desc: "Estates designed to mitigate estate duty and capital gains tax where the law permits.",
             },
             {
-              icon: Scroll,
+              icon: "Scroll",
               title: "Testator's Intention Preserved",
               desc: "Wills drafted to be clear, unambiguous and compliant with the formalities of the Wills Act.",
             },
             {
-              icon: ShieldCheck,
+              icon: "ShieldCheck",
               title: "Beneficiary Protection",
               desc: "Trust structures and testamentary arrangements that shelter vulnerable beneficiaries.",
             },
@@ -72,32 +61,32 @@ export default function EstateLawPage() {
           intro="From strategic estate planning and the drafting of wills through to the administration of deceased estates and the creation of trusts for asset protection, our estate practice handles the complete lifecycle of intergenerational wealth."
           items={[
             {
-              icon: TrendUp,
+              icon: "TrendUp",
               title: "Strategic Estate Planning",
               desc: "Legal and tax strategies structuring estates to minimise Estate Duty and Capital Gains Tax, ensuring the efficient transfer of wealth to beneficiaries.",
             },
             {
-              icon: Scroll,
+              icon: "Scroll",
               title: "Drafting of Wills & Testaments",
               desc: "Drafting wills that comply strictly with the Wills Act, including the creation of Testamentary Trusts and the appointment of executors to ensure the testator's intentions are enforceable.",
             },
             {
-              icon: Buildings,
+              icon: "Buildings",
               title: "Administration of Deceased Estates",
               desc: "Winding up of estates involving reporting to the Master of the High Court, procurement of Letters of Executorship and drafting of the Liquidation and Distribution Account.",
             },
             {
-              icon: Handshake,
+              icon: "Handshake",
               title: "Inter Vivos & Testamentary Trusts",
               desc: "Counsel on the creation of trusts for asset protection, managing registration of trusts and ensuring trustees adhere to the Trust Property Control Act.",
             },
             {
-              icon: Briefcase,
+              icon: "Briefcase",
               title: "Executor & Trustee Services",
               desc: "Acting as professional executors: collecting assets, settling debts and distributing the residue to the heirs, and serving as independent trustees where required.",
             },
             {
-              icon: FileDotted,
+              icon: "FileDotted",
               title: "Living Wills & Powers of Attorney",
               desc: "Drafting advance directives and enduring powers of attorney, ensuring our clients' wishes are respected if they lose legal or physical capacity.",
             },
@@ -110,7 +99,7 @@ export default function EstateLawPage() {
           heading="Anchored in the Wills Act and the Administration of Estates Act"
           intro="Estate law in South Africa is a highly formal discipline. Every will we draft and every estate we administer is measured against the strict requirements of the governing legislation."
           primary={{
-            icon: BookOpen,
+            icon: "BookOpen",
             eyebrow: "Wills Act 7 of 1953",
             title: "Form, formality and testamentary freedom",
             body: "A will that does not comply with the Wills Act may be invalid, with catastrophic consequences for beneficiaries. We draft and execute wills that survive every formal challenge.",
@@ -122,7 +111,7 @@ export default function EstateLawPage() {
             ],
           }}
           secondary={{
-            icon: Scales,
+            icon: "Scales",
             eyebrow: "Administration of Estates Act",
             title: "Administered under the Master's supervision",
             body: "Every deceased estate in South Africa falls under the supervisory jurisdiction of the Master of the High Court. We navigate that process with the precision and documentary rigour the Master requires.",

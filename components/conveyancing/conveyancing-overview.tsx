@@ -1,19 +1,21 @@
+"use client"
+
 import Image from "next/image"
-import { ShieldCheck, FileText, Buildings } from "phosphor-react"
+import { PhosphorIcon } from "@/components/services/phosphor-icon"
 
 const objectives = [
   {
-    icon: ShieldCheck,
+    icon: "ShieldCheck",
     title: "Legally Sound Transfers",
     desc: "Every transaction conducted in strict compliance with the Deeds Registries Act.",
   },
   {
-    icon: FileText,
+    icon: "FileText",
     title: "Unencumbered Title",
     desc: "Buyers receive clean, registered title with no hidden liabilities or claims.",
   },
   {
-    icon: Buildings,
+    icon: "Buildings",
     title: "Seller Protection",
     desc: "Seller interests fully safeguarded throughout the registration process.",
   },
@@ -66,7 +68,8 @@ export function ConveyancingOverview() {
                 return (
                   <div key={obj.title} className="flex gap-6">
                     <div className="flex-shrink-0 pt-1">
-                      <Icon
+                      <PhosphorIcon
+                        name={Icon}
                         size={40}
                         weight="bold"
                         color="#0f1d35"

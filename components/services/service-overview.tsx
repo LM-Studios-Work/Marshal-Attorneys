@@ -1,8 +1,11 @@
+"use client"
+
 import Image from "next/image"
-import type { IconProps } from "phosphor-react"
+import { PhosphorIcon } from "@/components/services/phosphor-icon"
+import type { PhosphorIconName } from "@/lib/phosphor-icon-names"
 
 type Highlight = {
-  icon: React.ComponentType<IconProps>
+  icon: PhosphorIconName
   title: string
   desc: string
 }
@@ -67,7 +70,8 @@ export function ServiceOverview({
                 return (
                   <div key={item.title} className="flex gap-6">
                     <div className="flex-shrink-0 pt-1">
-                      <Icon
+                      <PhosphorIcon
+                        name={Icon}
                         size={40}
                         weight="bold"
                         color="#0f1d35"

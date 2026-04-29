@@ -1,14 +1,4 @@
 import type { Metadata } from "next"
-import {
-  FileDotted,
-  ShieldWarning,
-  Handshake,
-  Scales,
-  ClipboardText,
-  Briefcase,
-  BookOpen,
-  ShieldCheck,
-} from "phosphor-react"
 import { TopBar } from "@/components/top-bar"
 import { SiteNav } from "@/components/site-nav"
 import { SiteFooter } from "@/components/site-footer"
@@ -48,17 +38,17 @@ export default function LabourLawPage() {
           badgeTitle="Fair. Procedural. Substantively sound."
           highlights={[
             {
-              icon: ShieldCheck,
+              icon: "ShieldCheck",
               title: "Substantive & Procedural Fairness",
               desc: "Every dismissal and disciplinary process structured to withstand CCMA and Labour Court scrutiny.",
             },
             {
-              icon: Scales,
+              icon: "Scales",
               title: "CCMA & Labour Court Advocacy",
               desc: "Full representation through conciliation, arbitration and subsequent review proceedings.",
             },
             {
-              icon: ClipboardText,
+              icon: "ClipboardText",
               title: "Proactive Compliance",
               desc: "Contracts, handbooks and policies designed to prevent disputes before they arise.",
             },
@@ -71,32 +61,32 @@ export default function LabourLawPage() {
           intro="From the drafting of enforceable employment contracts through retrenchment processes under Section 189 to arbitration at the CCMA and review in the Labour Court, we cover the full labour law spectrum for both employers and employees."
           items={[
             {
-              icon: FileDotted,
+              icon: "FileDotted",
               title: "Employment Contract Architecture",
               desc: "Drafting employment contracts that define terms of service, confidentiality and restraint of trade, with clauses that are reasonable and enforceable under South African law.",
             },
             {
-              icon: ClipboardText,
+              icon: "ClipboardText",
               title: "Disciplinary Procedures",
               desc: "Guiding employers through Substantive and Procedural Fairness requirements, including drafting charge sheets and presiding over disciplinary hearings, to avoid unfair dismissal claims.",
             },
             {
-              icon: ShieldWarning,
+              icon: "ShieldWarning",
               title: "Retrenchments & Section 189 Process",
               desc: "Managing the mandatory consultation process, drafting of the notice of contemplation of retrenchment and negotiation of severance packages under Section 189 of the LRA.",
             },
             {
-              icon: Scales,
+              icon: "Scales",
               title: "CCMA & Labour Court Representation",
               desc: "Representation in unfair dismissal, unfair labour practice and discrimination disputes, across conciliation, arbitration and review of awards in the Labour Court.",
             },
             {
-              icon: BookOpen,
+              icon: "BookOpen",
               title: "Compliance Audits & Policy Drafting",
               desc: "Audits of company policies to ensure alignment with the jurisprudence of the Labour Appeal Court and current CCMA practice.",
             },
             {
-              icon: Handshake,
+              icon: "Handshake",
               title: "Collective Bargaining & Union Matters",
               desc: "Advising on recognition agreements, collective bargaining processes, strike action and essential-service designations under the LRA.",
             },
@@ -109,7 +99,7 @@ export default function LabourLawPage() {
           heading="Practised within the tripartite labour statutes"
           intro="South African labour law rests on three pillars: the LRA, BCEA and EEA. Every matter we handle is analysed through the lens of these statutes and the evolving jurisprudence of the specialist labour courts."
           primary={{
-            icon: BookOpen,
+            icon: "BookOpen",
             eyebrow: "Labour Relations Act",
             title: "The constitutive statute of the workplace",
             body: "The LRA governs the formation and dissolution of the employment relationship, unfair dismissal jurisprudence, collective bargaining and dispute resolution. Mastery of its procedures is central to everything we do.",
@@ -121,7 +111,7 @@ export default function LabourLawPage() {
             ],
           }}
           secondary={{
-            icon: Briefcase,
+            icon: "Briefcase",
             eyebrow: "BCEA & EEA",
             title: "Minimum standards and equitable treatment",
             body: "The BCEA establishes the minimum conditions of employment, while the EEA outlaws unfair discrimination and mandates affirmative action at designated employers. We align policies and practices with both.",

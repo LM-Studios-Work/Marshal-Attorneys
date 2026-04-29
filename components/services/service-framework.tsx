@@ -1,9 +1,11 @@
+"use client"
+
 import { Check } from "lucide-react"
-import { ShieldCheck, Scales } from "phosphor-react"
-import type { IconProps } from "phosphor-react"
+import { PhosphorIcon } from "@/components/services/phosphor-icon"
+import type { PhosphorIconName } from "@/lib/phosphor-icon-names"
 
 type FrameworkCard = {
-  icon?: React.ComponentType<IconProps>
+  icon?: PhosphorIconName
   eyebrow: string
   title: string
   body: string
@@ -25,8 +27,8 @@ export function ServiceFramework({
   primary,
   secondary,
 }: ServiceFrameworkProps) {
-  const PrimaryIcon = primary.icon ?? ShieldCheck
-  const SecondaryIcon = secondary.icon ?? Scales
+  const primaryIcon = primary.icon ?? "ShieldCheck"
+  const secondaryIcon = secondary.icon ?? "Scales"
   return (
     <section className="bg-background py-24 md:py-32">
       <div className="mx-auto max-w-[1400px] px-6 md:px-10">
@@ -46,7 +48,8 @@ export function ServiceFramework({
           <article className="bg-dark-bg text-white p-10 md:p-12">
             <div className="flex items-center gap-4 mb-8">
               <div className="flex-shrink-0">
-                <PrimaryIcon
+                <PhosphorIcon
+                  name={primaryIcon}
                   size={32}
                   weight="bold"
                   color="#b9896a"
@@ -78,7 +81,8 @@ export function ServiceFramework({
           <article className="bg-soft-bg text-dark-bg p-10 md:p-12">
             <div className="flex items-center gap-4 mb-8">
               <div className="flex-shrink-0">
-                <SecondaryIcon
+                <PhosphorIcon
+                  name={secondaryIcon}
                   size={32}
                   weight="bold"
                   color="#b9896a"
