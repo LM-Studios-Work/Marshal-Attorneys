@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { ChevronDown } from "lucide-react";
-import { useState } from "react";
+import { ChevronDown, Menu, X } from "lucide-react";
+import { useEffect, useState } from "react";
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -29,6 +29,19 @@ const navItems = [
 
 export function SiteNav() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+
+  // Lock body scroll while drawer open
+  useEffect(() => {
+    if (mobileOpen) {
+      const original = document.body.style.overflow;
+      document.body.style.overflow = "hidden";
+      return () => {
+        document.body.style.overflow = original;
+      };
+    }
+  }, [mobileOpen]);
 
   return (
     <header className="sticky top-11 z-50 bg-background border-b border-border/60 shadow-sm">
@@ -43,6 +56,7 @@ export function SiteNav() {
           />
         </Link>
 
+        {/* Desktop nav */}
         <nav className="hidden lg:block">
           <ul className="flex items-center gap-8 text-[12px] tracking-[0.22em] uppercase text-dark-bg/80">
             {navItems.map((item) => {
@@ -85,13 +99,151 @@ export function SiteNav() {
           </ul>
         </nav>
 
+        {/* Desktop CTA */}
         <Link
           href="/contact"
-          className="inline-flex items-center justify-center px-7 py-3 bg-tan text-white text-[11px] tracking-[0.22em] uppercase hover:bg-dark-bg transition-colors"
+          className="hidden lg:inline-flex items-center justify-center px-7 py-3 bg-tan text-white text-[11px] tracking-[0.22em] uppercase hover:bg-dark-bg transition-colors"
         >
           Free Consultation
         </Link>
+
+        {/* Mobile burger */}
+        <button
+          type="button"
+          aria-label="Open menu"
+          aria-expanded={mobileOpen}
+          aria-controls="mobile-nav-drawer"
+          onClick={() => setMobileOpen(true)}
+          className="lg:hidden inline-flex items-center justify-center h-11 w-11 -mr-2 text-dark-bg hover:text-tan transition-colors"
+        >
+          <Menu className="h-6 w-6" aria-hidden />
+        </button>
       </div>
+
+      {/* Mobile drawer */}
+      {/* Backdrop */}
+      <div
+        aria-hidden
+        onClick={() => setMobileOpen(false)}
+        className={`lg:hidden fixed inset-0 z-[60] bg-dark-bg/40 transition-opacity duration-200 ${
+          mobileOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
+      />
+
+      {/* Panel */}
+      <aside
+        id="mobile-nav-drawer"
+        aria-hidden={!mobileOpen}
+        className={`lg:hidden fixed top-0 right-0 z-[70] h-[100dvh] w-[85%] max-w-sm bg-background shadow-2xl flex flex-col transition-transform duration-300 ease-out ${
+          mobileOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <div className="flex items-center justify-between px-6 h-20 border-b border-border/60">
+          <Link
+            href="/"
+            onClick={() => setMobileOpen(false)}
+            className="flex items-center gap-3"
+          >
+            <Image
+              src="/Red%20Modern%20Law%20Consulting%20Firm%20Logo.png"
+              alt="Marshal Ndlovu Attorneys Logo"
+              width={36}
+              height={36}
+              className="h-9 w-auto"
+            />
+          </Link>
+          <button
+            type="button"
+            aria-label="Close menu"
+            onClick={() => setMobileOpen(false)}
+            className="inline-flex items-center justify-center h-11 w-11 -mr-2 text-dark-bg hover:text-tan transition-colors"
+          >
+            <X className="h-6 w-6" aria-hidden />
+          </button>
+        </div>
+
+        <nav className="flex-1 overflow-y-auto px-2 py-4">
+          <ul className="flex flex-col">
+            {navItems.map((item) => {
+              const hasSubmenu = "submenu" in item && item.submenu;
+              if (!hasSubmenu) {
+                return (
+                  <li key={item.label}>
+                    <Link
+                      href={item.href}
+                      onClick={() => setMobileOpen(false)}
+                      className="block px-4 py-3.5 text-[13px] tracking-[0.22em] uppercase text-dark-bg/85 hover:text-tan border-b border-border/40 transition-colors"
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                );
+              }
+              return (
+                <li key={item.label} className="border-b border-border/40">
+                  <div className="flex items-center">
+                    <Link
+                      href={item.href}
+                      onClick={() => setMobileOpen(false)}
+                      className="flex-1 block px-4 py-3.5 text-[13px] tracking-[0.22em] uppercase text-dark-bg/85 hover:text-tan transition-colors"
+                    >
+                      {item.label}
+                    </Link>
+                    <button
+                      type="button"
+                      aria-label={`${
+                        mobileServicesOpen ? "Collapse" : "Expand"
+                      } ${item.label} submenu`}
+                      aria-expanded={mobileServicesOpen}
+                      onClick={() => setMobileServicesOpen((v) => !v)}
+                      className="px-4 py-3.5 text-dark-bg/70 hover:text-tan transition-colors"
+                    >
+                      <ChevronDown
+                        className={`h-4 w-4 transition-transform ${
+                          mobileServicesOpen ? "rotate-180" : ""
+                        }`}
+                        aria-hidden
+                      />
+                    </button>
+                  </div>
+                  <ul
+                    className={`grid transition-[grid-template-rows] duration-300 ease-out ${
+                      mobileServicesOpen
+                        ? "grid-rows-[1fr]"
+                        : "grid-rows-[0fr]"
+                    }`}
+                  >
+                    <li className="overflow-hidden">
+                      <div className="bg-soft-bg/60">
+                        {item.submenu!.map((sub) => (
+                          <Link
+                            key={sub.label}
+                            href={sub.href}
+                            onClick={() => setMobileOpen(false)}
+                            className="block px-8 py-3 text-[11px] tracking-[0.22em] uppercase text-dark-bg/75 hover:text-tan border-b border-border/30 last:border-b-0 transition-colors"
+                          >
+                            {sub.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
+
+        <div className="p-5 border-t border-border/60">
+          <Link
+            href="/contact"
+            onClick={() => setMobileOpen(false)}
+            className="flex w-full items-center justify-center px-7 py-3 bg-tan text-white text-[11px] tracking-[0.22em] uppercase hover:bg-dark-bg transition-colors"
+          >
+            Free Consultation
+          </Link>
+        </div>
+      </aside>
     </header>
   );
 }
