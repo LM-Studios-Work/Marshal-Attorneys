@@ -6,9 +6,9 @@ const leftLinks = [
 ]
 
 const socialLinks = [
-  { label: "Facebook", href: "#" },
-  { label: "LinkedIn", href: "#" },
-  { label: "Instagram", href: "#" },
+  { label: "Facebook", href: "https://facebook.com", external: true },
+  { label: "LinkedIn", href: "https://linkedin.com", external: true },
+  { label: "Instagram", href: "https://instagram.com", external: true },
 ]
 
 export function TopBar() {
@@ -36,12 +36,23 @@ export function TopBar() {
         <ul className="flex items-center gap-0 ml-auto">
           {socialLinks.map((l, i) => (
             <li key={l.label} className="flex items-center">
-              <Link
-                href={l.href}
-                className="px-3 py-1 hover:text-tan transition-colors"
-              >
-                {l.label}
-              </Link>
+              {"external" in l && l.external ? (
+                <a
+                  href={l.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-3 py-1 hover:text-tan transition-colors"
+                >
+                  {l.label}
+                </a>
+              ) : (
+                <Link
+                  href={l.href}
+                  className="px-3 py-1 hover:text-tan transition-colors"
+                >
+                  {l.label}
+                </Link>
+              )}
               {i < socialLinks.length - 1 && (
                 <span aria-hidden className="text-tan/70">
                   •

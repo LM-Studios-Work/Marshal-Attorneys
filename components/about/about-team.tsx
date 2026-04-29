@@ -65,7 +65,7 @@ export function AboutTeam() {
                   </p>
                 </div>
                 <Link
-                  href="/team"
+                  href="/about#team"
                   className="mt-1 text-[11px] tracking-[0.18em] uppercase text-dark-bg/50 hover:text-tan transition-colors border-b border-dark-bg/20 hover:border-tan pb-px"
                 >
                   Meet Attorney

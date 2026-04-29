@@ -4,17 +4,25 @@ import Image from "next/image";
 const columns = [
   {
     title: "Practice Areas",
-    items: [
-      "Conveyancing",
-      "Family Law",
-      "Litigation",
-      "Labour Law",
-      "Estate Law",
+    links: [
+      { label: "Conveyancing", href: "/services/conveyancing" },
+      { label: "Family Law", href: "/services/family-law" },
+      { label: "Litigation", href: "/services/litigation" },
+      { label: "Notarial Services", href: "/services/notarial-services" },
+      { label: "Consumer Law", href: "/services/consumer-law" },
+      { label: "Labour Law", href: "/services/labour-law" },
+      { label: "Insolvency Law", href: "/services/insolvency-law" },
+      { label: "Estate Law", href: "/services/estate-law" },
     ],
   },
   {
     title: "Firm",
-    items: ["About Us", "Our Team", "Services", "Contact"],
+    links: [
+      { label: "About Us", href: "/about" },
+      { label: "Our Team", href: "/about#team" },
+      { label: "Case Results", href: "/case-results" },
+      { label: "Contact", href: "/contact" },
+    ],
   },
   {
     title: "Contact",
@@ -56,14 +64,20 @@ export function SiteFooter() {
                 {col.title}
               </p>
               <ul className="mt-5 space-y-3 text-sm">
-                {col.items.map((item) => (
-                  <li key={item}>
-                    <Link
-                      href="#"
-                      className="text-white/70 hover:text-tan transition-colors"
-                    >
-                      {item}
-                    </Link>
+                {("links" in col ? col.links : col.items).map((item) => (
+                  <li key={typeof item === "string" ? item : item.label}>
+                    {"href" in item ? (
+                      <Link
+                        href={item.href}
+                        className="text-white/70 hover:text-tan transition-colors"
+                      >
+                        {item.label}
+                      </Link>
+                    ) : (
+                      <span className="text-white/70">
+                        {item}
+                      </span>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -77,15 +91,15 @@ export function SiteFooter() {
             rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            <Link href="#" className="hover:text-tan">
+            <a href="#privacy" className="hover:text-tan">
               Privacy
-            </Link>
-            <Link href="#" className="hover:text-tan">
+            </a>
+            <a href="#terms" className="hover:text-tan">
               Terms
-            </Link>
-            <Link href="#" className="hover:text-tan">
+            </a>
+            <a href="#cookies" className="hover:text-tan">
               Cookies
-            </Link>
+            </a>
           </div>
         </div>
       </div>

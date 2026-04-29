@@ -22,8 +22,8 @@ const navItems = [
       { label: "Estate Law", href: "/services/estate-law" },
     ],
   },
-  { label: "Our Team", href: "/team" },
-  { label: "Blog", href: "/blog" },
+  { label: "Our Team", href: "/about#team" },
+  { label: "Case Results", href: "/case-results" },
   { label: "Contact", href: "/contact" },
 ];
 
