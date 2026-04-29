@@ -10,7 +10,7 @@ const stats: { value: number; suffix: string; label: string }[] = [
 export function StatsBar() {
   return (
     <section className="bg-soft-bg relative">
-      <div className="mx-auto max-w-[1400px] px-6 md:px-10 py-16 md:py-20">
+      <div className="mx-auto max-w-[1400px] px-6 md:px-10 py-24 md:py-32">
         <dl className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-6">
           {stats.map((s) => (
             <div key={s.label} className="text-center">
