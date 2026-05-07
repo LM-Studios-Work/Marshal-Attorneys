@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { RouteScrollManager } from "@/components/route-scroll-manager";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { FloatingWhatsApp } from "@/components/floating-whatsapp";
 import "./globals.css";
@@ -43,6 +44,7 @@ export default function RootLayout({
       className={`${inter.variable} ${playfair.variable} bg-background`}
     >
       <body className="font-sans antialiased">
+        <RouteScrollManager />
         <ScrollReveal />
         {children}
         <FloatingWhatsApp />

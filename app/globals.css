@@ -39,6 +39,13 @@
   --input: #e5e7eb;
   --ring: var(--tan);
   --radius: 0.25rem;
+  --site-header-offset: 124px;
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --site-header-offset: 96px;
+  }
 }
 
 @theme inline {
@@ -75,6 +82,7 @@
 
 @layer base {
   html {
+    scroll-padding-top: var(--site-header-offset);
     scroll-behavior: smooth;
   }
 

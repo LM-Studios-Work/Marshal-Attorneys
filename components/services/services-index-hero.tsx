@@ -1,7 +1,7 @@
-import Image from "next/image"
-import Link from "next/link"
-import { ChevronRight } from "lucide-react"
-import { AnimatedNumber } from "@/components/animated-number"
+import Image from "next/image";
+import Link from "next/link";
+import { ChevronRight } from "lucide-react";
+import { AnimatedNumber } from "@/components/animated-number";
 
 export function ServicesIndexHero() {
   return (
@@ -59,8 +59,8 @@ export function ServicesIndexHero() {
           {/* Right: image */}
           <div className="relative hidden lg:block min-h-[560px]">
             <Image
-              src="/elegant-law-office-interior-dark-navy.jpg"
-              alt="Marshal Ndlovu Attorneys office interior"
+              src="/team/Marshal.webp"
+              alt="Marshal Ndlovu Attorneys team"
               fill
               priority
               className="object-cover opacity-70"
@@ -71,7 +71,7 @@ export function ServicesIndexHero() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
 function Stat({
@@ -79,9 +79,9 @@ function Stat({
   suffix,
   label,
 }: {
-  value: number
-  suffix?: string
-  label: string
+  value: number;
+  suffix?: string;
+  label: string;
 }) {
   return (
     <div>
@@ -93,5 +93,5 @@ function Stat({
         {label}
       </p>
     </div>
-  )
+  );
 }

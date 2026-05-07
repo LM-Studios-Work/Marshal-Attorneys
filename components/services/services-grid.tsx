@@ -1,15 +1,15 @@
-import Image from "next/image"
-import Link from "next/link"
-import { ArrowUpRight } from "lucide-react"
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 
 type Service = {
-  number: string
-  title: string
-  blurb: string
-  description: string
-  image: string
-  href: string
-}
+  number: string;
+  title: string;
+  blurb: string;
+  description: string;
+  image: string;
+  href: string;
+};
 
 const services: Service[] = [
   {
@@ -18,7 +18,7 @@ const services: Service[] = [
     blurb: "Property Transfers & Bonds",
     description:
       "We handle property transfers, bond registrations, and title deed work with precision through our network of five Deeds Offices across four provinces.",
-    image: "/leather-wallet-and-card-holder-on-linen.jpg",
+    image: "/team/customer care.webp",
     href: "/services/conveyancing",
   },
   {
@@ -27,7 +27,7 @@ const services: Service[] = [
     blurb: "Divorce, Custody & Maintenance",
     description:
       "We guide clients through divorce, custody, maintenance, and domestic matters with discretion and care at every stage of the process.",
-    image: "/brown-leather-notebook-on-desk.jpg",
+    image: "/services/services other/family law hero.webp",
     href: "/services/family-law",
   },
   {
@@ -36,7 +36,7 @@ const services: Service[] = [
     blurb: "Court Representation",
     description:
       "We represent clients in court and manage complex civil disputes with strategic, prepared, and tenacious advocacy.",
-    image: "/wooden-judge-gavel-on-marble.jpg",
+    image: "/services/services other/litigation hero.webp",
     href: "/services/litigation",
   },
   {
@@ -45,7 +45,7 @@ const services: Service[] = [
     blurb: "Antenuptial & Notarial Bonds",
     description:
       "Our qualified notary public prepares antenuptial contracts, notarial bonds, and authentications with meticulous attention to detail.",
-    image: "/elegant-law-office-interior-dark-navy.jpg",
+    image: "/services/services other/Notarial-Services Hero.webp",
     href: "/services/notarial-services",
   },
   {
@@ -54,7 +54,7 @@ const services: Service[] = [
     blurb: "CPA Enforcement & Disputes",
     description:
       "We assist with Consumer Protection Act enforcement, defective goods, and supplier disputes to protect consumer rights with rigor and resolve.",
-    image: "/placeholder.svg?height=900&width=1200",
+    image: "/services/services other/Consumer-Protection-Act.jpg",
     href: "/services/consumer-law",
   },
   {
@@ -63,7 +63,7 @@ const services: Service[] = [
     blurb: "CCMA & Employment Matters",
     description:
       "We provide clear, decisive representation in CCMA disputes, dismissals, and broader employment matters for both employees and employers.",
-    image: "/courtroom-gavel-detail-warm-tones.jpg",
+    image: "/services/services other/labour-laws hero.webp",
     href: "/services/labour-law",
   },
   {
@@ -72,7 +72,7 @@ const services: Service[] = [
     blurb: "Sequestration & Liquidations",
     description:
       "We help individuals and companies navigate voluntary sequestration, liquidations, and debt relief with a clear path forward.",
-    image: "/placeholder.svg?height=900&width=1200",
+    image: "/services/services other/insolvency-law hero.webp",
     href: "/services/insolvency-law",
   },
   {
@@ -81,10 +81,10 @@ const services: Service[] = [
     blurb: "Wills, Trusts & Estates",
     description:
       "We advise on wills, trusts, and deceased estate administration to preserve legacies with care, foresight, and professional rigor.",
-    image: "/rows-of-leather-bound-law-books-on-shelf.jpg",
+    image: "/services/WILLS-ESTATES-LAWYERS-IN-PRETORIA.jpg",
     href: "/services/estate-law",
   },
-]
+];
 
 export function ServicesGrid() {
   return (
@@ -161,5 +161,5 @@ export function ServicesGrid() {
         </ul>
       </div>
     </section>
-  )
+  );
 }

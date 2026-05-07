@@ -137,3 +137,19 @@ No new imports found, skipping writing import map
  GET /contact 200 in 301ms (next.js: 8ms, application-code: 293ms)
  GET /articles 200 in 1760ms (next.js: 65ms, application-code: 1696ms)
 ✓ Compiled in 2.6s
+Generating import map
+○ Compiling /about ...
+ GET / 200 in 4.0s (next.js: 3.2s, application-code: 785ms)
+No new imports found, skipping writing import map
+ GET /about 200 in 6.1s (next.js: 2.6s, application-code: 3.5s)
+✓ Compiled in 1822ms
+✓ Compiled in 1399ms
+✓ Finished filesystem cache database compaction in 15.0s
+Generating import map
+Writing import map to C:\Users\austi\Downloads\Lawyer Website\app\(payload)\admin\importMap.js
+ GET /about 200 in 17.5s (next.js: 2.1s, application-code: 15.4s)
+✓ Compiled in 608ms
+✓ Compiled in 132ms
+✓ Compiled in 127ms
+○ Compiling / ...
+ GET / 200 in 9.5s (next.js: 4.5s, application-code: 4.9s)
