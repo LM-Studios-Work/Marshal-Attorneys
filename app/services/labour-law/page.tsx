@@ -1,19 +1,19 @@
-import type { Metadata } from "next"
-import { TopBar } from "@/components/top-bar"
-import { SiteNav } from "@/components/site-nav"
-import { SiteFooter } from "@/components/site-footer"
-import { ServiceHero } from "@/components/services/service-hero"
-import { ServiceOverview } from "@/components/services/service-overview"
-import { ServiceDetails } from "@/components/services/service-details"
-import { ServiceFramework } from "@/components/services/service-framework"
-import { ServiceCTA } from "@/components/services/service-cta"
-import { NotWhatYoureLookingFor } from "@/components/not-what-youre-looking-for"
+import type { Metadata } from "next";
+import { TopBar } from "@/components/top-bar";
+import { SiteNav } from "@/components/site-nav";
+import { SiteFooter } from "@/components/site-footer";
+import { ServiceHero } from "@/components/services/service-hero";
+import { ServiceOverview } from "@/components/services/service-overview";
+import { ServiceDetails } from "@/components/services/service-details";
+import { ServiceFramework } from "@/components/services/service-framework";
+import { ServiceCTA } from "@/components/services/service-cta";
+import { NotWhatYoureLookingFor } from "@/components/not-what-youre-looking-for";
 
 export const metadata: Metadata = {
   title: "Labour Law | Marshal Ndlovu Attorneys Inc.",
   description:
     "Labour law advisory and litigation: employment contracts, disciplinary procedures, retrenchments under Section 189, CCMA and Labour Court representation.",
-}
+};
 
 export default function LabourLawPage() {
   return (
@@ -25,7 +25,7 @@ export default function LabourLawPage() {
           title="Labour Law"
           breadcrumb="Labour Law"
           description="Labour law is governed by the Labour Relations Act (LRA), the Basic Conditions of Employment Act (BCEA) and the Employment Equity Act (EEA). We provide guidance to ensure that employment relationships are managed within the boundaries of the law."
-          imageSrc="/boardroom-meeting-employment-dispute.jpg"
+          imageSrc="/services/services other/labour-laws hero.webp"
           imageAlt="Employment matter consultation"
         />
 
@@ -33,7 +33,7 @@ export default function LabourLawPage() {
           eyebrow="Overview"
           heading="Structured employment relationships, defensibly managed"
           body="Our labour law practice supports employers and employees through the complete employment lifecycle, from the architecture of the contract through performance management, disciplinary procedure, retrenchment and dispute resolution. We build employment relationships that are productive, lawful and defensible when tested."
-          imageSrc="/ccma-commissioner-hearing-room.jpg"
+          imageSrc="/services/services other/insolvency law overview.webp"
           imageAlt="CCMA hearing venue interior"
           badgeLabel="LRA, BCEA & EEA"
           badgeTitle="Fair. Procedural. Substantively sound."
@@ -133,5 +133,5 @@ export default function LabourLawPage() {
       </main>
       <SiteFooter />
     </>
-  )
+  );
 }

@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from "next/image";
 
 export function ContactFormSection() {
   return (
@@ -21,18 +21,18 @@ export function ContactFormSection() {
 
             <div className="mt-10 relative aspect-[4/3] overflow-hidden">
               <Image
-                src="/elegant-law-office-interior-with-leather-chairs-an.jpg"
+                src="/services/services other/insolvency law overview.webp"
                 alt="Interior of Marshal Ndlovu Attorneys' office"
                 fill
                 className="object-cover"
+                style={{ objectPosition: "center 35%" }}
                 sizes="(max-width: 1024px) 100vw, 45vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-dark-bg/40 to-transparent" />
               <div className="absolute bottom-6 left-6 right-6">
-                <p className="text-[10px] tracking-[0.28em] uppercase text-white/80">
+                <p className="text-[10px] tracking-[0.28em] uppercase text-tan">
                   Office Hours
                 </p>
-                <p className="mt-2 font-serif text-xl md:text-2xl text-white">
+                <p className="mt-2 font-serif text-xl md:text-2xl text-tan">
                   Monday to Friday, 08:30 to 17:00
                 </p>
               </div>
@@ -84,7 +84,7 @@ export function ContactFormSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
 function Field({
@@ -93,10 +93,10 @@ function Field({
   placeholder,
   type = "text",
 }: {
-  label: string
-  name: string
-  placeholder: string
-  type?: string
+  label: string;
+  name: string;
+  placeholder: string;
+  type?: string;
 }) {
   return (
     <div>
@@ -114,5 +114,5 @@ function Field({
         className="w-full border-b border-dark-bg/20 bg-transparent py-2 text-sm text-dark-bg placeholder:text-muted-foreground/70 focus:outline-none focus:border-tan"
       />
     </div>
-  )
+  );
 }

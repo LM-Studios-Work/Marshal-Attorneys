@@ -1,19 +1,19 @@
-import type { Metadata } from "next"
-import { TopBar } from "@/components/top-bar"
-import { SiteNav } from "@/components/site-nav"
-import { SiteFooter } from "@/components/site-footer"
-import { ServiceHero } from "@/components/services/service-hero"
-import { ServiceOverview } from "@/components/services/service-overview"
-import { ServiceDetails } from "@/components/services/service-details"
-import { ServiceFramework } from "@/components/services/service-framework"
-import { ServiceCTA } from "@/components/services/service-cta"
-import { NotWhatYoureLookingFor } from "@/components/not-what-youre-looking-for"
+import type { Metadata } from "next";
+import { TopBar } from "@/components/top-bar";
+import { SiteNav } from "@/components/site-nav";
+import { SiteFooter } from "@/components/site-footer";
+import { ServiceHero } from "@/components/services/service-hero";
+import { ServiceOverview } from "@/components/services/service-overview";
+import { ServiceDetails } from "@/components/services/service-details";
+import { ServiceFramework } from "@/components/services/service-framework";
+import { ServiceCTA } from "@/components/services/service-cta";
+import { NotWhatYoureLookingFor } from "@/components/not-what-youre-looking-for";
 
 export const metadata: Metadata = {
   title: "Consumer Law | Marshal Ndlovu Attorneys Inc.",
   description:
     "Consumer Protection Act and National Credit Act advisory and litigation: credit agreement vetting, responsible-lending compliance, tribunal advocacy and product-liability claims.",
-}
+};
 
 export default function ConsumerLawPage() {
   return (
@@ -25,7 +25,7 @@ export default function ConsumerLawPage() {
           title="Consumer Law"
           breadcrumb="Consumer Law"
           description="Consumer law in South Africa is governed by the Consumer Protection Act (CPA) and the National Credit Act (NCA). We ensure that businesses remain compliant with these regulations and represent consumers in the enforcement of their statutory rights."
-          imageSrc="/retail-contract-review-dark-warm.jpg"
+          imageSrc="/services/services other/Consumer-Protection-Act.jpg"
           imageAlt="Credit agreement and consumer contract"
         />
 
@@ -33,7 +33,7 @@ export default function ConsumerLawPage() {
           eyebrow="Overview"
           heading="Compliance-led, enforcement-ready"
           body="Consumer protection is a two-sided mandate: credit providers and retailers must structure their businesses to comply with the CPA and NCA; consumers have substantive rights that are enforceable before regulators and in the courts. We advise on both sides of that equation with commercial sensitivity and statutory precision."
-          imageSrc="/south-african-consumer-tribunal-hearing.jpg"
+          imageSrc="/team/Marshal.webp"
           imageAlt="Consumer tribunal hearing in progress"
           badgeLabel="CPA & NCA"
           badgeTitle="Regulated. Transparent. Enforceable."
@@ -133,5 +133,5 @@ export default function ConsumerLawPage() {
       </main>
       <SiteFooter />
     </>
-  )
+  );
 }

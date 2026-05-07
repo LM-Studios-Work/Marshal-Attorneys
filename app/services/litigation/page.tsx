@@ -1,19 +1,19 @@
-import type { Metadata } from "next"
-import { TopBar } from "@/components/top-bar"
-import { SiteNav } from "@/components/site-nav"
-import { SiteFooter } from "@/components/site-footer"
-import { ServiceHero } from "@/components/services/service-hero"
-import { ServiceOverview } from "@/components/services/service-overview"
-import { ServiceDetails } from "@/components/services/service-details"
-import { ServiceFramework } from "@/components/services/service-framework"
-import { ServiceCTA } from "@/components/services/service-cta"
-import { NotWhatYoureLookingFor } from "@/components/not-what-youre-looking-for"
+import type { Metadata } from "next";
+import { TopBar } from "@/components/top-bar";
+import { SiteNav } from "@/components/site-nav";
+import { SiteFooter } from "@/components/site-footer";
+import { ServiceHero } from "@/components/services/service-hero";
+import { ServiceOverview } from "@/components/services/service-overview";
+import { ServiceDetails } from "@/components/services/service-details";
+import { ServiceFramework } from "@/components/services/service-framework";
+import { ServiceCTA } from "@/components/services/service-cta";
+import { NotWhatYoureLookingFor } from "@/components/not-what-youre-looking-for";
 
 export const metadata: Metadata = {
   title: "Litigation | Marshal Ndlovu Attorneys Inc.",
   description:
     "Civil litigation in the High Court and Magistrates' Courts: RAF claims, unlawful arrest and constitutional litigation, debt recovery and insolvency.",
-}
+};
 
 export default function LitigationPage() {
   return (
@@ -25,7 +25,7 @@ export default function LitigationPage() {
           title="Litigation"
           breadcrumb="Litigation"
           description="Litigation is the process of resolving disputes through the application of the Uniform Rules of Court in the High Court and the Magistrates' Courts Rules. We employ a rigorous approach to evidence, pleading and courtroom advocacy."
-          imageSrc="/team/home hero image.webp"
+          imageSrc="/services/services other/litigation hero.webp"
           imageAlt="Marshal Ndlovu Attorneys litigation team"
         />
 
@@ -33,7 +33,7 @@ export default function LitigationPage() {
           eyebrow="Overview"
           heading="Disciplined advocacy from pleading to judgment"
           body="Marshal Ndlovu Attorneys Inc. conducts litigation with a singular focus: the strategic, evidence-driven resolution of disputes on behalf of our clients. From the initial letter of demand through the final appeal, our approach is defined by procedural precision and uncompromising courtroom preparation."
-          imageSrc="/stacked-court-files-brass-desk-lamp.jpg"
+          imageSrc="/services/WILLS-ESTATES-LAWYERS-IN-PRETORIA.jpg"
           imageAlt="Court files and legal pleadings prepared for litigation"
           badgeLabel="Uniform Rules of Court"
           badgeTitle="Evidence-led. Procedurally precise."
@@ -133,5 +133,5 @@ export default function LitigationPage() {
       </main>
       <SiteFooter />
     </>
-  )
+  );
 }

@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import { PhosphorIcon } from "@/components/services/phosphor-icon"
+import Image from "next/image";
+import { PhosphorIcon } from "@/components/services/phosphor-icon";
 
 const objectives = [
   {
@@ -19,7 +19,7 @@ const objectives = [
     title: "Seller Protection",
     desc: "Seller interests fully safeguarded throughout the registration process.",
   },
-]
+];
 
 export function ConveyancingOverview() {
   return (
@@ -29,7 +29,7 @@ export function ConveyancingOverview() {
           {/* Left image */}
           <div className="relative aspect-[4/5] overflow-hidden">
             <Image
-              src="/courtroom-gavel-detail-warm-tones.jpg"
+              src="/services/conveyancing-attorneys-south-africa-8923_1.jpg"
               alt="Property documents and conveyancing files"
               fill
               className="object-cover"
@@ -64,7 +64,7 @@ export function ConveyancingOverview() {
 
             <div className="mt-12 space-y-8">
               {objectives.map((obj) => {
-                const Icon = obj.icon
+                const Icon = obj.icon;
                 return (
                   <div key={obj.title} className="flex gap-6">
                     <div className="flex-shrink-0 pt-1">
@@ -86,12 +86,12 @@ export function ConveyancingOverview() {
                       </p>
                     </div>
                   </div>
-                )
+                );
               })}
             </div>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

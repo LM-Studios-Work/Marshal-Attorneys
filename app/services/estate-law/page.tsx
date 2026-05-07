@@ -1,19 +1,19 @@
-import type { Metadata } from "next"
-import { TopBar } from "@/components/top-bar"
-import { SiteNav } from "@/components/site-nav"
-import { SiteFooter } from "@/components/site-footer"
-import { ServiceHero } from "@/components/services/service-hero"
-import { ServiceOverview } from "@/components/services/service-overview"
-import { ServiceDetails } from "@/components/services/service-details"
-import { ServiceFramework } from "@/components/services/service-framework"
-import { ServiceCTA } from "@/components/services/service-cta"
-import { NotWhatYoureLookingFor } from "@/components/not-what-youre-looking-for"
+import type { Metadata } from "next";
+import { TopBar } from "@/components/top-bar";
+import { SiteNav } from "@/components/site-nav";
+import { SiteFooter } from "@/components/site-footer";
+import { ServiceHero } from "@/components/services/service-hero";
+import { ServiceOverview } from "@/components/services/service-overview";
+import { ServiceDetails } from "@/components/services/service-details";
+import { ServiceFramework } from "@/components/services/service-framework";
+import { ServiceCTA } from "@/components/services/service-cta";
+import { NotWhatYoureLookingFor } from "@/components/not-what-youre-looking-for";
 
 export const metadata: Metadata = {
   title: "Estate Law | Marshal Ndlovu Attorneys Inc.",
   description:
     "Estate planning and deceased estate administration: wills, testamentary and inter vivos trusts, executor services and Master's Office compliance.",
-}
+};
 
 export default function EstateLawPage() {
   return (
@@ -25,7 +25,7 @@ export default function EstateLawPage() {
           title="Estate Law"
           breadcrumb="Estate Law"
           description="Estate law encompasses the planning and administration of assets during a person's lifetime and after death. This practice is governed by the Administration of Estates Act 66 of 1965 and the Wills Act 7 of 1953."
-          imageSrc="/elegant-will-document-fountain-pen-lamp.jpg"
+          imageSrc="/services/WILLS-ESTATES-LAWYERS-IN-PRETORIA.jpg"
           imageAlt="Estate planning documents and quill"
         />
 
@@ -33,7 +33,7 @@ export default function EstateLawPage() {
           eyebrow="Overview"
           heading="Preserving wealth across generations"
           body="Estate law is the architecture of intergenerational wealth. We structure estates during our clients' lifetimes to minimise estate duty and capital gains tax, and we administer estates after death with the precision the Master of the High Court requires. Every instrument is drafted to express the testator's intention and to survive legal scrutiny."
-          imageSrc="/family-trust-meeting-warm-library.jpg"
+          imageSrc="/services/services other/estate law overview - Copy.webp"
           imageAlt="Family trust consultation setting"
           badgeLabel="Administration of Estates Act"
           badgeTitle="Structured. Efficient. Enforceable."
@@ -133,5 +133,5 @@ export default function EstateLawPage() {
       </main>
       <SiteFooter />
     </>
-  )
+  );
 }

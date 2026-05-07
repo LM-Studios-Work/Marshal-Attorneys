@@ -1,19 +1,19 @@
-import type { Metadata } from "next"
-import { TopBar } from "@/components/top-bar"
-import { SiteNav } from "@/components/site-nav"
-import { SiteFooter } from "@/components/site-footer"
-import { ServiceHero } from "@/components/services/service-hero"
-import { ServiceOverview } from "@/components/services/service-overview"
-import { ServiceDetails } from "@/components/services/service-details"
-import { ServiceFramework } from "@/components/services/service-framework"
-import { ServiceCTA } from "@/components/services/service-cta"
-import { NotWhatYoureLookingFor } from "@/components/not-what-youre-looking-for"
+import type { Metadata } from "next";
+import { TopBar } from "@/components/top-bar";
+import { SiteNav } from "@/components/site-nav";
+import { SiteFooter } from "@/components/site-footer";
+import { ServiceHero } from "@/components/services/service-hero";
+import { ServiceOverview } from "@/components/services/service-overview";
+import { ServiceDetails } from "@/components/services/service-details";
+import { ServiceFramework } from "@/components/services/service-framework";
+import { ServiceCTA } from "@/components/services/service-cta";
+import { NotWhatYoureLookingFor } from "@/components/not-what-youre-looking-for";
 
 export const metadata: Metadata = {
   title: "Family Law | Marshal Ndlovu Attorneys Inc.",
   description:
     "Family law services across South Africa: antenuptial contracts, divorce, parental rights, maintenance and family trusts under the Matrimonial Property, Divorce and Children's Acts.",
-}
+};
 
 export default function FamilyLawPage() {
   return (
@@ -25,7 +25,7 @@ export default function FamilyLawPage() {
           title="Family Law"
           breadcrumb="Family Law"
           description="Family law is governed by the Matrimonial Property Act, the Divorce Act, and the Children's Act 38 of 2005. Our practice focuses on the application of these laws to resolve disputes regarding matrimonial assets and the protection of minor children."
-          imageSrc="/warm-family-law-office-interior-south-africa.jpg"
+          imageSrc="/services/services other/family law hero.webp"
           imageAlt="Family law consultation setting"
         />
 
@@ -33,7 +33,7 @@ export default function FamilyLawPage() {
           eyebrow="Overview"
           heading="Protecting families through disciplined legal practice"
           body="We counsel individuals and families through the most significant transitions of their lives: the structuring of a marriage, the dissolution of one, and the protection of children and generational wealth. Every matter is handled with the rigour required by the relevant statutes and the discretion the subject demands."
-          imageSrc="/family-meeting-with-lawyer-warm-tones.jpg"
+          imageSrc="/services/services other/family law overview.webp"
           imageAlt="Attorney counselling a family on matrimonial matters"
           badgeLabel="Children's Act 38 of 2005"
           badgeTitle="Discreet. Child-focused. Enforceable."
@@ -133,5 +133,5 @@ export default function FamilyLawPage() {
       </main>
       <SiteFooter />
     </>
-  )
+  );
 }

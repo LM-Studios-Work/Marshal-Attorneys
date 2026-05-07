@@ -1,19 +1,19 @@
-import type { Metadata } from "next"
-import { TopBar } from "@/components/top-bar"
-import { SiteNav } from "@/components/site-nav"
-import { SiteFooter } from "@/components/site-footer"
-import { ServiceHero } from "@/components/services/service-hero"
-import { ServiceOverview } from "@/components/services/service-overview"
-import { ServiceDetails } from "@/components/services/service-details"
-import { ServiceFramework } from "@/components/services/service-framework"
-import { ServiceCTA } from "@/components/services/service-cta"
-import { NotWhatYoureLookingFor } from "@/components/not-what-youre-looking-for"
+import type { Metadata } from "next";
+import { TopBar } from "@/components/top-bar";
+import { SiteNav } from "@/components/site-nav";
+import { SiteFooter } from "@/components/site-footer";
+import { ServiceHero } from "@/components/services/service-hero";
+import { ServiceOverview } from "@/components/services/service-overview";
+import { ServiceDetails } from "@/components/services/service-details";
+import { ServiceFramework } from "@/components/services/service-framework";
+import { ServiceCTA } from "@/components/services/service-cta";
+import { NotWhatYoureLookingFor } from "@/components/not-what-youre-looking-for";
 
 export const metadata: Metadata = {
   title: "Insolvency Law | Marshal Ndlovu Attorneys Inc.",
   description:
     "Insolvency advisory and litigation: voluntary and compulsory sequestration, corporate liquidation, trustee representation and rehabilitation under the Insolvency Act.",
-}
+};
 
 export default function InsolvencyLawPage() {
   return (
@@ -25,7 +25,7 @@ export default function InsolvencyLawPage() {
           title="Insolvency Law"
           breadcrumb="Insolvency Law"
           description="Insolvency law regulates the distribution of a debtor's assets when they are unable to meet their financial obligations. Governed by the Insolvency Act 24 of 1936, this process ensures that creditors are treated according to a legal hierarchy of preference."
-          imageSrc="/insolvency-ledger-and-bankruptcy-papers.jpg"
+          imageSrc="/services/services other/insolvency-law hero.webp"
           imageAlt="Insolvency ledger and creditor documents"
         />
 
@@ -33,7 +33,7 @@ export default function InsolvencyLawPage() {
           eyebrow="Overview"
           heading="Orderly resolution of financial distress"
           body="Our insolvency practice guides debtors, creditors, trustees and liquidators through the statutory machinery that governs financial failure. From the first application for sequestration through to the final rehabilitation order, we ensure every step complies with the Insolvency Act and serves our client's strategic objective."
-          imageSrc="/creditor-meeting-boardroom-south-africa.jpg"
+          imageSrc="/services/services other/insolvency law overview.webp"
           imageAlt="Creditor meeting in a boardroom setting"
           badgeLabel="Insolvency Act 24 of 1936"
           badgeTitle="Ordered. Preferential. Properly administered."
@@ -133,5 +133,5 @@ export default function InsolvencyLawPage() {
       </main>
       <SiteFooter />
     </>
-  )
+  );
 }

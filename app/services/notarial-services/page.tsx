@@ -1,19 +1,19 @@
-import type { Metadata } from "next"
-import { TopBar } from "@/components/top-bar"
-import { SiteNav } from "@/components/site-nav"
-import { SiteFooter } from "@/components/site-footer"
-import { ServiceHero } from "@/components/services/service-hero"
-import { ServiceOverview } from "@/components/services/service-overview"
-import { ServiceDetails } from "@/components/services/service-details"
-import { ServiceFramework } from "@/components/services/service-framework"
-import { ServiceCTA } from "@/components/services/service-cta"
-import { NotWhatYoureLookingFor } from "@/components/not-what-youre-looking-for"
+import type { Metadata } from "next";
+import { TopBar } from "@/components/top-bar";
+import { SiteNav } from "@/components/site-nav";
+import { SiteFooter } from "@/components/site-footer";
+import { ServiceHero } from "@/components/services/service-hero";
+import { ServiceOverview } from "@/components/services/service-overview";
+import { ServiceDetails } from "@/components/services/service-details";
+import { ServiceFramework } from "@/components/services/service-framework";
+import { ServiceCTA } from "@/components/services/service-cta";
+import { NotWhatYoureLookingFor } from "@/components/not-what-youre-looking-for";
 
 export const metadata: Metadata = {
   title: "Notarial Services | Marshal Ndlovu Attorneys Inc.",
   description:
     "Appointed Notaries Public: notarial deeds of servitude, apostille and legalisation, tie agreements and notarial contracts executed with full public faith.",
-}
+};
 
 export default function NotarialServicesPage() {
   return (
@@ -25,7 +25,7 @@ export default function NotarialServicesPage() {
           title="Notarial Services"
           breadcrumb="Notarial Services"
           description="A Notary Public is a legal practitioner appointed by the Minister of Justice to execute documents that require a higher level of public faith. Notarial acts are often registered as Notarial Deeds in the Deeds Office."
-          imageSrc="/notary-wax-seal-and-fountain-pen-on-parchment.jpg"
+          imageSrc="/services/services other/Notarial-Services Hero.webp"
           imageAlt="Notarial seal and legal documents"
         />
 
@@ -33,7 +33,7 @@ export default function NotarialServicesPage() {
           eyebrow="Overview"
           heading="Executing instruments of public faith"
           body="Our notary brings the highest standard of attestation to instruments that demand it. Whether it is the binding of land in perpetuity, the authentication of documents for foreign jurisdictions or the execution of statutory notarial contracts, every instrument is prepared and executed with meticulous care."
-          imageSrc="/notarial-deed-ledger-and-brass-seal.jpg"
+          imageSrc="/services/services other/NOTARIAL_SERVICES hero.webp"
           imageAlt="Notarial deed ledger and official seal"
           badgeLabel="Appointed by the Minister of Justice"
           badgeTitle="Executed. Sealed. Legally authenticated."
@@ -135,5 +135,5 @@ export default function NotarialServicesPage() {
       </main>
       <SiteFooter />
     </>
-  )
+  );
 }
