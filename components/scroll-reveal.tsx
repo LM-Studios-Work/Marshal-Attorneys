@@ -15,6 +15,7 @@ export function ScrollReveal() {
   const pathname = usePathname()
 
   useEffect(() => {
+    const root = document.documentElement
     const elements = document.querySelectorAll<HTMLElement>(revealSelector)
 
     if (!elements.length) return
@@ -24,6 +25,13 @@ export function ScrollReveal() {
     ).matches
 
     if (prefersReducedMotion) {
+      elements.forEach((element) => element.classList.add("is-visible"))
+      return
+    }
+
+    root.classList.add("reveal-ready")
+
+    if (!("IntersectionObserver" in window)) {
       elements.forEach((element) => element.classList.add("is-visible"))
       return
     }
@@ -42,7 +50,16 @@ export function ScrollReveal() {
       },
     )
 
-    elements.forEach((element) => observer.observe(element))
+    elements.forEach((element) => {
+      const rect = element.getBoundingClientRect()
+
+      if (rect.top < window.innerHeight * 0.9) {
+        element.classList.add("is-visible")
+        return
+      }
+
+      observer.observe(element)
+    })
 
     return () => observer.disconnect()
   }, [pathname])

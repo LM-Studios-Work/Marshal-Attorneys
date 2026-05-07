@@ -126,3 +126,14 @@ No new imports found, skipping writing import map
  GET /about 200 in 6.3s (next.js: 147ms, application-code: 6.1s)
 ✓ Compiled in 1786ms
 ✓ Compiled in 137ms
+ GET /articles 200 in 14.9s (next.js: 9.1s, application-code: 5.8s)
+ GET /articles 200 in 2.5s (next.js: 44ms, application-code: 2.5s)
+ GET /api/media/file/Sinothando%20Mbatha.jpeg 200 in 392ms (next.js: 139ms, application-code: 254ms)
+ GET /contact 200 in 391ms (next.js: 263ms, application-code: 128ms)
+ GET /dimly-lit-law-library-with-leather-bound-books-cin.jpg 404 in 618ms (next.js: 302ms, application-code: 316ms)
+ GET / 200 in 1502ms (next.js: 335ms, application-code: 1166ms)
+ GET /services 200 in 1517ms (next.js: 594ms, application-code: 923ms)
+ GET /about 200 in 3.2s (next.js: 47ms, application-code: 3.1s)
+ GET /contact 200 in 301ms (next.js: 8ms, application-code: 293ms)
+ GET /articles 200 in 1760ms (next.js: 65ms, application-code: 1696ms)
+✓ Compiled in 2.6s

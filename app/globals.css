@@ -157,9 +157,64 @@
     padding-left: 1.25rem;
   }
 
+  html.reveal-ready {
+    --reveal-ease: cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  html.reveal-ready .home-page .home-section .home-reveal,
+  html.reveal-ready .home-page .home-section .home-image-stack,
+  html.reveal-ready .home-page .home-section .home-stat,
+  html.reveal-ready .home-page .home-section .home-service-card,
+  html.reveal-ready main > section:not(:first-of-type) .scroll-reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+      opacity 1200ms var(--reveal-ease),
+      transform 1200ms var(--reveal-ease);
+    will-change: opacity, transform;
+  }
+
+  html.reveal-ready .home-page .home-section .home-reveal.is-visible,
+  html.reveal-ready .home-page .home-section .home-image-stack.is-visible,
+  html.reveal-ready .home-page .home-section .home-stat.is-visible,
+  html.reveal-ready .home-page .home-section .home-service-card.is-visible,
+  html.reveal-ready main > section:not(:first-of-type) .scroll-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  html.reveal-ready .home-page .home-section .home-stat:nth-child(2),
+  html.reveal-ready .home-page .home-section .home-service-card:nth-child(2) {
+    transition-delay: 120ms;
+  }
+
+  html.reveal-ready .home-page .home-section .home-stat:nth-child(3),
+  html.reveal-ready .home-page .home-section .home-service-card:nth-child(3) {
+    transition-delay: 220ms;
+  }
+
+  html.reveal-ready .home-page .home-section .home-stat:nth-child(4),
+  html.reveal-ready .home-page .home-section .home-service-card:nth-child(4) {
+    transition-delay: 320ms;
+  }
+
+  html.reveal-ready .home-page .home-section .home-service-card:nth-child(n + 5) {
+    transition-delay: 380ms;
+  }
+
   @media (prefers-reduced-motion: reduce) {
     html {
       scroll-behavior: auto;
+    }
+
+    html.reveal-ready .home-page .home-section .home-reveal,
+    html.reveal-ready .home-page .home-section .home-image-stack,
+    html.reveal-ready .home-page .home-section .home-stat,
+    html.reveal-ready .home-page .home-section .home-service-card,
+    html.reveal-ready main > section:not(:first-of-type) .scroll-reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
     }
   }
 }

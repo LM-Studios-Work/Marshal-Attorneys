@@ -1234,3 +1234,251 @@ https://react.dev/link/hydration-mismatch
     at performWorkOnRoot (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9061:150)
     at performWorkOnRootViaSchedulerTask (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:10255:9)
     at MessagePort.performWorkUntilDeadline (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_0rpq4pf._.js:2647:64) (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:3439:25)
+[browser] Image with src "http://localhost:3000/Red%20Modern%20Law%20Consulting%20Firm%20Logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio. (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_115brz8._.js:2431:13)
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_115brz8._.js:2431:13)
+[browser] Uncaught Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <main>
+      <AboutHero>
+      <section>
+      <section>
+      <section>
+      <AboutTeam>
+        <section id="team" className="bg-backgro...">
+          ...
+            <Dialog>
+              <Dialog data-slot="dialog">
+                <DialogProvider scope={undefined} triggerRef={{current:null}} contentRef={{current:null}} ...>
+                  <div className="group">
+                    <div>
+                    <div className="mt-5 flex ...">
+                      <div>
+                      <DialogTrigger asChild={true}>
+                        <DialogTrigger data-slot="dialog-tri..." asChild={true}>
+                          <Primitive.button type="button" aria-haspopup="dialog" aria-expanded={false} ...>
+                            <Primitive.button.Slot type="button" aria-haspopup="dialog" aria-expanded={false} ...>
+                              <Primitive.button.SlotClone type="button" aria-haspopup="dialog" aria-expanded={false} ...>
++                               <button
++                                 type="button"
++                                 className="mt-1 shrink-0 text-[11px] tracking-[0.18em] uppercase text-tan transition..."
++                                 aria-haspopup="dialog"
++                                 aria-expanded={false}
++                                 aria-controls="radix-_R_qn5esndlb_"
++                                 data-state="closed"
++                                 data-slot="dialog-trigger"
++                                 onClick={function handleEvent}
++                                 ref={function}
++                               >
+                    ...
+      ...
+
+    at <unknown> (https://react.dev/link/hydration-mismatch)
+    at throwOnHydrationMismatch (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:3318:56)
+    at beginWork (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:6758:918)
+    at runWithFiberInDEV (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:965:74)
+    at performUnitOfWork (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9555:97)
+    at workLoopConcurrentByScheduler (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9551:58)
+    at renderRootConcurrent (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9534:71)
+    at performWorkOnRoot (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9061:150)
+    at performWorkOnRootViaSchedulerTask (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:10255:9)
+    at MessagePort.performWorkUntilDeadline (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_0rpq4pf._.js:2647:64)
+    at button (<anonymous>)
+    at <anonymous> (components\about\about-team.tsx:110:21)
+    at Array.map (<anonymous>:1:18)
+    at AboutTeam (components\about\about-team.tsx:83:24)
+    at Primitive.button.Slot (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_0nd-rck._.js:894:210)
+    at Primitive.button (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_0nd-rck._.js:1172:210)
+    at DialogTrigger (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_0nd-rck._.js:4107:206)
+    at DialogTrigger (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/_0aoiv.p._.js:846:214)
+    at <anonymous> (components\about\about-team.tsx:109:19)
+    at Array.map (<anonymous>:1:18)
+    at AboutTeam (components\about\about-team.tsx:83:24)
+    at AboutPage (app\about\page.tsx:105:9)
+  108 |                   </div>
+  109 |                   <DialogTrigger asChild>
+> 110 |                     <button
+      |                     ^
+  111 |                       type="button"
+  112 |                       className="mt-1 shrink-0 text-[11px] tracking-[0.18em] uppercase te...
+  113 |                     >
+[browser] Image with src "http://localhost:3000/Red%20Modern%20Law%20Consulting%20Firm%20Logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio. (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_115brz8._.js:2431:13)
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <LoadingBoundary name="contact/" loading={null}>
+      <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+        <RedirectBoundary>
+          <RedirectErrorBoundary router={{...}}>
+            <InnerLayoutRouter url="/contact" tree={[...]} params={{}} cacheNode={{rsc:{...}, ...}} segmentPath={[...]} ...>
+              <SegmentViewNode type="page" pagePath="contact/pa...">
+                <SegmentTrieNode>
+                <ContactPage>
+                  <main className="min-h-scre...">
+                    <div>
+                    <SiteNav>
+                    <section>
+                    <section>
+                    <ContactFormSection>
+                      <section className="bg-backgro...">
+                        <div className="mx-auto ma...">
+                          <div className="grid grid-...">
+                            <div>
+                            <div className="bg-soft-bg...">
+                              <form action="https://fo..." method="POST" className="grid grid-...">
+                                <input>
+                                <input>
+                                <input>
+                                <input>
+                                <Field>
+                                  <div>
+                                    <label>
+                                    <input
+                                      id="name"
+                                      name="name"
+                                      type="text"
+                                      placeholder="Your full name"
+                                      required={true}
+                                      className="w-full border-b border-dark-bg/20 bg-transparent py-2 text-sm text-da..."
+-                                     fdprocessedid="lx0t1k"
+                                    >
+                                <Field>
+                                  <div>
+                                    <label>
+                                    <input
+                                      id="email"
+                                      name="email"
+                                      type="email"
+                                      placeholder="you@example.com"
+                                      required={true}
+                                      className="w-full border-b border-dark-bg/20 bg-transparent py-2 text-sm text-da..."
+-                                     fdprocessedid="qybg0y"
+                                    >
+                                <div className="md:col-span-2">
+                                  <Field>
+                                    <div>
+                                      <label>
+                                      <input
+                                        id="subject"
+                                        name="subject"
+                                        type="text"
+                                        placeholder="What is this regarding?"
+                                        required={true}
+                                        className="w-full border-b border-dark-bg/20 bg-transparent py-2 text-sm text-..."
+-                                       fdprocessedid="3nv2ha"
+                                      >
+                                <div>
+                                <div className="md:col-spa...">
+                                  <button
+                                    type="submit"
+                                    className="w-full md:w-auto px-10 bg-tan text-white text-[11px] tracking-[0.28em] ..."
+-                                   fdprocessedid="fpq9lf"
+                                  >
++                                   Send Message
+                    <ConsultationFormSection>
+                      <section className="home-secti...">
+                        <div className="mx-auto ma...">
+                          <div className="grid grid-...">
+                            <div>
+                            <div className="home-revea...">
+                              <h3>
+                              <p>
+                              <form action="https://fo..." method="POST" className="mt-10 grid...">
+                                <input>
+                                <input>
+                                <input>
+                                <input>
+                                <Field label={"Name & S..."} name="fullname" placeholder="e.g. Thand...">
+                                  <div>
+                                    <label>
+                                    <input
+                                      id="fullname"
+                                      name="fullname"
+                                      type="text"
+                                      placeholder="e.g. Thandi Mokoena"
+                                      required={true}
+                                      className="w-full border-b border-dark-bg/20 bg-transparent py-2 text-sm text-da..."
+-                                     fdprocessedid="qsncw4"
+                                    >
+                                <Field label="Email" name="email" type="email" placeholder="you@exampl...">
+                                  <div>
+                                    <label>
+                                    <input
+                                      id="email"
+                                      name="email"
+                                      type="email"
+                                      placeholder="you@example.com"
+                                      required={true}
+                                      className="w-full border-b border-dark-bg/20 bg-transparent py-2 text-sm text-da..."
+-                                     fdprocessedid="l77n9"
+                                    >
+                                <Field label="Phone" name="phone" type="tel" placeholder="067 272 7475">
+                                  <div>
+                                    <label>
+                                    <input
+                                      id="phone"
+                                      name="phone"
+                                      type="tel"
+                                      placeholder="067 272 7475"
+                                      required={true}
+                                      className="w-full border-b border-dark-bg/20 bg-transparent py-2 text-sm text-da..."
+-                                     fdprocessedid="ec3qo"
+                                    >
+                                <div className="relative">
+                                  <label>
+                                  <button
+                                    id="service"
+                                    type="button"
+                                    aria-haspopup="listbox"
+                                    aria-expanded={false}
+                                    onClick={function onClick}
+                                    className="w-full flex items-center justify-between border-b border-dark-bg/20 bg-..."
+-                                   fdprocessedid="y10j9o"
+                                  >
+                                  ...
+                                <div>
+                                <div>
+                                <div className="md:col-spa...">
+                                  <button
+                                    type="submit"
+                                    className="w-full md:w-auto px-10 bg-tan text-white text-[11px] tracking-[0.28em] ..."
+-                                   fdprocessedid="uh23k"
+                                  >
++                                   Request Consultation
+                    ...
+              ...
+            ...
+ 
+    at <unknown> (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:3439:25)
+    at runWithFiberInDEV (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:965:74)
+    at emitPendingHydrationWarnings (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:3438:13)
+    at completeWork (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:6885:102)
+    at runWithFiberInDEV (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:965:131)
+    at completeUnitOfWork (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9622:23)
+    at performUnitOfWork (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9557:28)
+    at workLoopConcurrentByScheduler (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9551:58)
+    at renderRootConcurrent (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9534:71)
+    at performWorkOnRoot (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9061:150)
+    at performWorkOnRootViaSchedulerTask (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:10255:9)
+    at MessagePort.performWorkUntilDeadline (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_0rpq4pf._.js:2647:64) (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:3439:25)
+[browser] Image with src "http://localhost:3000/Red%20Modern%20Law%20Consulting%20Firm%20Logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio. (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_115brz8._.js:2431:13)
