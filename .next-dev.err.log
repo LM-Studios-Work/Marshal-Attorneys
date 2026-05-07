@@ -1,9 +1,1236 @@
-⚠ Port 3000 is in use by process 12608, using available port 3002 instead.
-⨯ Another next dev server is already running.
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
-- Local:        http://localhost:3001
-- PID:          24052
-- Dir:          C:\Users\austi\Downloads\Lawyer Website
-- Log:          .next\dev\logs\next-development.log
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
 
-Run taskkill /PID 24052 /F to stop it.
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <LoadingBoundary name="/" loading={null}>
+      <HTTPAccessFallbackBoundary notFound={{...}} forbidden={undefined} unauthorized={undefined}>
+        <HTTPAccessFallbackErrorBoundary pathname="/" notFound={{...}} forbidden={undefined} unauthorized={undefined} ...>
+          <RedirectBoundary>
+            <RedirectErrorBoundary router={{...}}>
+              <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:{...}, ...}} segmentPath={[...]} ...>
+                <SegmentViewNode type="page" pagePath="page.tsx">
+                  <SegmentTrieNode>
+                  <HomePage>
+                    <main className="home-page ...">
+                      <div>
+                      <SiteNav>
+                      <HeroSection>
+                        <section className="bg-background">
+                          <div>
+                          ...
+                            <div className="grid h-[ca...">
+                              <div>
+                              <div className="grid h-ful...">
+                                <div>
+                                <div className="bg-dark-bg...">
+                                  <div>
+                                  <button
+                                    aria-label="Previous testimonial"
+                                    className="absolute left-4 top-1/2 -translate-y-1/2 text-white/60 hover:text-tan t..."
+-                                   fdprocessedid="g168c"
+                                  >
+                                  <button
+                                    aria-label="Next testimonial"
+                                    className="absolute right-4 top-1/2 -translate-y-1/2 text-white/60 hover:text-tan ..."
+-                                   fdprocessedid="3u4dj7"
+                                  >
+                      <section>
+                      <section>
+                      <section>
+                      <GuidanceSection>
+                        <section className="home-secti...">
+                          <div className="mx-auto ma...">
+                            <div className="flex items...">
+                              <div>
+                              <div className="hidden md:...">
+                                <button>
+                                <button
+                                  type="button"
+                                  aria-label="Next services"
+                                  onClick={function onClick}
+                                  disabled={false}
+                                  className="h-10 w-10 flex items-center justify-center border border-border text-dark..."
+-                                 fdprocessedid="0s9ab9"
+                                >
+                            ...
+                      <section>
+                      ...
+                        <div className="mx-auto ma...">
+                          <div className="grid grid-...">
+                            <div>
+                            <div className="home-revea...">
+                              <h3>
+                              <p>
+                              <form action="https://fo..." method="POST" className="mt-10 grid...">
+                                <input>
+                                <input>
+                                <input>
+                                <input>
+                                <Field label={"Name & S..."} name="fullname" placeholder="e.g. Thand...">
+                                  <div>
+                                    <label>
+                                    <input
+                                      id="fullname"
+                                      name="fullname"
+                                      type="text"
+                                      placeholder="e.g. Thandi Mokoena"
+                                      required={true}
+                                      className="w-full border-b border-dark-bg/20 bg-transparent py-2 text-sm text-da..."
+-                                     fdprocessedid="qf4d5o"
+                                    >
+                                <Field label="Email" name="email" type="email" placeholder="you@exampl...">
+                                  <div>
+                                    <label>
+                                    <input
+                                      id="email"
+                                      name="email"
+                                      type="email"
+                                      placeholder="you@example.com"
+                                      required={true}
+                                      className="w-full border-b border-dark-bg/20 bg-transparent py-2 text-sm text-da..."
+-                                     fdprocessedid="ub0ma"
+                                    >
+                                <Field label="Phone" name="phone" type="tel" placeholder="067 272 7475">
+                                  <div>
+                                    <label>
+                                    <input
+                                      id="phone"
+                                      name="phone"
+                                      type="tel"
+                                      placeholder="067 272 7475"
+                                      required={true}
+                                      className="w-full border-b border-dark-bg/20 bg-transparent py-2 text-sm text-da..."
+-                                     fdprocessedid="h7p4oa"
+                                    >
+                                <div className="relative">
+                                  <label>
+                                  <button
+                                    id="service"
+                                    type="button"
+                                    aria-haspopup="listbox"
+                                    aria-expanded={false}
+                                    onClick={function onClick}
+                                    className="w-full flex items-center justify-between border-b border-dark-bg/20 bg-..."
+-                                   fdprocessedid="b4b3ud"
+                                  >
+                                  ...
+                                <div>
+                                <div>
+                                <div className="md:col-spa...">
+                                  <button
+                                    type="submit"
+                                    className="w-full md:w-auto px-10 bg-tan text-white text-[11px] tracking-[0.28em] ..."
+-                                   fdprocessedid="weiyak"
+                                  >
++                                   Request Consultation
+                      ...
+                ...
+              ...
+ 
+    at <unknown> (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:3439:25)
+    at runWithFiberInDEV (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:965:74)
+    at emitPendingHydrationWarnings (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:3438:13)
+    at completeWork (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:6885:102)
+    at runWithFiberInDEV (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:965:131)
+    at completeUnitOfWork (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9622:23)
+    at performUnitOfWork (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9557:28)
+    at workLoopConcurrentByScheduler (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9551:58)
+    at renderRootConcurrent (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9534:71)
+    at performWorkOnRoot (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9061:150)
+    at performWorkOnRootViaSchedulerTask (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:10255:9)
+    at MessagePort.performWorkUntilDeadline (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_0rpq4pf._.js:2647:64) (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:3439:25)
+[browser] ./components/hero-section.tsx:3:10
+You're importing a module that depends on `useState` into a React Server Component module. This API is only available in Client Components. To fix, mark the file (or its parent) with the `"use client"` directive.
+    Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+  1 | import Image from "next/image"
+  2 | import Link from "next/link"
+> 3 | import { useState } from "react"
+    |          ^^^^^^^^
+  4 | import { Star, ChevronLeft, ChevronRight } from "lucide-react"
+  5 |
+  6 | export function HeroSection() {
+
+Ecmascript file had an error
+
+Import trace:
+  Server Component:
+    ./components/hero-section.tsx
+    ./app/page.tsx 
+    at handleErrors (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13828:21)
+    at processMessage (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13891:21)
+    at WebSocket.handleMessage (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13335:52) (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13828:21)
+[browser] ./components/hero-section.tsx:3:10
+You're importing a module that depends on `useState` into a React Server Component module. This API is only available in Client Components. To fix, mark the file (or its parent) with the `"use client"` directive.
+    Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+  1 | import Image from "next/image"
+  2 | import Link from "next/link"
+> 3 | import { useState } from "react"
+    |          ^^^^^^^^
+  4 | import { Star, ChevronLeft, ChevronRight } from "lucide-react"
+  5 |
+  6 | export function HeroSection() {
+
+Ecmascript file had an error
+
+Import trace:
+  Server Component:
+    ./components/hero-section.tsx
+    ./app/page.tsx 
+    at handleErrors (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13828:21)
+    at processMessage (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13891:21)
+    at WebSocket.handleMessage (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13335:52) (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13828:21)
+[browser] ./components/hero-section.tsx:3:10
+You're importing a module that depends on `useState` into a React Server Component module. This API is only available in Client Components. To fix, mark the file (or its parent) with the `"use client"` directive.
+    Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+  1 | import Image from "next/image"
+  2 | import Link from "next/link"
+> 3 | import { useState } from "react"
+    |          ^^^^^^^^
+  4 | import { Star, ChevronLeft, ChevronRight } from "lucide-react"
+  5 |
+  6 | export function HeroSection() {
+
+Ecmascript file had an error
+
+Import trace:
+  Server Component:
+    ./components/hero-section.tsx
+    ./app/page.tsx 
+    at handleErrors (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13828:21)
+    at processMessage (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13891:21)
+    at WebSocket.handleMessage (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13335:52) (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13828:21)
+⨯ ./components/hero-section.tsx:3:10
+You're importing a module that depends on `useState` into a React Server Component module. This API is only available in Client Components. To fix, mark the file (or its parent) with the `"use client"` directive.
+    Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m
+  [90m2 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { useState } [36mfrom[0m [32m"react"[0m
+  [90m  |[0m          [31m[1m^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { [33mStar[0m, [33mChevronLeft[0m, [33mChevronRight[0m } [36mfrom[0m [32m"lucide-react"[0m
+  [90m5 |[0m
+  [90m6 |[0m [36mexport[0m [36mfunction[0m [33mHeroSection[0m() {
+
+Ecmascript file had an error
+
+Import trace:
+  Server Component:
+    ./components/hero-section.tsx
+    ./app/page.tsx
+
+
+[browser] ./components/hero-section.tsx:3:10
+You're importing a module that depends on `useState` into a React Server Component module. This API is only available in Client Components. To fix, mark the file (or its parent) with the `"use client"` directive.
+    Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+  1 | import Image from "next/image"
+  2 | import Link from "next/link"
+> 3 | import { useState } from "react"
+    |          ^^^^^^^^
+  4 | import { Star, ChevronLeft, ChevronRight } from "lucide-react"
+  5 |
+  6 | export function HeroSection() {
+
+Ecmascript file had an error
+
+Import trace:
+  Server Component:
+    ./components/hero-section.tsx
+    ./app/page.tsx 
+    at handleErrors (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13828:21)
+    at processMessage (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13891:21)
+    at WebSocket.handleMessage (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13335:52) (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13828:21)
+[browser] ./components/hero-section.tsx:3:10
+You're importing a module that depends on `useState` into a React Server Component module. This API is only available in Client Components. To fix, mark the file (or its parent) with the `"use client"` directive.
+    Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+  1 | import Image from "next/image"
+  2 | import Link from "next/link"
+> 3 | import { useState } from "react"
+    |          ^^^^^^^^
+  4 | import { Star, ChevronLeft, ChevronRight } from "lucide-react"
+  5 |
+  6 | export function HeroSection() {
+
+Ecmascript file had an error
+
+Import trace:
+  Server Component:
+    ./components/hero-section.tsx
+    ./app/page.tsx 
+    at handleErrors (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13828:21)
+    at processMessage (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13891:21)
+    at WebSocket.handleMessage (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13335:52) (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13828:21)
+[browser] ./components/hero-section.tsx:3:10
+You're importing a module that depends on `useState` into a React Server Component module. This API is only available in Client Components. To fix, mark the file (or its parent) with the `"use client"` directive.
+    Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+  1 | import Image from "next/image"
+  2 | import Link from "next/link"
+> 3 | import { useState } from "react"
+    |          ^^^^^^^^
+  4 | import { Star, ChevronLeft, ChevronRight } from "lucide-react"
+  5 |
+  6 | export function HeroSection() {
+
+Ecmascript file had an error
+
+Import trace:
+  Server Component:
+    ./components/hero-section.tsx
+    ./app/page.tsx 
+    at handleErrors (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13828:21)
+    at processMessage (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13891:21)
+    at WebSocket.handleMessage (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13335:52) (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13828:21)
+[browser] ./components/hero-section.tsx:3:10
+You're importing a module that depends on `useState` into a React Server Component module. This API is only available in Client Components. To fix, mark the file (or its parent) with the `"use client"` directive.
+    Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+  1 | import Image from "next/image"
+  2 | import Link from "next/link"
+> 3 | import { useState } from "react"
+    |          ^^^^^^^^
+  4 | import { Star, ChevronLeft, ChevronRight } from "lucide-react"
+  5 |
+  6 | export function HeroSection() {
+
+Ecmascript file had an error
+
+Import trace:
+  Server Component:
+    ./components/hero-section.tsx
+    ./app/page.tsx 
+    at handleErrors (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13828:21)
+    at processMessage (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13891:21)
+    at WebSocket.handleMessage (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13335:52) (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13828:21)
+[browser] Uncaught Error: ./components/hero-section.tsx:3:10
+You're importing a module that depends on `useState` into a React Server Component module. This API is only available in Client Components. To fix, mark the file (or its parent) with the `"use client"` directive.
+    Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+  1 | import Image from "next/image"
+  2 | import Link from "next/link"
+> 3 | import { useState } from "react"
+    |          ^^^^^^^^
+  4 | import { Star, ChevronLeft, ChevronRight } from "lucide-react"
+  5 |
+  6 | export function HeroSection() {
+
+Ecmascript file had an error
+
+Import trace:
+  Server Component:
+    ./components/hero-section.tsx
+    ./app/page.tsx
+
+
+    at <unknown> (Error: ./components/hero-section.tsx:3:10)
+    at <unknown> (Error: (./components/hero-section.tsx:3:10)
+[browser] ./components/hero-section.tsx:3:10
+You're importing a module that depends on `useState` into a React Server Component module. This API is only available in Client Components. To fix, mark the file (or its parent) with the `"use client"` directive.
+    Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+  1 | import Image from "next/image"
+  2 | import Link from "next/link"
+> 3 | import { useState } from "react"
+    |          ^^^^^^^^
+  4 | import { Star, ChevronLeft, ChevronRight } from "lucide-react"
+  5 |
+  6 | export function HeroSection() {
+
+Ecmascript file had an error
+
+Import trace:
+  Server Component:
+    ./components/hero-section.tsx
+    ./app/page.tsx 
+    at handleErrors (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+    at processMessage (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2834:28)
+    at <unknown> (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2679:13)
+    at WebSocket.handleMessage (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2324:17) (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+[browser] ./components/hero-section.tsx:3:10
+You're importing a module that depends on `useState` into a React Server Component module. This API is only available in Client Components. To fix, mark the file (or its parent) with the `"use client"` directive.
+    Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+  1 | import Image from "next/image"
+  2 | import Link from "next/link"
+> 3 | import { useState } from "react"
+    |          ^^^^^^^^
+  4 | import { Star, ChevronLeft, ChevronRight } from "lucide-react"
+  5 |
+  6 | export function HeroSection() {
+
+Ecmascript file had an error
+
+Import trace:
+  Server Component:
+    ./components/hero-section.tsx
+    ./app/page.tsx 
+    at handleErrors (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+    at processMessage (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2834:28)
+    at <unknown> (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2679:13)
+    at WebSocket.handleMessage (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2324:17) (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+[browser] ./components/hero-section.tsx:3:10
+You're importing a module that depends on `useState` into a React Server Component module. This API is only available in Client Components. To fix, mark the file (or its parent) with the `"use client"` directive.
+    Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+  1 | import Image from "next/image"
+  2 | import Link from "next/link"
+> 3 | import { useState } from "react"
+    |          ^^^^^^^^
+  4 | import { Star, ChevronLeft, ChevronRight } from "lucide-react"
+  5 |
+  6 | export function HeroSection() {
+
+Ecmascript file had an error
+
+Import trace:
+  Server Component:
+    ./components/hero-section.tsx
+    ./app/page.tsx 
+    at handleErrors (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+    at processMessage (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2834:28)
+    at <unknown> (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2679:13)
+    at WebSocket.handleMessage (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2324:17) (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+[browser] ./components/hero-section.tsx:3:10
+You're importing a module that depends on `useState` into a React Server Component module. This API is only available in Client Components. To fix, mark the file (or its parent) with the `"use client"` directive.
+    Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+  1 | import Image from "next/image"
+  2 | import Link from "next/link"
+> 3 | import { useState } from "react"
+    |          ^^^^^^^^
+  4 | import { Star, ChevronLeft, ChevronRight } from "lucide-react"
+  5 |
+  6 | export function HeroSection() {
+
+Ecmascript file had an error
+
+Import trace:
+  Server Component:
+    ./components/hero-section.tsx
+    ./app/page.tsx 
+    at handleErrors (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+    at processMessage (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2834:28)
+    at <unknown> (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2679:13)
+    at WebSocket.handleMessage (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2324:17) (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+[browser] ./components/hero-section.tsx:3:10
+You're importing a module that depends on `useState` into a React Server Component module. This API is only available in Client Components. To fix, mark the file (or its parent) with the `"use client"` directive.
+    Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+  1 | import Image from "next/image"
+  2 | import Link from "next/link"
+> 3 | import { useState } from "react"
+    |          ^^^^^^^^
+  4 | import { Star, ChevronLeft, ChevronRight } from "lucide-react"
+  5 |
+  6 | export function HeroSection() {
+
+Ecmascript file had an error
+
+Import trace:
+  Server Component:
+    ./components/hero-section.tsx
+    ./app/page.tsx 
+    at handleErrors (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+    at processMessage (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2834:28)
+    at <unknown> (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2679:13)
+    at WebSocket.handleMessage (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2324:17) (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_client_0pe1dg-._.js:2773:21)
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HTTPAccessFallbackErrorBoundary pathname="/" notFound={{...}} forbidden={undefined} unauthorized={undefined} ...>
+      <RedirectBoundary>
+        <RedirectErrorBoundary router={{...}}>
+          <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:{...}, ...}} segmentPath={[...]} ...>
+            <SegmentViewNode type="page" pagePath="page.tsx">
+              <SegmentTrieNode>
+              <HomePage>
+                <main className="home-page ...">
+                  <div>
+                  <SiteNav>
+                  <HeroSection>
+                  <section>
+                  <section>
+                  <section>
+                  <GuidanceSection>
+                  <section>
+                  <ConsultationFormSection>
+                    <section className="home-secti...">
+                      <div className="mx-auto ma...">
+                        <div className="grid grid-...">
+                          <div>
+                          <div className="home-revea...">
+                            <h3>
+                            <p>
+                            <form action="https://fo..." method="POST" className="mt-10 grid...">
+                              <input>
+                              <input>
+                              <input>
+                              <input>
+                              <Field>
+                              <Field label="Email" name="email" type="email" placeholder="you@exampl...">
+                                <div>
+                                  <label>
+                                  <input
+                                    id="email"
+                                    name="email"
+                                    type="email"
+                                    placeholder="you@example.com"
+                                    required={true}
+                                    className="w-full border-b border-dark-bg/20 bg-transparent py-2 text-sm text-dark..."
+-                                   fdprocessedid="re1bd4"
+                                  >
+                              <Field label="Phone" name="phone" type="tel" placeholder="067 272 7475">
+                                <div>
+                                  <label>
+                                  <input
+                                    id="phone"
+                                    name="phone"
+                                    type="tel"
+                                    placeholder="067 272 7475"
+                                    required={true}
+                                    className="w-full border-b border-dark-bg/20 bg-transparent py-2 text-sm text-dark..."
+-                                   fdprocessedid="35dsxo"
+                                  >
+                              <div className="relative">
+                                <label>
+                                <button
+                                  id="service"
+                                  type="button"
+                                  aria-haspopup="listbox"
+                                  aria-expanded={false}
+                                  onClick={function onClick}
+                                  className="w-full flex items-center justify-between border-b border-dark-bg/20 bg-tr..."
+-                                 fdprocessedid="yjtnt"
+                                >
+                                ...
+                              <div>
+                              <div>
+                              <div className="md:col-spa...">
+                                <button
+                                  type="submit"
+                                  className="w-full md:w-auto px-10 bg-tan text-white text-[11px] tracking-[0.28em] up..."
+-                                 fdprocessedid="vsko7q"
+                                >
++                                 Request Consultation
+                  ...
+            ...
+          ...
+ 
+    at <unknown> (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:3439:25)
+    at runWithFiberInDEV (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:965:74)
+    at emitPendingHydrationWarnings (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:3438:13)
+    at completeWork (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:6885:102)
+    at runWithFiberInDEV (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:965:131)
+    at completeUnitOfWork (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9622:23)
+    at performUnitOfWork (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9557:28)
+    at workLoopConcurrentByScheduler (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9551:58)
+    at renderRootConcurrent (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9534:71)
+    at performWorkOnRoot (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9061:150)
+    at performWorkOnRootViaSchedulerTask (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:10255:9)
+    at MessagePort.performWorkUntilDeadline (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_0rpq4pf._.js:2647:64) (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:3439:25)
+[browser] Image with src "http://localhost:3000/Red%20Modern%20Law%20Consulting%20Firm%20Logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio. (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_115brz8._.js:2431:13)
+⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+[browser] Uncaught Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <main>
+      <AboutHero>
+      <section>
+      <section>
+      <section>
+      <AboutTeam>
+        <section id="team" className="bg-backgro...">
+          ...
+            <Dialog>
+              <Dialog data-slot="dialog">
+                <DialogProvider scope={undefined} triggerRef={{current:null}} contentRef={{current:null}} ...>
+                  <div className="group">
+                    <div>
+                    <div className="mt-5 flex ...">
+                      <div>
+                      <DialogTrigger asChild={true}>
+                        <DialogTrigger data-slot="dialog-tri..." asChild={true}>
+                          <Primitive.button type="button" aria-haspopup="dialog" aria-expanded={false} ...>
+                            <Primitive.button.Slot type="button" aria-haspopup="dialog" aria-expanded={false} ...>
+                              <Primitive.button.SlotClone type="button" aria-haspopup="dialog" aria-expanded={false} ...>
++                               <button
++                                 type="button"
++                                 className="mt-1 shrink-0 text-[11px] tracking-[0.18em] uppercase text-tan transition..."
++                                 aria-haspopup="dialog"
++                                 aria-expanded={false}
++                                 aria-controls="radix-_R_1leatpeqlb_"
++                                 data-state="closed"
++                                 data-slot="dialog-trigger"
++                                 onClick={function handleEvent}
++                                 ref={function}
++                               >
+                    ...
+      ...
+
+    at <unknown> (https://react.dev/link/hydration-mismatch)
+    at throwOnHydrationMismatch (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:3318:56)
+    at beginWork (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:6758:918)
+    at runWithFiberInDEV (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:965:74)
+    at performUnitOfWork (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9555:97)
+    at workLoopConcurrentByScheduler (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9551:58)
+    at renderRootConcurrent (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9534:71)
+    at performWorkOnRoot (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9061:150)
+    at performWorkOnRootViaSchedulerTask (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:10255:9)
+    at MessagePort.performWorkUntilDeadline (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_0rpq4pf._.js:2647:64)
+    at button (<anonymous>)
+    at <anonymous> (components\about\about-team.tsx:110:21)
+    at Array.map (<anonymous>:1:18)
+    at AboutTeam (components\about\about-team.tsx:83:24)
+    at Primitive.button.Slot (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_0nd-rck._.js:894:210)
+    at Primitive.button (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_0nd-rck._.js:1172:210)
+    at DialogTrigger (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_0nd-rck._.js:4107:206)
+    at DialogTrigger (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/_0aoiv.p._.js:846:214)
+    at <anonymous> (components\about\about-team.tsx:109:19)
+    at Array.map (<anonymous>:1:18)
+    at AboutTeam (components\about\about-team.tsx:83:24)
+    at AboutPage (app\about\page.tsx:105:9)
+  108 |                   </div>
+  109 |                   <DialogTrigger asChild>
+> 110 |                     <button
+      |                     ^
+  111 |                       type="button"
+  112 |                       className="mt-1 shrink-0 text-[11px] tracking-[0.18em] uppercase te...
+  113 |                     >
+[browser] Image with src "http://localhost:3000/Red%20Modern%20Law%20Consulting%20Firm%20Logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio. (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_115brz8._.js:2431:13)
+[browser] Image with src "/Red%20Modern%20Law%20Consulting%20Firm%20Logo.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_115brz8._.js:2431:13)
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <LoadingBoundary name="/" loading={null}>
+      <HTTPAccessFallbackBoundary notFound={{...}} forbidden={undefined} unauthorized={undefined}>
+        <HTTPAccessFallbackErrorBoundary pathname="/" notFound={{...}} forbidden={undefined} unauthorized={undefined} ...>
+          <RedirectBoundary>
+            <RedirectErrorBoundary router={{...}}>
+              <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:{...}, ...}} segmentPath={[...]} ...>
+                <SegmentViewNode type="page" pagePath="page.tsx">
+                  <SegmentTrieNode>
+                  <HomePage>
+                    <main className="home-page ...">
+                      <div>
+                      <SiteNav>
+                      ...
+                        <div className="hidden lg:...">
+                          <div className="mx-auto w-...">
+                            <div className="grid h-[ca...">
+                              <div>
+                              <div className="grid h-ful...">
+                                <div>
+                                <div className="bg-dark-bg...">
+                                  <blockquote>
+                                  <div>
+                                  <button
+                                    onClick={function prevTestimonial}
+                                    aria-label="Previous testimonial"
+                                    className="absolute left-4 top-1/2 -translate-y-1/2 text-white/60 hover:text-tan t..."
+-                                   fdprocessedid="f5s7il"
+                                  >
+                                  <button
+                                    onClick={function nextTestimonial}
+                                    aria-label="Next testimonial"
+                                    className="absolute right-4 top-1/2 -translate-y-1/2 text-white/60 hover:text-tan ..."
+-                                   fdprocessedid="od6cjs"
+                                  >
+                      <section>
+                      <section>
+                      <section>
+                      <GuidanceSection>
+                        <section className="home-secti...">
+                          <div className="mx-auto ma...">
+                            <div className="flex items...">
+                              <div>
+                              <div className="hidden md:...">
+                                <button>
+                                <button
+                                  type="button"
+                                  aria-label="Next services"
+                                  onClick={function onClick}
+                                  disabled={false}
+                                  className="h-10 w-10 flex items-center justify-center border border-border text-dark..."
+-                                 fdprocessedid="gonhf"
+                                >
+                            ...
+                      <section>
+                      ...
+                        <div className="mx-auto ma...">
+                          <div className="grid grid-...">
+                            <div>
+                            <div className="home-revea...">
+                              <h3>
+                              <p>
+                              <form action="https://fo..." method="POST" className="mt-10 grid...">
+                                <input>
+                                <input>
+                                <input>
+                                <input>
+                                <Field label={"Name & S..."} name="fullname" placeholder="e.g. Thand...">
+                                  <div>
+                                    <label>
+                                    <input
+                                      id="fullname"
+                                      name="fullname"
+                                      type="text"
+                                      placeholder="e.g. Thandi Mokoena"
+                                      required={true}
+                                      className="w-full border-b border-dark-bg/20 bg-transparent py-2 text-sm text-da..."
+-                                     fdprocessedid="ngn59h"
+                                    >
+                                <Field label="Email" name="email" type="email" placeholder="you@exampl...">
+                                  <div>
+                                    <label>
+                                    <input
+                                      id="email"
+                                      name="email"
+                                      type="email"
+                                      placeholder="you@example.com"
+                                      required={true}
+                                      className="w-full border-b border-dark-bg/20 bg-transparent py-2 text-sm text-da..."
+-                                     fdprocessedid="f2p2fc"
+                                    >
+                                <Field label="Phone" name="phone" type="tel" placeholder="067 272 7475">
+                                  <div>
+                                    <label>
+                                    <input
+                                      id="phone"
+                                      name="phone"
+                                      type="tel"
+                                      placeholder="067 272 7475"
+                                      required={true}
+                                      className="w-full border-b border-dark-bg/20 bg-transparent py-2 text-sm text-da..."
+-                                     fdprocessedid="ahg2tc"
+                                    >
+                                <div className="relative">
+                                  <label>
+                                  <button
+                                    id="service"
+                                    type="button"
+                                    aria-haspopup="listbox"
+                                    aria-expanded={false}
+                                    onClick={function onClick}
+                                    className="w-full flex items-center justify-between border-b border-dark-bg/20 bg-..."
+-                                   fdprocessedid="2bvvmrg"
+                                  >
+                                  ...
+                                <div>
+                                <div>
+                                <div className="md:col-spa...">
+                                  <button
+                                    type="submit"
+                                    className="w-full md:w-auto px-10 bg-tan text-white text-[11px] tracking-[0.28em] ..."
+-                                   fdprocessedid="egco4p"
+                                  >
++                                   Request Consultation
+                      ...
+                ...
+              ...
+ 
+    at <unknown> (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:3439:25)
+    at runWithFiberInDEV (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:965:74)
+    at emitPendingHydrationWarnings (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:3438:13)
+    at completeWork (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:6885:102)
+    at runWithFiberInDEV (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:965:131)
+    at completeUnitOfWork (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9622:23)
+    at performUnitOfWork (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9557:28)
+    at workLoopConcurrentByScheduler (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9551:58)
+    at renderRootConcurrent (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9534:71)
+    at performWorkOnRoot (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9061:150)
+    at performWorkOnRootViaSchedulerTask (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:10255:9)
+    at MessagePort.performWorkUntilDeadline (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_0rpq4pf._.js:2647:64) (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:3439:25)
+[browser] Image with src "http://localhost:3000/Red%20Modern%20Law%20Consulting%20Firm%20Logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio. (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_115brz8._.js:2431:13)
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_115brz8._.js:2431:13)
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <LoadingBoundary name="/" loading={null}>
+      <HTTPAccessFallbackBoundary notFound={{...}} forbidden={undefined} unauthorized={undefined}>
+        <HTTPAccessFallbackErrorBoundary pathname="/" notFound={{...}} forbidden={undefined} unauthorized={undefined} ...>
+          <RedirectBoundary>
+            <RedirectErrorBoundary router={{...}}>
+              <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:{...}, ...}} segmentPath={[...]} ...>
+                <SegmentViewNode type="page" pagePath="page.tsx">
+                  <SegmentTrieNode>
+                  <HomePage>
+                    <main className="home-page ...">
+                      <div>
+                      <SiteNav>
+                      ...
+                        <div className="hidden lg:...">
+                          <div className="mx-auto w-...">
+                            <div className="grid h-[ca...">
+                              <div>
+                              <div className="grid h-ful...">
+                                <div>
+                                <div className="bg-dark-bg...">
+                                  <blockquote>
+                                  <div>
+                                  <button
+                                    onClick={function prevTestimonial}
+                                    aria-label="Previous testimonial"
+                                    className="absolute left-4 top-1/2 -translate-y-1/2 text-white/60 hover:text-tan t..."
+-                                   fdprocessedid="0cuvat"
+                                  >
+                                  <button
+                                    onClick={function nextTestimonial}
+                                    aria-label="Next testimonial"
+                                    className="absolute right-4 top-1/2 -translate-y-1/2 text-white/60 hover:text-tan ..."
+-                                   fdprocessedid="j368q9"
+                                  >
+                      <section>
+                      <section>
+                      <section>
+                      <GuidanceSection>
+                        <section className="home-secti...">
+                          <div className="mx-auto ma...">
+                            <div className="flex items...">
+                              <div>
+                              <div className="hidden md:...">
+                                <button>
+                                <button
+                                  type="button"
+                                  aria-label="Next services"
+                                  onClick={function onClick}
+                                  disabled={false}
+                                  className="h-10 w-10 flex items-center justify-center border border-border text-dark..."
+-                                 fdprocessedid="axxdc"
+                                >
+                            ...
+                      <section>
+                      ...
+                        <div className="mx-auto ma...">
+                          <div className="grid grid-...">
+                            <div>
+                            <div className="home-revea...">
+                              <h3>
+                              <p>
+                              <form action="https://fo..." method="POST" className="mt-10 grid...">
+                                <input>
+                                <input>
+                                <input>
+                                <input>
+                                <Field label={"Name & S..."} name="fullname" placeholder="e.g. Thand...">
+                                  <div>
+                                    <label>
+                                    <input
+                                      id="fullname"
+                                      name="fullname"
+                                      type="text"
+                                      placeholder="e.g. Thandi Mokoena"
+                                      required={true}
+                                      className="w-full border-b border-dark-bg/20 bg-transparent py-2 text-sm text-da..."
+-                                     fdprocessedid="v7a3r"
+                                    >
+                                <Field label="Email" name="email" type="email" placeholder="you@exampl...">
+                                  <div>
+                                    <label>
+                                    <input
+                                      id="email"
+                                      name="email"
+                                      type="email"
+                                      placeholder="you@example.com"
+                                      required={true}
+                                      className="w-full border-b border-dark-bg/20 bg-transparent py-2 text-sm text-da..."
+-                                     fdprocessedid="d9plx"
+                                    >
+                                <Field label="Phone" name="phone" type="tel" placeholder="067 272 7475">
+                                  <div>
+                                    <label>
+                                    <input
+                                      id="phone"
+                                      name="phone"
+                                      type="tel"
+                                      placeholder="067 272 7475"
+                                      required={true}
+                                      className="w-full border-b border-dark-bg/20 bg-transparent py-2 text-sm text-da..."
+-                                     fdprocessedid="w5b0wp"
+                                    >
+                                <div className="relative">
+                                  <label>
+                                  <button
+                                    id="service"
+                                    type="button"
+                                    aria-haspopup="listbox"
+                                    aria-expanded={false}
+                                    onClick={function onClick}
+                                    className="w-full flex items-center justify-between border-b border-dark-bg/20 bg-..."
+-                                   fdprocessedid="1ms4ec"
+                                  >
+                                  ...
+                                <div>
+                                <div>
+                                <div className="md:col-spa...">
+                                  <button
+                                    type="submit"
+                                    className="w-full md:w-auto px-10 bg-tan text-white text-[11px] tracking-[0.28em] ..."
+-                                   fdprocessedid="n5tuz6"
+                                  >
++                                   Request Consultation
+                      ...
+                ...
+              ...
+ 
+    at <unknown> (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:3439:25)
+    at runWithFiberInDEV (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:965:74)
+    at emitPendingHydrationWarnings (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:3438:13)
+    at completeWork (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:6885:102)
+    at runWithFiberInDEV (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:965:131)
+    at completeUnitOfWork (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9622:23)
+    at performUnitOfWork (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9557:28)
+    at workLoopConcurrentByScheduler (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9551:58)
+    at renderRootConcurrent (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9534:71)
+    at performWorkOnRoot (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9061:150)
+    at performWorkOnRootViaSchedulerTask (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:10255:9)
+    at MessagePort.performWorkUntilDeadline (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_0rpq4pf._.js:2647:64) (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:3439:25)
+[browser] Image with src "http://localhost:3000/Red%20Modern%20Law%20Consulting%20Firm%20Logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio. (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_115brz8._.js:2431:13)
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_115brz8._.js:2431:13)
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <LoadingBoundary name="/" loading={null}>
+      <HTTPAccessFallbackBoundary notFound={{...}} forbidden={undefined} unauthorized={undefined}>
+        <HTTPAccessFallbackErrorBoundary pathname="/" notFound={{...}} forbidden={undefined} unauthorized={undefined} ...>
+          <RedirectBoundary>
+            <RedirectErrorBoundary router={{...}}>
+              <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:{...}, ...}} segmentPath={[...]} ...>
+                <SegmentViewNode type="page" pagePath="page.tsx">
+                  <SegmentTrieNode>
+                  <HomePage>
+                    <main className="home-page ...">
+                      <div>
+                      <SiteNav>
+                      ...
+                        <div className="hidden lg:...">
+                          <div className="mx-auto w-...">
+                            <div className="grid h-[ca...">
+                              <div>
+                              <div className="grid h-ful...">
+                                <div>
+                                <div className="bg-dark-bg...">
+                                  <blockquote>
+                                  <div>
+                                  <button
+                                    onClick={function prevTestimonial}
+                                    aria-label="Previous testimonial"
+                                    className="absolute left-4 top-1/2 -translate-y-1/2 text-white/60 hover:text-tan t..."
+-                                   fdprocessedid="vhgiec"
+                                  >
+                                  <button
+                                    onClick={function nextTestimonial}
+                                    aria-label="Next testimonial"
+                                    className="absolute right-4 top-1/2 -translate-y-1/2 text-white/60 hover:text-tan ..."
+-                                   fdprocessedid="78iooe"
+                                  >
+                      <section>
+                      <section>
+                      <section>
+                      <GuidanceSection>
+                        <section className="home-secti...">
+                          <div className="mx-auto ma...">
+                            <div className="flex items...">
+                              <div>
+                              <div className="hidden md:...">
+                                <button>
+                                <button
+                                  type="button"
+                                  aria-label="Next services"
+                                  onClick={function onClick}
+                                  disabled={false}
+                                  className="h-10 w-10 flex items-center justify-center border border-border text-dark..."
+-                                 fdprocessedid="9wdqci"
+                                >
+                            ...
+                      <section>
+                      ...
+                        <div className="mx-auto ma...">
+                          <div className="grid grid-...">
+                            <div>
+                            <div className="home-revea...">
+                              <h3>
+                              <p>
+                              <form action="https://fo..." method="POST" className="mt-10 grid...">
+                                <input>
+                                <input>
+                                <input>
+                                <input>
+                                <Field label={"Name & S..."} name="fullname" placeholder="e.g. Thand...">
+                                  <div>
+                                    <label>
+                                    <input
+                                      id="fullname"
+                                      name="fullname"
+                                      type="text"
+                                      placeholder="e.g. Thandi Mokoena"
+                                      required={true}
+                                      className="w-full border-b border-dark-bg/20 bg-transparent py-2 text-sm text-da..."
+-                                     fdprocessedid="ae0vbc"
+                                    >
+                                <Field label="Email" name="email" type="email" placeholder="you@exampl...">
+                                  <div>
+                                    <label>
+                                    <input
+                                      id="email"
+                                      name="email"
+                                      type="email"
+                                      placeholder="you@example.com"
+                                      required={true}
+                                      className="w-full border-b border-dark-bg/20 bg-transparent py-2 text-sm text-da..."
+-                                     fdprocessedid="tk3anc"
+                                    >
+                                <Field label="Phone" name="phone" type="tel" placeholder="067 272 7475">
+                                  <div>
+                                    <label>
+                                    <input
+                                      id="phone"
+                                      name="phone"
+                                      type="tel"
+                                      placeholder="067 272 7475"
+                                      required={true}
+                                      className="w-full border-b border-dark-bg/20 bg-transparent py-2 text-sm text-da..."
+-                                     fdprocessedid="4lvmn"
+                                    >
+                                <div className="relative">
+                                  <label>
+                                  <button
+                                    id="service"
+                                    type="button"
+                                    aria-haspopup="listbox"
+                                    aria-expanded={false}
+                                    onClick={function onClick}
+                                    className="w-full flex items-center justify-between border-b border-dark-bg/20 bg-..."
+-                                   fdprocessedid="0dl0y"
+                                  >
+                                  ...
+                                <div>
+                                <div>
+                                <div className="md:col-spa...">
+                                  <button
+                                    type="submit"
+                                    className="w-full md:w-auto px-10 bg-tan text-white text-[11px] tracking-[0.28em] ..."
+-                                   fdprocessedid="3yh7y"
+                                  >
++                                   Request Consultation
+                      ...
+                ...
+              ...
+ 
+    at <unknown> (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:3439:25)
+    at runWithFiberInDEV (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:965:74)
+    at emitPendingHydrationWarnings (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:3438:13)
+    at completeWork (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:6885:102)
+    at runWithFiberInDEV (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:965:131)
+    at completeUnitOfWork (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9622:23)
+    at performUnitOfWork (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9557:28)
+    at workLoopConcurrentByScheduler (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9551:58)
+    at renderRootConcurrent (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9534:71)
+    at performWorkOnRoot (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9061:150)
+    at performWorkOnRootViaSchedulerTask (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:10255:9)
+    at MessagePort.performWorkUntilDeadline (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_0rpq4pf._.js:2647:64) (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:3439:25)
+[browser] Image with src "/Red%20Modern%20Law%20Consulting%20Firm%20Logo.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_115brz8._.js:2431:13)
+[browser] Image with src "/Red%20Modern%20Law%20Consulting%20Firm%20Logo.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_115brz8._.js:2431:13)
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <LoadingBoundary name="/" loading={null}>
+      <HTTPAccessFallbackBoundary notFound={{...}} forbidden={undefined} unauthorized={undefined}>
+        <HTTPAccessFallbackErrorBoundary pathname="/" notFound={{...}} forbidden={undefined} unauthorized={undefined} ...>
+          <RedirectBoundary>
+            <RedirectErrorBoundary router={{...}}>
+              <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:{...}, ...}} segmentPath={[...]} ...>
+                <SegmentViewNode type="page" pagePath="page.tsx">
+                  <SegmentTrieNode>
+                  <HomePage>
+                    <main className="home-page ...">
+                      <div>
+                      <SiteNav>
+                      ...
+                        <div className="hidden lg:...">
+                          <div className="mx-auto w-...">
+                            <div className="grid h-[ca...">
+                              <div>
+                              <div className="grid h-ful...">
+                                <div>
+                                <div className="bg-dark-bg...">
+                                  <blockquote>
+                                  <div>
+                                  <button
+                                    onClick={function prevTestimonial}
+                                    aria-label="Previous testimonial"
+                                    className="absolute left-4 top-1/2 -translate-y-1/2 text-white/60 hover:text-tan t..."
+-                                   fdprocessedid="ew8p1o"
+                                  >
+                                  <button
+                                    onClick={function nextTestimonial}
+                                    aria-label="Next testimonial"
+                                    className="absolute right-4 top-1/2 -translate-y-1/2 text-white/60 hover:text-tan ..."
+-                                   fdprocessedid="ep812k"
+                                  >
+                      <section>
+                      <section>
+                      <section>
+                      <GuidanceSection>
+                        <section className="home-secti...">
+                          <div className="mx-auto ma...">
+                            <div className="flex items...">
+                              <div>
+                              <div className="hidden md:...">
+                                <button>
+                                <button
+                                  type="button"
+                                  aria-label="Next services"
+                                  onClick={function onClick}
+                                  disabled={false}
+                                  className="h-10 w-10 flex items-center justify-center border border-border text-dark..."
+-                                 fdprocessedid="cyy8p"
+                                >
+                            ...
+                      <section>
+                      ...
+                        <div className="mx-auto ma...">
+                          <div className="grid grid-...">
+                            <div>
+                            <div className="home-revea...">
+                              <h3>
+                              <p>
+                              <form action="https://fo..." method="POST" className="mt-10 grid...">
+                                <input>
+                                <input>
+                                <input>
+                                <input>
+                                <Field label={"Name & S..."} name="fullname" placeholder="e.g. Thand...">
+                                  <div>
+                                    <label>
+                                    <input
+                                      id="fullname"
+                                      name="fullname"
+                                      type="text"
+                                      placeholder="e.g. Thandi Mokoena"
+                                      required={true}
+                                      className="w-full border-b border-dark-bg/20 bg-transparent py-2 text-sm text-da..."
+-                                     fdprocessedid="wravl"
+                                    >
+                                <Field label="Email" name="email" type="email" placeholder="you@exampl...">
+                                  <div>
+                                    <label>
+                                    <input
+                                      id="email"
+                                      name="email"
+                                      type="email"
+                                      placeholder="you@example.com"
+                                      required={true}
+                                      className="w-full border-b border-dark-bg/20 bg-transparent py-2 text-sm text-da..."
+-                                     fdprocessedid="vh4xuq"
+                                    >
+                                <Field label="Phone" name="phone" type="tel" placeholder="067 272 7475">
+                                  <div>
+                                    <label>
+                                    <input
+                                      id="phone"
+                                      name="phone"
+                                      type="tel"
+                                      placeholder="067 272 7475"
+                                      required={true}
+                                      className="w-full border-b border-dark-bg/20 bg-transparent py-2 text-sm text-da..."
+-                                     fdprocessedid="8z2j4"
+                                    >
+                                <div className="relative">
+                                  <label>
+                                  <button
+                                    id="service"
+                                    type="button"
+                                    aria-haspopup="listbox"
+                                    aria-expanded={false}
+                                    onClick={function onClick}
+                                    className="w-full flex items-center justify-between border-b border-dark-bg/20 bg-..."
+-                                   fdprocessedid="jrdtqc"
+                                  >
+                                  ...
+                                <div>
+                                <div>
+                                <div className="md:col-spa...">
+                                  <button
+                                    type="submit"
+                                    className="w-full md:w-auto px-10 bg-tan text-white text-[11px] tracking-[0.28em] ..."
+-                                   fdprocessedid="di3id"
+                                  >
++                                   Request Consultation
+                      ...
+                ...
+              ...
+ 
+    at <unknown> (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:3439:25)
+    at runWithFiberInDEV (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:965:74)
+    at emitPendingHydrationWarnings (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:3438:13)
+    at completeWork (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:6885:102)
+    at runWithFiberInDEV (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:965:131)
+    at completeUnitOfWork (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9622:23)
+    at performUnitOfWork (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9557:28)
+    at workLoopConcurrentByScheduler (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9551:58)
+    at renderRootConcurrent (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9534:71)
+    at performWorkOnRoot (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:9061:150)
+    at performWorkOnRootViaSchedulerTask (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:10255:9)
+    at MessagePort.performWorkUntilDeadline (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_0rpq4pf._.js:2647:64) (file://C:/Users/austi/Downloads/Lawyer Website/.next/dev/static/chunks/node_modules_next_dist_compiled_react-dom_058-ah~._.js:3439:25)

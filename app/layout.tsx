@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { FloatingWhatsApp } from "@/components/floating-whatsapp";
 import "./globals.css";
 
 const inter = Inter({
@@ -42,6 +43,7 @@ export default function RootLayout({
     >
       <body className="font-sans antialiased">
         {children}
+        <FloatingWhatsApp />
         {process.env.NODE_ENV === "production" && <Analytics />}
       </body>
     </html>

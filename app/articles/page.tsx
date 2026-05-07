@@ -16,6 +16,7 @@ import {
   getMediaSrc,
   getPostExcerpt,
   getPublishedPostsWhere,
+  logPayloadArticlesError,
 } from "@/lib/articles"
 
 export const dynamic = "force-dynamic"
@@ -34,17 +35,22 @@ export const metadata: Metadata = {
 }
 
 async function getPosts() {
-  const payload = await getPayload({ config })
+  try {
+    const payload = await getPayload({ config })
 
-  const result = await payload.find({
-    collection: "posts",
-    depth: 2,
-    limit: 12,
-    sort: "-publishedDate",
-    where: getPublishedPostsWhere(),
-  })
+    const result = await payload.find({
+      collection: "posts",
+      depth: 2,
+      limit: 12,
+      sort: "-publishedDate",
+      where: getPublishedPostsWhere(),
+    })
 
-  return result.docs as unknown as ArticlePost[]
+    return result.docs as unknown as ArticlePost[]
+  } catch (error) {
+    logPayloadArticlesError("articles", error)
+    return []
+  }
 }
 
 export default async function ArticlesPage() {

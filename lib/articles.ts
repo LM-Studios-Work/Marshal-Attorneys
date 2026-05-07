@@ -108,3 +108,7 @@ export function getAuthorName(author: ArticlePost["author"]) {
 
   return "Marshal Ndlovu Attorneys Inc."
 }
+
+export function logPayloadArticlesError(context: string, error: unknown) {
+  console.error(`Failed to load ${context} from Payload`, error)
+}

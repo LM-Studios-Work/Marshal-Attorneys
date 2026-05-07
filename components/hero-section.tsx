@@ -1,8 +1,40 @@
-import Image from "next/image"
-import Link from "next/link"
-import { Star, ChevronLeft, ChevronRight } from "lucide-react"
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 
 export function HeroSection() {
+  const testimonials = [
+    {
+      quote:
+        "Marshal Ndlovu Attorneys guided us through a complex contract dispute with clarity and confidence. Their team delivered excellent results while keeping us informed at every step.",
+      location: "Pretoria",
+    },
+    {
+      quote:
+        "The support we received was exceptional. From the first consultation to the final settlement, the firm handled our case with professionalism and compassion.",
+      location: "Cape Town",
+    },
+    {
+      quote:
+        "Their expertise in conveyancing made selling our property straightforward. We felt confident and well cared for the entire time.",
+      location: "Durban",
+    },
+  ];
+
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+
+  const nextTestimonial = () => {
+    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+  };
+
+  const prevTestimonial = () => {
+    setCurrentTestimonial(
+      (prev) => (prev - 1 + testimonials.length) % testimonials.length
+    );
+  };
   return (
     <section className="bg-background">
       {/* ===================== MOBILE LAYOUT ===================== */}
@@ -100,11 +132,17 @@ export function HeroSection() {
                   Defending your rights with expertise
                 </h2>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground max-w-sm mx-auto">
-                  A well-established boutique firm with national capacity, offering a full range of corporate and commercial legal services.
+                  A well-established boutique firm with national capacity,
+                  offering a full range of corporate and commercial legal
+                  services.
                 </p>
                 <div className="mt-5 flex items-center justify-center gap-1.5 text-tan">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-current" aria-hidden />
+                    <Star
+                      key={i}
+                      className="h-4 w-4 fill-current"
+                      aria-hidden
+                    />
                   ))}
                   <span className="sr-only">Rated 5 out of 5</span>
                 </div>
@@ -113,33 +151,26 @@ export function HeroSection() {
               {/* Bottom: Dark testimonial card */}
               <div className="bg-dark-bg text-white px-8 py-6 relative flex flex-col items-center justify-center text-center overflow-hidden">
                 <blockquote className="text-sm xl:text-[15px] leading-relaxed max-w-sm mx-auto">
-                  &ldquo;Marshal Ndlovu Attorneys Inc. made the process of buying
-                  our first home seamless and stress-free. Their professionalism
-                  and attention to detail were outstanding.&rdquo;
+                  &ldquo;{testimonials[currentTestimonial].quote}&rdquo;
                 </blockquote>
 
                 <div className="mt-5 flex flex-col items-center">
-                  <div className="relative h-10 w-10 overflow-hidden rounded-full ring-2 ring-tan/40">
-                    <Image
-                      src="/professional-woman-headshot-warm-lighting.jpg"
-                      alt="Client testimonial"
-                      fill
-                      className="object-cover"
-                      sizes="48px"
-                    />
-                  </div>
-                  <p className="mt-3 text-sm font-medium">Verified Client</p>
-                  <p className="text-xs text-white/60 mt-0.5">Johannesburg</p>
+                  <p className="text-sm font-medium">Verified Client</p>
+                  <p className="text-xs text-white/60 mt-0.5">
+                    {testimonials[currentTestimonial].location}
+                  </p>
                 </div>
 
                 {/* Carousel arrows */}
                 <button
+                  onClick={prevTestimonial}
                   aria-label="Previous testimonial"
                   className="absolute left-4 top-1/2 -translate-y-1/2 text-white/60 hover:text-tan transition-colors"
                 >
                   <ChevronLeft className="h-5 w-5" />
                 </button>
                 <button
+                  onClick={nextTestimonial}
                   aria-label="Next testimonial"
                   className="absolute right-4 top-1/2 -translate-y-1/2 text-white/60 hover:text-tan transition-colors"
                 >
@@ -151,5 +182,5 @@ export function HeroSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

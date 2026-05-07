@@ -41,7 +41,19 @@ export function ContactFormSection() {
 
           {/* Right: form */}
           <div className="bg-soft-bg p-8 md:p-12">
-            <form className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-7">
+            <form
+              action="https://formsubmit.co/info@manattorneys.co.za"
+              method="POST"
+              className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-7"
+            >
+              <input
+                type="hidden"
+                name="_subject"
+                value="New website contact enquiry"
+              />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="form" value="Contact Form" />
               <Field label="Name" name="name" placeholder="Your full name" />
               <Field
                 label="Email"
@@ -68,6 +80,7 @@ export function ContactFormSection() {
                   name="message"
                   rows={5}
                   placeholder="Tell us a little about your matter"
+                  required
                   className="w-full border-b border-dark-bg/20 bg-transparent py-2 text-sm text-dark-bg placeholder:text-muted-foreground/70 focus:outline-none focus:border-tan resize-none"
                 />
               </div>
@@ -111,6 +124,7 @@ function Field({
         name={name}
         type={type}
         placeholder={placeholder}
+        required
         className="w-full border-b border-dark-bg/20 bg-transparent py-2 text-sm text-dark-bg placeholder:text-muted-foreground/70 focus:outline-none focus:border-tan"
       />
     </div>

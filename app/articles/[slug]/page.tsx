@@ -19,6 +19,7 @@ import {
   getMediaSrc,
   getPostExcerpt,
   getPublishedPostsWhere,
+  logPayloadArticlesError,
 } from "@/lib/articles"
 
 export const dynamic = "force-dynamic"
@@ -30,48 +31,58 @@ type PageProps = {
 }
 
 async function getPost(slug: string) {
-  const payload = await getPayload({ config })
+  try {
+    const payload = await getPayload({ config })
 
-  const result = await payload.find({
-    collection: "posts",
-    depth: 2,
-    limit: 1,
-    where: {
-      and: [
-        {
-          slug: {
-            equals: slug,
+    const result = await payload.find({
+      collection: "posts",
+      depth: 2,
+      limit: 1,
+      where: {
+        and: [
+          {
+            slug: {
+              equals: slug,
+            },
           },
-        },
-        getPublishedPostsWhere(),
-      ],
-    },
-  })
+          getPublishedPostsWhere(),
+        ],
+      },
+    })
 
-  return (result.docs[0] || null) as unknown as ArticlePost | null
+    return (result.docs[0] || null) as unknown as ArticlePost | null
+  } catch (error) {
+    logPayloadArticlesError(`article "${slug}"`, error)
+    return null
+  }
 }
 
 async function getRelatedPosts(currentPost: ArticlePost) {
-  const payload = await getPayload({ config })
+  try {
+    const payload = await getPayload({ config })
 
-  const result = await payload.find({
-    collection: "posts",
-    depth: 2,
-    limit: 3,
-    sort: "-publishedDate",
-    where: {
-      and: [
-        getPublishedPostsWhere(),
-        {
-          slug: {
-            not_equals: currentPost.slug,
+    const result = await payload.find({
+      collection: "posts",
+      depth: 2,
+      limit: 3,
+      sort: "-publishedDate",
+      where: {
+        and: [
+          getPublishedPostsWhere(),
+          {
+            slug: {
+              not_equals: currentPost.slug,
+            },
           },
-        },
-      ],
-    },
-  })
+        ],
+      },
+    })
 
-  return result.docs as unknown as ArticlePost[]
+    return result.docs as unknown as ArticlePost[]
+  } catch (error) {
+    logPayloadArticlesError("related articles", error)
+    return []
+  }
 }
 
 export async function generateMetadata({

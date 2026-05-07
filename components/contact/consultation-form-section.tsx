@@ -77,7 +77,15 @@ export function ConsultationFormSection() {
               Fields marked are all required. We respond within one business day.
             </p>
 
-            <form className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-7">
+            <form
+              action="https://formsubmit.co/info@manattorneys.co.za"
+              method="POST"
+              className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-7"
+            >
+              <input type="hidden" name="_subject" value="New consultation request" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="form" value="Consultation Request" />
               <Field
                 label="Name & Surname"
                 name="fullname"
@@ -201,6 +209,7 @@ export function ConsultationFormSection() {
                   name="message"
                   rows={5}
                   placeholder="Briefly describe your situation"
+                  required
                   className="w-full border-b border-dark-bg/20 bg-transparent py-2 text-sm text-dark-bg placeholder:text-muted-foreground/70 focus:outline-none focus:border-tan resize-none"
                 />
               </div>
@@ -245,6 +254,7 @@ function Field({
         name={name}
         type={type}
         placeholder={placeholder}
+        required
         className="w-full border-b border-dark-bg/20 bg-transparent py-2 text-sm text-dark-bg placeholder:text-muted-foreground/70 focus:outline-none focus:border-tan"
       />
     </div>

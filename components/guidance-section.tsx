@@ -58,6 +58,7 @@ const items = [
 
 export function GuidanceSection() {
   const scrollerRef = useRef<HTMLDivElement>(null)
+  const isInteractingRef = useRef(false)
   const [canScrollPrev, setCanScrollPrev] = useState(false)
   const [canScrollNext, setCanScrollNext] = useState(true)
 
@@ -81,13 +82,37 @@ export function GuidanceSection() {
     }
   }, [updateButtons])
 
-  const scrollByCard = (direction: 1 | -1) => {
+  const scrollByCard = useCallback((direction: 1 | -1) => {
     const el = scrollerRef.current
     if (!el) return
     const card = el.querySelector<HTMLElement>("[data-card]")
     const distance = card ? card.offsetWidth + 24 : Math.round(el.clientWidth * 0.8)
     el.scrollBy({ left: direction * distance, behavior: "smooth" })
-  }
+  }, [])
+
+  useEffect(() => {
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches
+
+    if (prefersReducedMotion) return
+
+    const interval = window.setInterval(() => {
+      const el = scrollerRef.current
+      if (!el || isInteractingRef.current) return
+
+      const isAtEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 8
+
+      if (isAtEnd) {
+        el.scrollTo({ left: 0, behavior: "smooth" })
+        return
+      }
+
+      scrollByCard(1)
+    }, 6200)
+
+    return () => window.clearInterval(interval)
+  }, [scrollByCard])
 
   return (
     <section className="home-section bg-background py-24 md:py-32">
@@ -128,6 +153,34 @@ export function GuidanceSection() {
         <div className="overflow-hidden">
           <div
             ref={scrollerRef}
+            onPointerDown={() => {
+              isInteractingRef.current = true
+            }}
+            onPointerUp={() => {
+              window.setTimeout(() => {
+                isInteractingRef.current = false
+              }, 1200)
+            }}
+            onTouchStart={() => {
+              isInteractingRef.current = true
+            }}
+            onTouchEnd={() => {
+              window.setTimeout(() => {
+                isInteractingRef.current = false
+              }, 1200)
+            }}
+            onMouseEnter={() => {
+              isInteractingRef.current = true
+            }}
+            onMouseLeave={() => {
+              isInteractingRef.current = false
+            }}
+            onFocus={() => {
+              isInteractingRef.current = true
+            }}
+            onBlur={() => {
+              isInteractingRef.current = false
+            }}
             className="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-2 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
           >
             {items.map((item) => (
