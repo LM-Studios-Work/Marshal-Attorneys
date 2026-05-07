@@ -60,8 +60,8 @@ export function ConveyancingHero() {
           {/* Right image */}
           <div className="relative hidden lg:block min-h-[520px]">
             <Image
-              src="/elegant-law-office-interior-dark-navy.jpg"
-              alt="Conveyancing documents and legal contracts"
+              src="/team/customer care.webp"
+              alt="Client care at Marshal Ndlovu Attorneys"
               fill
               priority
               className="object-cover opacity-70"

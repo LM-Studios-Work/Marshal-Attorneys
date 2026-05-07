@@ -21,6 +21,7 @@ const columns = [
       { label: "About Us", href: "/about" },
       { label: "Our Team", href: "/about#team" },
       { label: "Who Do I Talk To", href: "/who-do-i-talk-to" },
+      { label: "Articles", href: "/articles" },
       { label: "Contact", href: "/contact" },
     ],
   },

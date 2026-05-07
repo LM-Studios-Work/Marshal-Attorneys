@@ -25,8 +25,8 @@ export default function LitigationPage() {
           title="Litigation"
           breadcrumb="Litigation"
           description="Litigation is the process of resolving disputes through the application of the Uniform Rules of Court in the High Court and the Magistrates' Courts Rules. We employ a rigorous approach to evidence, pleading and courtroom advocacy."
-          imageSrc="/high-court-chamber-south-africa-moody.jpg"
-          imageAlt="High Court chamber interior"
+          imageSrc="/team/home hero image.webp"
+          imageAlt="Marshal Ndlovu Attorneys litigation team"
         />
 
         <ServiceOverview

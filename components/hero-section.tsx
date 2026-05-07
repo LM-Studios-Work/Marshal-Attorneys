@@ -9,7 +9,7 @@ export function HeroSection() {
       <div className="lg:hidden bg-dark-bg">
         <div className="relative h-[24rem] w-full overflow-hidden">
           <Image
-            src="/team/home hero image.webp"
+            src="/team/main hero home.jpeg"
             alt="Marshal Ndlovu Attorneys office interior"
             fill
             priority
@@ -62,7 +62,7 @@ export function HeroSection() {
             {/* Left: Lawyer portrait with overlay card */}
             <div className="relative h-full min-h-0 overflow-hidden">
               <Image
-                src="/team/customer care.webp"
+                src="/team/main hero home.jpeg"
                 alt="Marshal Ndlovu Attorneys team hero image"
                 fill
                 priority

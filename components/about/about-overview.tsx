@@ -8,7 +8,7 @@ export function AboutOverview() {
           {/* Left image */}
           <div className="relative aspect-[4/5] overflow-hidden">
             <Image
-              src="/rows-of-leather-bound-law-books-on-shelf.jpg"
+              src="/team/main hero home.jpeg"
               alt="Law library at Marshal Ndlovu Attorneys"
               fill
               className="object-cover"
