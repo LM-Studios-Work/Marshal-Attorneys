@@ -153,3 +153,124 @@ Writing import map to C:\Users\austi\Downloads\Lawyer Website\app\(payload)\admi
 ✓ Compiled in 127ms
 ○ Compiling / ...
  GET / 200 in 9.5s (next.js: 4.5s, application-code: 4.9s)
+Generating import map
+No new imports found, skipping writing import map
+ GET /admin 200 in 262ms (next.js: 30ms, application-code: 233ms)
+ GET /admin 200 in 844ms (next.js: 100ms, application-code: 744ms)
+ GET /api/users/me 200 in 5.1s (next.js: 5.0s, application-code: 88ms)
+ GET /api/users/me 200 in 38ms (next.js: 17ms, application-code: 22ms)
+ GET /api/payload-preferences/nav 200 in 151ms (next.js: 118ms, application-code: 33ms)
+ GET /api/payload-preferences/nav 200 in 97ms (next.js: 77ms, application-code: 20ms)
+ GET /admin/login 200 in 572ms (next.js: 16ms, application-code: 556ms)
+ GET /admin/login 200 in 775ms (next.js: 10ms, application-code: 765ms)
+ GET /admin 200 in 337ms (next.js: 10ms, application-code: 327ms)
+ GET /api/users/me 200 in 47ms (next.js: 23ms, application-code: 24ms)
+ GET /api/users/me 200 in 25ms (next.js: 14ms, application-code: 12ms)
+ GET /api/payload-preferences/nav 200 in 197ms (next.js: 178ms, application-code: 19ms)
+ GET /api/payload-preferences/nav 200 in 92ms (next.js: 78ms, application-code: 14ms)
+ GET /admin/login 200 in 543ms (next.js: 33ms, application-code: 510ms)
+ GET /admin/login 200 in 528ms (next.js: 19ms, application-code: 509ms)
+ POST /api/users/login 200 in 2.9s (next.js: 22ms, application-code: 2.9s)
+ GET /admin 200 in 2.1s (next.js: 25ms, application-code: 2.1s)
+ GET /admin/collections/users/create 200 in 578ms (next.js: 7ms, application-code: 571ms)
+ GET /api/payload-preferences/collection-users 200 in 407ms (next.js: 8ms, application-code: 399ms)
+ POST /api/payload-preferences/collection-users 200 in 1191ms (next.js: 5ms, application-code: 1185ms)
+ GET /api/payload-preferences/undefined 200 in 391ms (next.js: 14ms, application-code: 376ms)
+ POST /admin/collections/users/create 200 in 243ms (next.js: 17ms, application-code: 226ms)
+  └─ ƒ <inline action>({"args":{"collectionSlug":"users","docPermissions":"[Object]","docPreferences":null,"...":"8 items not stringified"},"name":"form-state"}) in 195ms app/(payload)/layout.tsx
+ POST /admin/collections/users/create 200 in 227ms (next.js: 8ms, application-code: 219ms)
+  └─ ƒ <inline action>({"args":{"collectionSlug":"users","docPermissions":"[Object]","docPreferences":null,"...":"8 items not stringified"},"name":"form-state"}) in 203ms app/(payload)/layout.tsx
+ POST /admin/collections/users/create 200 in 221ms (next.js: 6ms, application-code: 215ms)
+  └─ ƒ <inline action>({"args":{"collectionSlug":"users","docPermissions":"[Object]","docPreferences":null,"...":"8 items not stringified"},"name":"form-state"}) in 201ms app/(payload)/layout.tsx
+ POST /admin/collections/users/create 200 in 279ms (next.js: 9ms, application-code: 270ms)
+  └─ ƒ <inline action>({"args":{"collectionSlug":"users","docPermissions":"[Object]","docPreferences":null,"...":"8 items not stringified"},"name":"form-state"}) in 249ms app/(payload)/layout.tsx
+ POST /admin/collections/users/create 200 in 209ms (next.js: 6ms, application-code: 203ms)
+  └─ ƒ <inline action>({"args":{"collectionSlug":"users","docPermissions":"[Object]","docPreferences":null,"...":"8 items not stringified"},"name":"form-state"}) in 190ms app/(payload)/layout.tsx
+ POST /admin/collections/users/create 200 in 221ms (next.js: 8ms, application-code: 213ms)
+  └─ ƒ <inline action>({"args":{"collectionSlug":"users","docPermissions":"[Object]","docPreferences":null,"...":"8 items not stringified"},"name":"form-state"}) in 196ms app/(payload)/layout.tsx
+ POST /admin/collections/users/create 200 in 1533ms (next.js: 17ms, application-code: 1516ms)
+  └─ ƒ <inline action>({"args":{"collectionSlug":"users","docPermissions":"[Object]","docPreferences":null,"...":"8 items not stringified"},"name":"form-state"}) in 1446ms app/(payload)/layout.tsx
+ POST /admin/collections/users/create 200 in 411ms (next.js: 6ms, application-code: 405ms)
+  └─ ƒ <inline action>({"args":{"collectionSlug":"users","docPermissions":"[Object]","docPreferences":null,"...":"8 items not stringified"},"name":"form-state"}) in 293ms app/(payload)/layout.tsx
+ POST /admin/collections/users/create 200 in 297ms (next.js: 9ms, application-code: 289ms)
+  └─ ƒ <inline action>({"args":{"collectionSlug":"users","docPermissions":"[Object]","docPreferences":null,"...":"8 items not stringified"},"name":"form-state"}) in 203ms app/(payload)/layout.tsx
+ POST /admin/collections/users/create 200 in 276ms (next.js: 7ms, application-code: 269ms)
+  └─ ƒ <inline action>({"args":{"collectionSlug":"users","docPermissions":"[Object]","docPreferences":null,"...":"8 items not stringified"},"name":"form-state"}) in 236ms app/(payload)/layout.tsx
+ POST /admin/collections/users/create 200 in 1392ms (next.js: 16ms, application-code: 1376ms)
+  └─ ƒ <inline action>({"args":{"collectionSlug":"users","docPermissions":"[Object]","docPreferences":null,"...":"8 items not stringified"},"name":"form-state"}) in 1357ms app/(payload)/layout.tsx
+ POST /admin/collections/users/create 200 in 226ms (next.js: 14ms, application-code: 212ms)
+  └─ ƒ <inline action>({"args":{"collectionSlug":"users","docPermissions":"[Object]","docPreferences":null,"...":"8 items not stringified"},"name":"form-state"}) in 192ms app/(payload)/layout.tsx
+ POST /admin/collections/users/create 200 in 211ms (next.js: 5ms, application-code: 205ms)
+  └─ ƒ <inline action>({"args":{"collectionSlug":"users","docPermissions":"[Object]","docPreferences":null,"...":"8 items not stringified"},"name":"form-state"}) in 188ms app/(payload)/layout.tsx
+ POST /admin/collections/users/create 200 in 1335ms (next.js: 14ms, application-code: 1322ms)
+  └─ ƒ <inline action>({"args":{"collectionSlug":"users","docPermissions":"[Object]","docPreferences":null,"...":"8 items not stringified"},"name":"form-state"}) in 1297ms app/(payload)/layout.tsx
+ POST /admin/collections/users/create 200 in 225ms (next.js: 11ms, application-code: 214ms)
+  └─ ƒ <inline action>({"args":{"collectionSlug":"users","docPermissions":"[Object]","docPreferences":null,"...":"8 items not stringified"},"name":"form-state"}) in 187ms app/(payload)/layout.tsx
+ POST /admin/collections/users/create 200 in 229ms (next.js: 6ms, application-code: 223ms)
+  └─ ƒ <inline action>({"args":{"collectionSlug":"users","docPermissions":"[Object]","docPreferences":null,"...":"8 items not stringified"},"name":"form-state"}) in 202ms app/(payload)/layout.tsx
+ POST /admin/collections/users/create 200 in 211ms (next.js: 8ms, application-code: 203ms)
+  └─ ƒ <inline action>({"args":{"collectionSlug":"users","docPermissions":"[Object]","docPreferences":null,"...":"8 items not stringified"},"name":"form-state"}) in 188ms app/(payload)/layout.tsx
+ POST /admin/collections/users/create 200 in 223ms (next.js: 6ms, application-code: 218ms)
+  └─ ƒ <inline action>({"args":{"collectionSlug":"users","docPermissions":"[Object]","docPreferences":null,"...":"8 items not stringified"},"name":"form-state"}) in 204ms app/(payload)/layout.tsx
+ POST /admin/collections/users/create 200 in 226ms (next.js: 20ms, application-code: 206ms)
+  └─ ƒ <inline action>({"args":{"collectionSlug":"users","docPermissions":"[Object]","docPreferences":null,"...":"8 items not stringified"},"name":"form-state"}) in 190ms app/(payload)/layout.tsx
+ POST /admin/collections/users/create 200 in 250ms (next.js: 13ms, application-code: 237ms)
+  └─ ƒ <inline action>({"args":{"collectionSlug":"users","docPermissions":"[Object]","docPreferences":null,"...":"8 items not stringified"},"name":"form-state"}) in 220ms app/(payload)/layout.tsx
+ POST /admin/collections/users/create 200 in 221ms (next.js: 7ms, application-code: 215ms)
+  └─ ƒ <inline action>({"args":{"collectionSlug":"users","docPermissions":"[Object]","docPreferences":null,"...":"8 items not stringified"},"name":"form-state"}) in 201ms app/(payload)/layout.tsx
+ POST /admin/collections/users/create 200 in 255ms (next.js: 15ms, application-code: 240ms)
+  └─ ƒ <inline action>({"args":{"collectionSlug":"users","docPermissions":"[Object]","docPreferences":null,"...":"8 items not stringified"},"name":"form-state"}) in 225ms app/(payload)/layout.tsx
+ POST /admin/collections/users/create 200 in 205ms (next.js: 7ms, application-code: 198ms)
+  └─ ƒ <inline action>({"args":{"collectionSlug":"users","docPermissions":"[Object]","docPreferences":null,"...":"8 items not stringified"},"name":"form-state"}) in 188ms app/(payload)/layout.tsx
+ POST /admin/collections/users/create 200 in 208ms (next.js: 6ms, application-code: 202ms)
+  └─ ƒ <inline action>({"args":{"collectionSlug":"users","docPermissions":"[Object]","docPreferences":null,"...":"8 items not stringified"},"name":"form-state"}) in 187ms app/(payload)/layout.tsx
+ POST /admin/collections/users/create 200 in 285ms (next.js: 7ms, application-code: 278ms)
+  └─ ƒ <inline action>({"args":{"collectionSlug":"users","docPermissions":"[Object]","docPreferences":null,"...":"8 items not stringified"},"name":"form-state"}) in 264ms app/(payload)/layout.tsx
+ POST /admin/collections/users/create 200 in 225ms (next.js: 21ms, application-code: 203ms)
+  └─ ƒ <inline action>({"args":{"collectionSlug":"users","docPermissions":"[Object]","docPreferences":null,"...":"8 items not stringified"},"name":"form-state"}) in 187ms app/(payload)/layout.tsx
+ POST /admin/collections/users/create 200 in 224ms (next.js: 9ms, application-code: 215ms)
+  └─ ƒ <inline action>({"args":{"collectionSlug":"users","docPermissions":"[Object]","docPreferences":null,"...":"8 items not stringified"},"name":"form-state"}) in 200ms app/(payload)/layout.tsx
+ GET /admin/collections/users 200 in 4.9s (next.js: 25ms, application-code: 4.9s)
+ GET /admin/collections/users/1 200 in 2.0s (next.js: 17ms, application-code: 2.0s)
+ GET /admin/account 200 in 920ms (next.js: 12ms, application-code: 909ms)
+ GET /api/payload-preferences/collection-users-1 200 in 1495ms (next.js: 14ms, application-code: 1481ms)
+ POST /admin/account 200 in 1350ms (next.js: 18ms, application-code: 1332ms)
+  └─ ƒ <inline action>({"args":{"checkForStaleData":true,"collectionSlug":"users","docPermissions":"[Object]","...":"11 items not stringified"},"name":"form-state"}) in 1316ms app/(payload)/layout.tsx
+ POST /admin/account 200 in 815ms (next.js: 8ms, application-code: 807ms)
+  └─ ƒ <inline action>({"args":{"checkForStaleData":false,"collectionSlug":"users","docPermissions":"[Object]","...":"10 items not stringified"},"name":"form-state"}) in 779ms app/(payload)/layout.tsx
+ POST /admin/account 200 in 783ms (next.js: 9ms, application-code: 774ms)
+  └─ ƒ <inline action>({"args":{"checkForStaleData":false,"collectionSlug":"users","docPermissions":"[Object]","...":"10 items not stringified"},"name":"form-state"}) in 755ms app/(payload)/layout.tsx
+ POST /admin/account 200 in 771ms (next.js: 13ms, application-code: 759ms)
+  └─ ƒ <inline action>({"args":{"checkForStaleData":false,"collectionSlug":"users","docPermissions":"[Object]","...":"10 items not stringified"},"name":"form-state"}) in 740ms app/(payload)/layout.tsx
+ POST /admin/account 200 in 946ms (next.js: 7ms, application-code: 939ms)
+  └─ ƒ <inline action>({"args":{"checkForStaleData":false,"collectionSlug":"users","docPermissions":"[Object]","...":"10 items not stringified"},"name":"form-state"}) in 922ms app/(payload)/layout.tsx
+ POST /admin/account 200 in 1062ms (next.js: 8ms, application-code: 1054ms)
+  └─ ƒ <inline action>({"args":{"checkForStaleData":false,"collectionSlug":"users","docPermissions":"[Object]","...":"10 items not stringified"},"name":"form-state"}) in 1044ms app/(payload)/layout.tsx
+ POST /admin/account 200 in 1432ms (next.js: 17ms, application-code: 1415ms)
+  └─ ƒ <inline action>({"args":{"checkForStaleData":false,"collectionSlug":"users","docPermissions":"[Object]","...":"10 items not stringified"},"name":"form-state"}) in 1395ms app/(payload)/layout.tsx
+ POST /admin/account 200 in 791ms (next.js: 10ms, application-code: 781ms)
+  └─ ƒ <inline action>({"args":{"checkForStaleData":false,"collectionSlug":"users","docPermissions":"[Object]","...":"10 items not stringified"},"name":"form-state"}) in 761ms app/(payload)/layout.tsx
+ POST /admin/account 200 in 1013ms (next.js: 5ms, application-code: 1008ms)
+  └─ ƒ <inline action>({"args":{"checkForStaleData":false,"collectionSlug":"users","docPermissions":"[Object]","...":"10 items not stringified"},"name":"form-state"}) in 990ms app/(payload)/layout.tsx
+ POST /admin/account 200 in 770ms (next.js: 6ms, application-code: 764ms)
+  └─ ƒ <inline action>({"args":{"checkForStaleData":false,"collectionSlug":"users","docPermissions":"[Object]","...":"10 items not stringified"},"name":"form-state"}) in 748ms app/(payload)/layout.tsx
+ POST /admin/account 200 in 777ms (next.js: 7ms, application-code: 769ms)
+  └─ ƒ <inline action>({"args":{"checkForStaleData":false,"collectionSlug":"users","docPermissions":"[Object]","...":"10 items not stringified"},"name":"form-state"}) in 745ms app/(payload)/layout.tsx
+ PATCH /api/users/1?depth=0&fallback-locale=null 200 in 4.7s (next.js: 14ms, application-code: 4.6s)
+ POST /api/users/access/1 200 in 206ms (next.js: 4ms, application-code: 202ms)
+ POST /api/users/access/1 200 in 199ms (next.js: 6ms, application-code: 193ms)
+ POST /admin/account 200 in 242ms (next.js: 19ms, application-code: 223ms)
+  └─ ƒ <inline action>({"args":{"collectionSlug":"users","data":"[Object]","docPermissions":"[Object]","...":"9 items not stringified"},"name":"form-state"}) in 207ms app/(payload)/layout.tsx
+ POST /api/users/refresh-token 200 in 1482ms (next.js: 11ms, application-code: 1471ms)
+✓ Compiled in 958ms
+Generating import map
+No new imports found, skipping writing import map
+ GET /admin/account 200 in 15.5s (next.js: 3.5s, application-code: 11.9s)
+ GET /admin/account 200 in 3.8s (next.js: 282ms, application-code: 3.6s)
+ GET /admin/account 200 in 3.5s (next.js: 14ms, application-code: 3.5s)
+ GET /admin/account 200 in 3.4s (next.js: 21ms, application-code: 3.3s)
+ GET /admin/logout-inactivity?redirect=%2Fadmin%2Faccount 200 in 9.0s (next.js: 4.6s, application-code: 4.4s)
+ GET /admin/login?redirect=%2Fadmin%2Faccount 200 in 600ms (next.js: 67ms, application-code: 532ms)
+ GET /admin/login?redirect=%2Fadmin%2Faccount 200 in 1737ms (next.js: 34ms, application-code: 1703ms)
+ GET /gallery 404 in 3.5s (next.js: 2.3s, application-code: 1245ms)
+[?25h

@@ -43,14 +43,14 @@ export const fallbackTeamMembers: TeamMemberCard[] = [
     name: "Sinothando Mbatha",
     role: "Litigation and Conveyancing Secretary",
     image: "/team/Sinothando Mbatha.jpeg",
-    bio: "Sinothando Mbatha supports the firm's litigation and conveyancing departments with disciplined file management, client communication, and administrative coordination. Her role helps ensure that matters are handled with accuracy, responsiveness, and consistent attention to detail from instruction through completion.",
+    bio: "Sinothando Mbatha completed both her Paralegal and Conveyancing courses and promptly began working with various law firms and advocates to refine her practice. She joined our Conveyancing team in 2024, collaborating closely with the Director to establish and sustain an outstanding Conveyancing Department. A major portion of her responsibilities involves preparing all registration documents, including but not limited to bonds, bond cancellations, and transfer documents, for lodgement at the Deeds Office. She has cultivated working relationships with all major South African banks, municipalities, the Master of the High Court, and other relevant partners to ensure rapid turnaround times in all her matters.\n\nWith a solid understanding of court procedures, Sino supports the litigation team by drafting pleadings and applications for court and other alternative dispute resolution forums. She has gained valuable experience serving as an assistant to an Advocate specializing in Commercial Litigation, where she assisted with legal and risk matters, conducted contract reviews, and identified operational improvements to reduce legal exposure and enhance efficiency. She is equally proficient in managing litigation for state-owned entities, prominent corporates, and other clients.\n\nSinothando's approach is grounded in thorough legal research and drafting, strategic problem-solving, and a commitment to maintaining strong client relationships through clear communication and consistently high-quality service.",
   },
   {
     id: "busisiwe-ndlovu",
     name: "Busisiwe Ndlovu",
     role: "Second Year Candidate Attorney",
     image: "/team/Busisiwe Ndlovu.jpeg",
-    bio: "Busisiwe Ndlovu is a Second Year Candidate Attorney who assists with legal research, drafting, consultations, and matter preparation across the firm's practice areas. She brings diligence, professionalism, and a developing command of legal procedure to the support she provides to clients and the firm.",
+    bio: "Busisiwe Ndlovu is an aspiring legal professional who is passionate about justice and committed to making a positive impact in the legal field. She studied for her LLB degree at the University of South Africa and graduated in 2023. Having worked with a few firms during her studies, she gained valuable practical experience in many legal practice areas. She is very inquisitive, meticulous, and consistent in her deliverables. She thrives both independently and collaboratively, demonstrating adaptability and a strong work ethic. Motivated by a deep desire to address injustices and promote social justice, she often volunteers and participates in community outreach programs. Currently, at Marshal Ndlovu Attorneys Inc., Busisiwe contributes enthusiastically and professionally to diverse legal matters. With her diverse background and unwavering commitment, she is well positioned to make a meaningful and lasting impact in the legal profession generally.",
   },
 ]
 
@@ -120,7 +120,7 @@ export function AboutTeam({ teamMembers }: { teamMembers: TeamMemberCard[] }) {
                   className="max-h-[calc(100svh-2rem)] w-[calc(100vw-2rem)] overflow-hidden border-border bg-background p-0 sm:max-w-4xl"
                   aria-describedby={getDialogDescriptionId(member.name)}
                 >
-                  <div className="grid max-h-[calc(100svh-2rem)] gap-0 md:h-[560px] md:grid-cols-[minmax(260px,0.78fr)_1fr]">
+                  <div className="grid max-h-[calc(100svh-2rem)] min-h-0 gap-0 md:h-[560px] md:grid-cols-[minmax(260px,0.78fr)_1fr]">
                     <div className="relative hidden h-full bg-soft-bg md:block">
                       <Image
                         src={member.image}
@@ -132,7 +132,7 @@ export function AboutTeam({ teamMembers }: { teamMembers: TeamMemberCard[] }) {
                       />
                       <div className="absolute inset-x-0 bottom-0 h-1 bg-tan" />
                     </div>
-                    <div className="max-h-[calc(100svh-2rem)] overflow-y-auto p-7 md:h-full md:p-9">
+                    <div className="max-h-[calc(100svh-2rem)] min-h-0 overflow-y-auto overscroll-contain p-7 md:h-full md:p-9">
                       <DialogHeader>
                         <p className="text-[11px] tracking-[0.28em] uppercase text-tan">
                           Team profile
@@ -151,7 +151,13 @@ export function AboutTeam({ teamMembers }: { teamMembers: TeamMemberCard[] }) {
                         className="text-muted-foreground"
                       >
                         <div className="space-y-5 text-sm leading-relaxed">
-                          <p>{member.bio}</p>
+                          {member.bio
+                            .split(/\n\s*\n/)
+                            .map((paragraph) => paragraph.trim())
+                            .filter(Boolean)
+                            .map((paragraph) => (
+                              <p key={paragraph}>{paragraph}</p>
+                            ))}
                           {member.expertise?.length ? (
                             <div>
                               <h3 className="font-serif text-xl font-normal text-dark-bg">
